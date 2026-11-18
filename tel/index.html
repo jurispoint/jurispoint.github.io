@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="sk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zavolať · JurisPoint</title><meta name="robots" content="noindex">
+<style>body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#f6f7f9;color:#1c2430;display:flex;min-height:100vh;align-items:center;justify-content:center}
+.c{background:#fff;border:1px solid #e3e7ee;border-radius:16px;padding:28px 22px;text-align:center;width:min(92vw,380px)}
+.n{font-size:30px;font-weight:700;letter-spacing:.5px;margin:6px 0 22px;word-break:break-all}
+a.b{display:block;background:#1f9d55;color:#fff;text-decoration:none;font-size:22px;font-weight:700;padding:18px;border-radius:12px}
+.m{color:#5d6878;font-size:14px;margin-top:14px}</style></head>
+<body><div class="c"><div class="m">Číslo</div><div class="n" id="n">–</div><a class="b" id="b" href="#">📞 Zavolať</a><div class="m" id="m"></div></div>
+<script>
+var n=(new URLSearchParams(location.search).get("n")||"").replace(/[^\d+]/g,"").slice(0,20);
+document.getElementById("n").textContent=n||"chýba číslo";
+if(n){document.getElementById("b").href="tel:"+n;document.title="Zavolať "+n;}
+else{document.getElementById("b").style.display="none";}
+</script></body></html>
