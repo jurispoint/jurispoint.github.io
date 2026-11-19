@@ -94,5 +94,22 @@ footer a { color:var(--muted); }
   <div>© 2026 JurisPoint · <a href="mailto:jurispointsk@gmail.com">jurispointsk@gmail.com</a></div>
   <div><a href="../">Úvod</a> · <a href="../obchodne-podmienky/">Obchodné podmienky</a> · <a href="../ochrana-osobnych-udajov/">Ochrana osobných údajov</a></div>
 </div></footer>
+<script>
+(function () {
+  var EXEC = "https://script.google.com/macros/s/AKfycbyFLJh1mFOWF8bHsK2cgxSpkCBK8aAk6B6Y-9bmTBus4_hX5-_0Ls8TDQFpOich_MrK/exec";
+  var ME = false, consent = ""; try { ME = localStorage.getItem("jp_ja") === "1"; consent = localStorage.getItem("jp_consent") || ""; } catch (e) {}
+  if (ME) return;
+  var DEV = /iPad|Tablet/i.test(navigator.userAgent) ? "tablet" : (/Mobi|Android|iPhone/i.test(navigator.userAgent) ? "mobil" : "pocitac");
+  var SRC = "priamo"; try { var h = document.referrer ? new URL(document.referrer).hostname : ""; if (h && h.indexOf("jurispoint") < 0) SRC = h; } catch (e) {}
+  var body = JSON.stringify({ v: 2, e: "view", x: location.pathname, r: "", p: "obchodne", s: Math.random().toString(36).slice(2, 10), f: SRC, d: DEV });
+  try { if (!(navigator.sendBeacon && navigator.sendBeacon(EXEC, new Blob([body], { type: "text/plain" })))) fetch(EXEC, { method: "POST", mode: "no-cors", credentials: "omit", body: body }).catch(function () {}); } catch (e) {}
+  if (consent === "y") {
+    window.dataLayer = window.dataLayer || []; window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag("consent", "default", { ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: "granted" });
+    window.gtag("js", new Date());
+    var sc = document.createElement("script"); sc.async = true; sc.src = "https://www.googletagmanager.com/gtm.js?id=GTM-NRD2DCZG"; document.head.appendChild(sc);
+  }
+})();
+</script>
 </body>
 </html>
