@@ -206,6 +206,15 @@ footer .links { display:flex; gap:22px; flex-wrap:wrap; }
 .note { font-size:13px; color:var(--faint); margin-top:6px; max-width:560px; }
 .toast { position:fixed; left:50%; bottom:96px; transform:translateX(-50%); background:var(--navy); color:#fff; padding:10px 16px; border-radius:10px; font-size:14px; opacity:0; transition:opacity .2s; pointer-events:none; z-index:50; }
 .toast.show { opacity:1; }
+.cookie { position:fixed; left:16px; bottom:16px; z-index:60; max-width:420px; background:var(--navy); color:#d8dde7; border-radius:14px; padding:18px 18px 16px; box-shadow:0 18px 40px rgba(26,35,50,.3); font-size:14.5px; line-height:1.5; display:none; }
+.cookie.show { display:block; }
+.cookie b { color:#fff; font-family:var(--serif); font-size:17px; font-weight:600; display:block; margin-bottom:4px; }
+.cookie a { color:#e9a68d; }
+.cookie .row { display:flex; gap:10px; margin-top:14px; }
+.cookie .btn { padding:11px 16px; font-size:14.5px; flex:1; }
+.cookie .btn-no { background:transparent; color:#fff; border-color:rgba(255,255,255,.35); }
+.linkbtn { background:none; border:0; padding:0; color:var(--muted); font:inherit; text-decoration:underline; cursor:pointer; }
+@media (max-width:760px) { .cookie { left:10px; right:10px; bottom:10px; max-width:none; } }
 .reveal { opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease; }
 .reveal.in { opacity:1; transform:none; }
 
@@ -338,15 +347,15 @@ footer .links { display:flex; gap:22px; flex-wrap:wrap; }
       <p>Dve celé analýzy na stiahnutie a zoznam všetkých tém s kľúčovými slovami a predpismi.</p>
     </div>
     <div class="samples">
-      <a class="sample reveal" href="https://drive.google.com/uc?export=download&id=1XgftIvjgyibeNTzTa-i2IckVtqUerCGB" target="_blank" rel="noopener">
+      <a class="sample reveal" data-ev="ukazka1" href="https://drive.google.com/uc?export=download&id=1XgftIvjgyibeNTzTa-i2IckVtqUerCGB" target="_blank" rel="noopener">
         <div class="img"><img src="/img/ukazka1-vyrez.webp" alt="Prehľad rozhodnutí z ukážky o striedavej starostlivosti" width="900" height="557" loading="lazy"></div>
         <div class="body"><span class="area">Rodinné právo</span><h3>Konflikt rodičov a striedavá starostlivosť</h3><p>Stačí samotný konflikt rodičov na zamietnutie striedavej osobnej starostlivosti? Desať rozhodnutí ÚS SR a krajských súdov.</p><span class="dl">Stiahnuť ukážku (PDF)</span></div>
       </a>
-      <a class="sample reveal" href="https://drive.google.com/uc?export=download&id=1DebYU2AugeCQBMPwfMe0_0hk5HycLg2d" target="_blank" rel="noopener">
+      <a class="sample reveal" data-ev="ukazka2" href="https://drive.google.com/uc?export=download&id=1DebYU2AugeCQBMPwfMe0_0hk5HycLg2d" target="_blank" rel="noopener">
         <div class="img"><img src="/img/ukazka2-vyrez.webp" alt="Prehľad rozhodnutí z ukážky o kamerovom zázname" width="900" height="557" loading="lazy"></div>
         <div class="body"><span class="area">Trestné právo</span><h3>Kamerový záznam mestskej polície ako dôkaz</h3><p>Je záznam z kamier mestskej polície použiteľný ako dôkaz v trestnom konaní a za akých podmienok?</p><span class="dl">Stiahnuť ukážku (PDF)</span></div>
       </a>
-      <a class="sample listcard reveal" href="/zoznam-tem.pdf" target="_blank" rel="noopener">
+      <a class="sample listcard reveal" data-ev="zoznam" href="/zoznam-tem.pdf" target="_blank" rel="noopener">
         <div class="img"><div><span>174.</span>Použiteľnosť kamerového záznamu mestskej polície ako dôkaz v trestnom konaní</div><div><span>115.</span>Konflikt a zhoršená komunikácia rodičov ako prekážka striedavej osobnej starostlivosti</div><div><span>85.</span>Odporovateľnosť právnych úkonov (§ 42a OZ)</div><div><span>215.</span>Reťazenie výpovedí z pracovného pomeru</div><div><span>130.</span>Neodkladné opatrenie vo veciach výživného</div></div>
         <div class="body"><span class="area">Všetkých 250 tém</span><h3>Zoznam tém s kľúčovými slovami</h3><p>Prehľad celého katalógu podľa oblastí práva, s kľúčovými slovami a predpismi, ktorých sa analýzy týkajú.</p><span class="dl">Stiahnuť zoznam (PDF)</span></div>
       </a>
@@ -431,8 +440,8 @@ footer .links { display:flex; gap:22px; flex-wrap:wrap; }
         <p>Napíšte nám alebo zavolajte. Radi Vám poradíme, ktoré analýzy sa hodia pre Vašu prax.</p>
       </div>
       <div class="lines">
-        <a href="mailto:jurispointsk@gmail.com"><small>E‑mail</small>jurispointsk@gmail.com</a>
-        <a href="tel:+421902197834"><small>Telefón</small>+421 902 197 834</a>
+        <a data-ev="kontakt" data-x="mail" href="mailto:jurispointsk@gmail.com"><small>E‑mail</small>jurispointsk@gmail.com</a>
+        <a data-ev="kontakt" data-x="telefon" href="tel:+421902197834"><small>Telefón</small>+421 902 197 834</a>
       </div>
     </div>
   </div>
@@ -448,6 +457,7 @@ footer .links { display:flex; gap:22px; flex-wrap:wrap; }
     <div class="links">
       <a href="/obchodne-podmienky/">Obchodné podmienky</a>
       <a href="/ochrana-osobnych-udajov/">Ochrana osobných údajov</a>
+      <button type="button" class="linkbtn" id="cookieset">Nastavenia cookies</button>
       <span>© 2026 JurisPoint</span>
     </div>
   </div>
@@ -460,6 +470,11 @@ footer .links { display:flex; gap:22px; flex-wrap:wrap; }
     <a class="btn btn-accent" id="buy" href="#" aria-disabled="true">Objednať</a>
   </div>
 </div>
+<div class="cookie" id="cookie" role="dialog" aria-label="Súhlas s cookies">
+  <b>Môžeme merať návštevnosť?</b>
+  S Vaším súhlasom použijeme analytické cookies Google Analytics, aby sme videli, ako sa web používa. Bez súhlasu ich nepoužijeme. <a href="/ochrana-osobnych-udajov/#cookies">Viac informácií</a>
+  <div class="row"><button type="button" class="btn btn-no" id="cookieno">Odmietnuť</button><button type="button" class="btn btn-accent" id="cookieyes">Povoliť</button></div>
+</div>
 <div class="toast" id="toast"></div>
 
 <script>
@@ -470,7 +485,6 @@ footer .links { display:flex; gap:22px; flex-wrap:wrap; }
   var MAX = 250, MIN = 5, KEY = "jp-katalog-vyber";
   var IS_CAT = /^\/katalog/.test(location.pathname);
   var REF = (function () { try { return (new URLSearchParams(location.search).get("r") || "").replace(/[^A-Za-z0-9_-]/g, "").slice(0, 40); } catch (e) { return ""; } })();
-  try { fetch(EXEC, { method: "POST", mode: "no-cors", credentials: "omit", keepalive: true, body: JSON.stringify({ v: 1, r: REF, p: IS_CAT ? "katalog" : "web" }) }).catch(function () {}); } catch (e) {}
 
   var el = function (id) { return document.getElementById(id); };
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
@@ -479,6 +493,50 @@ footer .links { display:flex; gap:22px; flex-wrap:wrap; }
   var sel = {};
   try { (JSON.parse(localStorage.getItem(KEY) || "[]") || []).forEach(function (i) { if (byId[i]) sel[i] = 1; }); } catch (e) {}
   var area = "", query = "", expanded = false, LIMIT = 30;
+  // ---- meranie: vlastné bez cookies + Google Analytics len so súhlasom ----
+  var PAGE = IS_CAT ? "katalog" : "web";
+  var ME = false;
+  try { if (/[?&]ja=1/.test(location.search)) localStorage.setItem("jp_ja", "1"); if (/[?&]ja=0/.test(location.search)) localStorage.removeItem("jp_ja"); ME = localStorage.getItem("jp_ja") === "1"; } catch (e) {}
+  var SID = Math.random().toString(36).slice(2, 10);
+  var DEV = /iPad|Tablet/i.test(navigator.userAgent) ? "tablet" : (/Mobi|Android|iPhone/i.test(navigator.userAgent) ? "mobil" : "pocitac");
+  var SRC = (function () {
+    if (REF) return "mail";
+    try { var u = new URLSearchParams(location.search).get("utm_source"); if (u) return u.slice(0, 40); } catch (e) {}
+    try { var h = document.referrer ? new URL(document.referrer).hostname : ""; if (h && h.indexOf("jurispoint") < 0) return h; } catch (e) {}
+    return "priamo";
+  })();
+  function track(ev, x) {
+    if (ME) return;
+    var body = JSON.stringify({ v: 2, e: ev, x: x || "", r: REF, p: PAGE, s: SID, f: SRC, d: DEV });
+    try { if (navigator.sendBeacon && navigator.sendBeacon(EXEC, new Blob([body], { type: "text/plain" }))) {} else fetch(EXEC, { method: "POST", mode: "no-cors", credentials: "omit", keepalive: true, body: body }).catch(function () {}); } catch (e) {}
+    try { if (window.gtag && GA_ON) window.gtag("event", ev, { detail: String(x || "").slice(0, 90) }); } catch (e) {}
+  }
+  var GA_ON = false;
+  function loadGA() {
+    if (GA_ON || ME) return; GA_ON = true;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag("consent", "default", { ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: "granted" });
+    window.gtag("js", new Date());
+    var sc = document.createElement("script"); sc.async = true; sc.src = "https://www.googletagmanager.com/gtm.js?id=GTM-NRD2DCZG"; document.head.appendChild(sc);
+  }
+  var consent = ""; try { consent = localStorage.getItem("jp_consent") || ""; } catch (e) {}
+  function setConsent(v) { consent = v; try { localStorage.setItem("jp_consent", v); } catch (e) {} el("cookie").classList.remove("show"); if (v === "y") loadGA(); track("cookies", v === "y" ? "povolene" : "odmietnute"); }
+  if (consent === "y") loadGA(); else if (!consent && !ME) setTimeout(function () { el("cookie").classList.add("show"); }, 900);
+  el("cookieyes").addEventListener("click", function () { setConsent("y"); });
+  el("cookieno").addEventListener("click", function () { setConsent("n"); });
+  el("cookieset").addEventListener("click", function () { el("cookie").classList.add("show"); });
+  track("view", location.pathname + (location.hash || ""));
+  var t0 = Date.now(), hidden0 = 0, hiddenAt = 0, maxScroll = 0, seen = [], left = false;
+  window.addEventListener("scroll", function () { var h = document.documentElement; var p = Math.round((window.scrollY + window.innerHeight) / h.scrollHeight * 100); if (p > maxScroll) maxScroll = p; }, { passive: true });
+  function leave() { if (left) return; left = true; var secs = Math.round((Date.now() - t0 - hidden0) / 1000); track("odchod", secs + " s, posun " + Math.min(maxScroll, 100) + " %, videl: " + (seen.join(" ") || "úvod")); }
+  document.addEventListener("visibilitychange", function () { if (document.visibilityState === "hidden") { hiddenAt = Date.now(); leave(); } else if (hiddenAt) { hidden0 += Date.now() - hiddenAt; hiddenAt = 0; left = false; t0 = Date.now(); hidden0 = 0; } });
+  window.addEventListener("pagehide", leave);
+  if ("IntersectionObserver" in window) {
+    var secObs = new IntersectionObserver(function (es) { es.forEach(function (x) { if (x.isIntersecting && seen.indexOf(x.target.id) < 0) { seen.push(x.target.id); track("sekcia", x.target.id); } }); }, { threshold: 0.35 });
+    ["obsah", "ukazky", "cennik", "katalog", "otazky", "kontakt"].forEach(function (id) { var n = el(id); if (n) secObs.observe(n); });
+  }
+  document.addEventListener("click", function (e) { var a = e.target.closest("[data-ev]"); if (a) track(a.getAttribute("data-ev"), a.getAttribute("data-x") || ""); }, true);
 
   // header + menu
   var hdr = document.querySelector("header.top");
@@ -558,7 +616,7 @@ footer .links { display:flex; gap:22px; flex-wrap:wrap; }
   function toggle(i, on) {
     if (on && !sel[i] && count() >= MAX) { toast("Maximum je " + MAX + " tém."); return false; }
     if (on) sel[i] = 1; else delete sel[i];
-    save(); renderBar(); renderAreas(); return true;
+    save(); renderBar(); renderAreas(); clearTimeout(toggle.h); toggle.h = setTimeout(function () { track("vyber", count() + " tém"); }, 4000); return true;
   }
   function toCatalog() { el("katalog").scrollIntoView({ behavior: "smooth" }); }
 
@@ -573,16 +631,16 @@ footer .links { display:flex; gap:22px; flex-wrap:wrap; }
   el("list").addEventListener("click", function (e) { if (e.target.id === "more") { expanded = true; renderList(); } });
   el("areas").addEventListener("click", function (e) {
     var c = e.target.closest(".chip"); if (!c) return;
-    area = c.dataset.a; renderAreas(); renderList();
+    area = c.dataset.a; renderAreas(); renderList(); track("filter", area || "vsetky");
     var y = el("list").getBoundingClientRect().top + window.scrollY - 230;
     if (window.scrollY > y) window.scrollTo(0, y);
   });
-  var qt; el("q").addEventListener("input", function (e) { clearTimeout(qt); qt = setTimeout(function () { query = e.target.value.trim(); renderList(); }, 140); });
+  var qt, qs, lastQ = ""; el("q").addEventListener("input", function (e) { clearTimeout(qt); qt = setTimeout(function () { query = e.target.value.trim(); renderList(); }, 140); clearTimeout(qs); qs = setTimeout(function () { var v = e.target.value.trim(); if (v.length >= 2 && v !== lastQ) { lastQ = v; track("hladanie", v + " (" + el("found").textContent.split(" ")[0] + ")"); } }, 1600); });
   el("info").addEventListener("click", function (e) { if (e.target.id === "showsel") { el("drawer").classList.toggle("open"); renderBar(); } });
   el("drawer").addEventListener("click", function (e) { var r = e.target.dataset.rm; if (!r) return; toggle(Number(r), false); renderList(); });
   el("clearsel").addEventListener("click", function () { sel = {}; save(); el("drawer").classList.remove("open"); renderBar(); renderAreas(); renderList(); toast("Výber bol zrušený."); });
-  el("allbtn").addEventListener("click", function () { CATALOG.forEach(function (x) { sel[x.i] = 1; }); save(); area = "__sel"; renderBar(); renderAreas(); renderList(); toCatalog(); toast("Vybraný celý katalóg, všetkých " + CATALOG.length + " analýz."); });
-  el("buy").addEventListener("click", function (e) { if (el("buy").getAttribute("aria-disabled") === "true") { e.preventDefault(); toCatalog(); } });
+  el("allbtn").addEventListener("click", function () { CATALOG.forEach(function (x) { sel[x.i] = 1; }); save(); area = "__sel"; renderBar(); renderAreas(); renderList(); toCatalog(); track("cely_katalog", ""); toast("Vybraný celý katalóg, všetkých " + CATALOG.length + " analýz."); });
+  el("buy").addEventListener("click", function (e) { if (el("buy").getAttribute("aria-disabled") === "true") { e.preventDefault(); toCatalog(); return; } var n = count(), t = tierFor(n); track("objednat", n + " tém, balík " + t.n + ", " + t.price); try { if (window.gtag && GA_ON) window.gtag("event", "begin_checkout", { value: parseFloat(t.price.replace(",", ".")), currency: "EUR" }); } catch (x) {} });
 
   if ("IntersectionObserver" in window) {
     new IntersectionObserver(function (es) { catVisible = es[0].isIntersecting; renderBar(); }, { rootMargin: "0px 0px -40% 0px" }).observe(el("katalog"));
