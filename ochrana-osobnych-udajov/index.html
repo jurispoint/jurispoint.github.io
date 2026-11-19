@@ -70,7 +70,8 @@ footer a { color:var(--muted); }
 <h2>4. Komu údaje poskytujeme</h2>
 <ul>
 <li><b>Stripe Payments Europe, Ltd.</b> (Írsko): spracovanie platby a vystavenie faktúry. Stripe môže údaje prenášať aj do USA na základe štandardných zmluvných doložiek EÚ.</li>
-<li><b>Google</b> (Gmail, Google Drive): komunikácia s kupujúcim, dodanie súborov a záznam otvorení katalógu.</li>
+<li><b>Google</b> (Gmail, Google Drive): komunikácia s kupujúcim, dodanie súborov a záznamy o návštevnosti webu.</li>
+<li><b>Google Ireland Limited</b> (Google Analytics): štatistika návštevnosti, len ak ste s ňou súhlasili.</li>
 <li><b>GitHub</b>: prevádzka webovej stránky a katalógu analýz.</li>
 <li><b>Účtovník alebo účtovná kancelária</b>: vedenie účtovníctva.</li>
 <li><b>Orgány verejnej moci</b>: len ak to vyžaduje zákon.</li>
@@ -94,12 +95,34 @@ footer a { color:var(--muted); }
 <li>podať sťažnosť dozornému orgánu: Úrad na ochranu osobných údajov Slovenskej republiky, Hraničná 12, 820 07 Bratislava (<a href="https://www.dataprotection.gov.sk">www.dataprotection.gov.sk</a>).</li>
 </ul>
 <p>Práva uplatníte e-mailom na <a href="mailto:jurispointsk@gmail.com">jurispointsk@gmail.com</a>. Odpovieme do jedného mesiaca.</p>
-<h2>7. Zmeny</h2>
+<h2 id="cookies">7. Cookies a meranie návštevnosti</h2>
+<p>Návštevnosť webu jurispoint.sk meriame dvoma spôsobmi.</p>
+<p><b>Vlastné meranie bez cookies.</b> Zaznamenávame zobrazenie stránok, časti webu, ktoré si pozriete, čas strávený na stránke, vyhľadávanie v katalógu, stiahnutie ukážok a kliknutie na objednávku, spolu so zdrojom návštevy a typom zariadenia. Na tento účel do Vášho zariadenia nič neukladáme a Vašu IP adresu nezaznamenávame. Ak ste na web prišli cez odkaz z nášho e-mailu alebo správy, priradíme návštevu ku kontaktným údajom podľa čl. 2. Právnym základom je oprávnený záujem na zlepšovaní webu a ponuky (čl. 6 ods. 1 písm. f) GDPR). Záznamy uchovávame najdlhšie 2 roky.</p>
+<p><b>Google Analytics.</b> Analytické cookies Google Analytics (_ga, _ga_*) použijeme len vtedy, ak ich povolíte na lište pri prvej návšteve. Pomáhajú nám vidieť súhrnnú štatistiku návštevnosti. Reklamné funkcie sú vypnuté. Cookies sa uchovávajú najdlhšie 14 mesiacov. Údaje môžu byť prenesené do USA na základe rámca ochrany údajov medzi EÚ a USA. Právnym základom je Váš súhlas (čl. 6 ods. 1 písm. a) GDPR a § 109 ods. 8 zákona č. 452/2021 Z. z. o elektronických komunikáciách). Súhlas môžete kedykoľvek odvolať cez odkaz Nastavenia cookies v pätičke webu.</p>
+<p><b>Nevyhnutné úložisko.</b> Prehliadač si pamätá Váš výber tém v katalógu a rozhodnutie o cookies. Tieto údaje zostávajú vo Vašom zariadení a neodosielame ich.</p>
+<h2>8. Zmeny</h2>
 <p>Tieto zásady môžeme aktualizovať. Platné znenie je vždy zverejnené na tejto stránke.</p>
 </div></main>
 <footer><div class="wrap">
   <div>© 2026 JurisPoint · <a href="mailto:jurispointsk@gmail.com">jurispointsk@gmail.com</a></div>
   <div><a href="../">Úvod</a> · <a href="../obchodne-podmienky/">Obchodné podmienky</a> · <a href="../ochrana-osobnych-udajov/">Ochrana osobných údajov</a></div>
 </div></footer>
+<script>
+(function () {
+  var EXEC = "https://script.google.com/macros/s/AKfycbyFLJh1mFOWF8bHsK2cgxSpkCBK8aAk6B6Y-9bmTBus4_hX5-_0Ls8TDQFpOich_MrK/exec";
+  var ME = false, consent = ""; try { ME = localStorage.getItem("jp_ja") === "1"; consent = localStorage.getItem("jp_consent") || ""; } catch (e) {}
+  if (ME) return;
+  var DEV = /iPad|Tablet/i.test(navigator.userAgent) ? "tablet" : (/Mobi|Android|iPhone/i.test(navigator.userAgent) ? "mobil" : "pocitac");
+  var SRC = "priamo"; try { var h = document.referrer ? new URL(document.referrer).hostname : ""; if (h && h.indexOf("jurispoint") < 0) SRC = h; } catch (e) {}
+  var body = JSON.stringify({ v: 2, e: "view", x: location.pathname, r: "", p: "ochrana", s: Math.random().toString(36).slice(2, 10), f: SRC, d: DEV });
+  try { if (!(navigator.sendBeacon && navigator.sendBeacon(EXEC, new Blob([body], { type: "text/plain" })))) fetch(EXEC, { method: "POST", mode: "no-cors", credentials: "omit", body: body }).catch(function () {}); } catch (e) {}
+  if (consent === "y") {
+    window.dataLayer = window.dataLayer || []; window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag("consent", "default", { ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: "granted" });
+    window.gtag("js", new Date());
+    var sc = document.createElement("script"); sc.async = true; sc.src = "https://www.googletagmanager.com/gtm.js?id=GTM-NRD2DCZG"; document.head.appendChild(sc);
+  }
+})();
+</script>
 </body>
 </html>
