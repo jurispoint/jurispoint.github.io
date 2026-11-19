@@ -2,204 +2,270 @@
 <html lang="sk">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>JurisPoint · Analýzy súdnej judikatúry pre advokátov</title>
-<meta name="description" content="Analýzy súdnej judikatúry pre advokátsku prax. Každá analýza odpovedá na konkrétnu právnu otázku: kľúčové rozhodnutia so spisovou značkou, doslovné citácie a praktický postup pre obe strany sporu.">
-<meta property="og:title" content="JurisPoint · Analýzy súdnej judikatúry pre advokátov">
-<meta property="og:description" content="Ako súdy rozhodujú vo Vašej otázke. Ručná rešerš, doslovné citácie, praktický postup.">
+<meta name="description" content="250 analýz slovenskej judikatúry pre advokátsku prax. Každá odpovedá na jednu právnu otázku: kľúčové rozhodnutia so spisovou značkou, doslovné citácie a praktický postup pre obe strany sporu.">
+<link rel="canonical" href="https://jurispoint.sk/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="sk_SK">
 <meta property="og:site_name" content="JurisPoint">
-<meta name="theme-color" content="#1d2a43">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:url" content="https://jurispoint.sk/">
+<meta property="og:title" content="JurisPoint · Analýzy súdnej judikatúry pre advokátov">
+<meta property="og:description" content="Ako súdy rozhodujú vo Vašej otázke. 250 analýz, ručná rešerš, doslovné citácie so spisovou značkou.">
+<meta property="og:image" content="https://jurispoint.sk/img/ukazka-prehlad.webp">
+<meta name="theme-color" content="#1a2332">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --navy: #1d2a43; --navy-2: #2b3b5c; --ink: #222a36; --muted: #5d6878; --line: #e3e0d8;
-  --paper: #fbf9f5; --card: #ffffff; --accent: #b9532f; --accent-2: #9e4426; --soft: #f3eee6;
-  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
-  --sans: Inter, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --navy:#1a2332; --navy2:#26324a; --ink:#1f2633; --muted:#5f6a7a; --faint:#8a94a3; --line:#e4e1da; --line2:#d6d2c8;
+  --paper:#faf8f4; --card:#fff; --soft:#f2eee6; --accent:#c1502e; --accent2:#a8431f; --sel:#fbf1ec;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:Inter, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --r:14px;
 }
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; font-family: var(--sans); color: var(--ink); background: var(--paper); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-a { color: inherit; }
-.wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
-h1, h2, h3 { font-family: var(--serif); color: var(--navy); font-weight: 600; line-height: 1.18; margin: 0; letter-spacing: -0.01em; }
-h2 { font-size: clamp(28px, 3.6vw, 40px); }
-h3 { font-size: 21px; }
-.eyebrow { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
-.lead { font-size: 19px; color: var(--muted); max-width: 640px; }
-section { padding: 96px 0; }
-.sec-head { max-width: 720px; margin-bottom: 48px; }
-.sec-head .eyebrow { display: block; margin-bottom: 14px; }
-.sec-head p { color: var(--muted); margin: 16px 0 0; font-size: 18px; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; scroll-padding-top:84px; }
+body { margin:0; font-family:var(--sans); color:var(--ink); background:var(--paper); font-size:16.5px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+a { color:inherit; }
+img { max-width:100%; display:block; }
+.wrap { max-width:1140px; margin:0 auto; padding:0 24px; }
+h1, h2, h3 { font-family:var(--serif); color:var(--navy); font-weight:600; letter-spacing:-.012em; margin:0; line-height:1.15; }
+h2 { font-size:clamp(28px, 3.4vw, 40px); }
+h3 { font-size:20px; line-height:1.3; }
+.kicker { display:inline-flex; align-items:center; gap:10px; font-size:12.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); font-weight:600; }
+.kicker::before { content:""; width:22px; height:1px; background:var(--accent); }
+section { padding:96px 0; }
+.head { max-width:700px; margin-bottom:44px; }
+.head h2 { margin-top:14px; }
+.head p { color:var(--muted); font-size:18px; margin:14px 0 0; }
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; font:600 15.5px/1 var(--sans); text-decoration:none; border-radius:10px; padding:15px 22px; border:1.5px solid transparent; cursor:pointer; transition:background .15s, transform .15s, box-shadow .15s, border-color .15s; white-space:nowrap; }
+.btn:hover { transform:translateY(-1px); }
+.btn-dark { background:var(--navy); color:#fff; box-shadow:0 8px 22px rgba(26,35,50,.18); }
+.btn-dark:hover { background:var(--navy2); }
+.btn-accent { background:var(--accent); color:#fff; box-shadow:0 8px 22px rgba(193,80,46,.22); }
+.btn-accent:hover { background:var(--accent2); }
+.btn-line { border-color:var(--line2); color:var(--navy); background:var(--card); }
+.btn-line:hover { border-color:var(--navy); }
 
 /* header */
-header { position: sticky; top: 0; z-index: 20; background: rgba(251,249,245,.92); backdrop-filter: saturate(150%) blur(8px); border-bottom: 1px solid transparent; transition: border-color .2s; }
-header.scrolled { border-bottom-color: var(--line); }
-.nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
-.logo { display: flex; flex-direction: column; align-items: center; text-decoration: none; font-family: var(--serif); color: var(--navy); line-height: 1; letter-spacing: .2em; font-size: 15px; font-weight: 600; }
-.logo .rule { display: flex; align-items: center; gap: 6px; color: var(--accent); font-size: 10px; margin: 3px 0; letter-spacing: 0; }
-.logo .rule::before, .logo .rule::after { content: ""; width: 22px; height: 1px; background: var(--accent); }
-.menu { display: flex; align-items: center; gap: 28px; font-size: 15px; }
-.menu a { text-decoration: none; color: var(--ink); }
-.menu a:hover { color: var(--accent); }
-.menu a.btn-primary, .menu a.btn-primary:hover { color: #fff; }
-.btn { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 600; font-size: 15.5px; border-radius: 10px; padding: 13px 22px; transition: transform .15s, background .15s, box-shadow .15s; border: 1.5px solid transparent; cursor: pointer; }
-.btn:hover { transform: translateY(-1px); }
-.btn-primary { background: var(--navy); color: #fff; box-shadow: 0 6px 18px rgba(29,42,67,.18); }
-.btn-primary:hover { background: var(--navy-2); }
-.btn-ghost { border-color: var(--navy); color: var(--navy); background: transparent; }
-.btn-accent { background: var(--accent); color: #fff; }
-.btn-accent:hover { background: var(--accent-2); }
-.menu .btn { padding: 10px 18px; }
-.burger { display: none; background: none; border: 0; font-size: 26px; color: var(--navy); cursor: pointer; }
+header.top { position:sticky; top:0; z-index:30; background:rgba(250,248,244,.9); backdrop-filter:saturate(160%) blur(10px); -webkit-backdrop-filter:saturate(160%) blur(10px); border-bottom:1px solid transparent; transition:border-color .2s; }
+header.top.scrolled { border-bottom-color:var(--line); }
+.nav { height:72px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+.logo { display:flex; flex-direction:column; align-items:center; text-decoration:none; font-family:var(--serif); color:var(--navy); line-height:1; letter-spacing:.22em; font-size:15px; font-weight:600; }
+.logo i { display:flex; align-items:center; gap:6px; font-style:normal; color:var(--accent); font-size:10px; margin:3px 0; letter-spacing:0; }
+.logo i::before, .logo i::after { content:""; width:22px; height:1px; background:var(--accent); }
+.menu { display:flex; align-items:center; gap:28px; font-size:15px; }
+.menu a { text-decoration:none; color:var(--ink); }
+.menu a:hover { color:var(--accent); }
+.menu .btn { padding:11px 18px; color:#fff; }
+.burger { display:none; background:none; border:0; width:44px; height:44px; font-size:24px; color:var(--navy); cursor:pointer; }
 
 /* hero */
-.hero { padding: 72px 0 88px; }
-.hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 64px; align-items: center; }
-.hero h1 { font-size: clamp(36px, 5vw, 58px); margin: 18px 0 22px; }
-.hero h1 em { font-style: normal; color: var(--accent); }
-.hero .cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
-.hero .note { margin-top: 18px; font-size: 14px; color: var(--muted); }
-.doc { position: relative; }
-.doc-card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 30px 30px 26px; box-shadow: 0 24px 60px rgba(29,42,67,.12); position: relative; z-index: 2; }
-.doc-back { position: absolute; inset: 18px -18px -18px 18px; background: var(--soft); border: 1px solid var(--line); border-radius: 16px; z-index: 1; }
-.doc-top { display: flex; justify-content: space-between; align-items: center; font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
-.doc-top span:last-child { color: var(--muted); letter-spacing: .06em; }
-.doc h3 { font-size: 22px; margin: 14px 0 18px; }
-.doc ul { list-style: none; padding: 0; margin: 0; }
-.doc li { display: flex; gap: 12px; padding: 11px 0; border-top: 1px solid var(--line); font-size: 15px; }
-.doc li b { display: block; color: var(--navy); font-weight: 600; }
-.doc li small { color: var(--muted); font-size: 13.5px; }
-.dot { flex: 0 0 26px; height: 26px; border-radius: 50%; background: var(--soft); color: var(--accent); display: grid; place-items: center; font-family: var(--serif); font-weight: 700; font-size: 14px; }
-.cite { margin-top: 16px; background: var(--paper); border-left: 3px solid var(--accent); padding: 12px 14px; font-family: var(--serif); font-size: 14.5px; color: #3b4454; font-style: italic; border-radius: 0 8px 8px 0; }
-.cite span { display: block; font-style: normal; font-family: var(--sans); font-size: 12px; color: var(--muted); margin-top: 6px; }
+.hero { padding:64px 0 40px; overflow:hidden; }
+.hero-grid { display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center; }
+.hero-grid > div:first-child { position:relative; z-index:2; }
+.hero h1 { font-size:clamp(38px, 5.2vw, 62px); margin:18px 0 22px; }
+.hero h1 em { font-style:italic; color:var(--accent); font-weight:600; }
+.hero .lead { font-size:19px; color:var(--muted); max-width:560px; margin:0; }
+.hero .cta { display:flex; flex-wrap:wrap; gap:12px; margin-top:32px; }
+.hero .fine { margin-top:18px; font-size:14px; color:var(--faint); }
+.paper { position:relative; }
+.paper .sheet { border-radius:6px; box-shadow:0 30px 70px rgba(26,35,50,.18), 0 2px 6px rgba(26,35,50,.06); border:1px solid var(--line); background:#fff; overflow:hidden; }
+.paper .sheet img { width:100%; height:auto; }
+.paper .back { position:absolute; width:58%; left:0; top:10%; transform:rotate(-5deg); z-index:0; opacity:.95; }
+.paper .front { position:relative; z-index:1; width:86%; margin-left:auto; transform:rotate(1.2deg); }
+.paper .front .sheet { max-height:560px; }
+.paper .tag { position:absolute; z-index:2; left:2%; bottom:6%; background:var(--navy); color:#fff; border-radius:12px; padding:14px 16px; font-size:13.5px; line-height:1.45; box-shadow:0 14px 30px rgba(26,35,50,.25); max-width:250px; }
+.paper .tag b { display:block; font-family:var(--serif); font-size:17px; font-weight:600; margin-bottom:2px; }
 
-/* stats */
-.stats { background: var(--navy); color: #fff; padding: 34px 0; }
-.stats .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-.stat b { display: block; font-family: var(--serif); font-size: 34px; font-weight: 600; }
-.stat span { color: #c8d0de; font-size: 14.5px; }
+/* strip */
+.strip { border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:var(--card); }
+.strip .wrap { display:grid; grid-template-columns:repeat(4, 1fr); }
+.stat { padding:26px 20px; border-left:1px solid var(--line); }
+.stat:first-child { border-left:0; padding-left:0; }
+.stat b { display:block; font-family:var(--serif); color:var(--navy); font-size:32px; font-weight:600; line-height:1.1; }
+.stat span { color:var(--muted); font-size:14.5px; }
 
-/* features */
-.grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-.feat { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 26px 24px; }
-.feat .ic { width: 44px; height: 44px; border-radius: 11px; background: var(--soft); color: var(--accent); display: grid; place-items: center; font-family: var(--serif); font-size: 22px; font-weight: 700; margin-bottom: 18px; }
-.feat h3 { font-size: 19px; margin-bottom: 8px; }
-.feat p { margin: 0; color: var(--muted); font-size: 15.5px; }
+/* what */
+.what { display:grid; grid-template-columns:repeat(4, 1fr); gap:0; border:1px solid var(--line); border-radius:var(--r); background:var(--card); overflow:hidden; }
+.what div { padding:30px 26px; border-left:1px solid var(--line); }
+.what div:first-child { border-left:0; }
+.what .n { font-family:var(--serif); color:var(--accent); font-size:15px; font-weight:600; letter-spacing:.06em; }
+.what h3 { margin:12px 0 8px; font-size:19px; }
+.what p { margin:0; color:var(--muted); font-size:15.5px; }
 
 /* research */
-.research { background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-.quote { font-family: var(--serif); font-size: clamp(24px, 2.8vw, 32px); color: var(--navy); line-height: 1.3; }
-.quote::before { content: "„"; color: var(--accent); }
-.quote::after { content: "“"; color: var(--accent); }
-.checks { list-style: none; padding: 0; margin: 0; }
-.checks li { position: relative; padding: 0 0 18px 36px; color: var(--ink); }
-.checks li::before { content: "§"; position: absolute; left: 0; top: -1px; width: 24px; height: 24px; border-radius: 50%; background: var(--soft); color: var(--accent); display: grid; place-items: center; font-family: var(--serif); font-size: 14px; font-weight: 700; }
-.checks b { color: var(--navy); }
-
-/* steps */
-.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; counter-reset: s; }
-.step { position: relative; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 30px 26px 26px; }
-.step::before { counter-increment: s; content: counter(s); font-family: var(--serif); font-size: 46px; color: var(--accent); opacity: .9; line-height: 1; display: block; margin-bottom: 14px; }
-.step p { color: var(--muted); margin: 8px 0 0; font-size: 15.5px; }
-.aside { margin-top: 22px; color: var(--muted); font-size: 15.5px; }
+.research { background:var(--navy); color:#d8dde7; }
+.research .wrap { display:grid; grid-template-columns:1.1fr .9fr; gap:64px; align-items:center; }
+.research .kicker { color:#e9a68d; }
+.research .kicker::before { background:#e9a68d; }
+.research blockquote { margin:18px 0 0; font-family:var(--serif); color:#fff; font-size:clamp(25px, 3vw, 34px); line-height:1.3; }
+.research ul { list-style:none; margin:0; padding:0; }
+.research li { padding:16px 0 16px 34px; border-top:1px solid rgba(255,255,255,.12); position:relative; font-size:16px; }
+.research li:first-child { border-top:0; }
+.research li::before { content:"§"; position:absolute; left:0; top:14px; font-family:var(--serif); color:#e9a68d; font-size:19px; }
+.research li b { color:#fff; font-weight:600; }
 
 /* samples */
-.samples { background: var(--soft); }
-.cards2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
-.sample { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 30px; display: flex; flex-direction: column; }
-.sample .tag { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
-.sample h3 { margin: 10px 0 10px; font-size: 22px; }
-.sample p { color: var(--muted); margin: 0 0 22px; font-size: 15.5px; flex: 1; }
-.sample .btn { align-self: flex-start; }
-.listlink { margin-top: 26px; text-align: center; color: var(--muted); }
-.listlink a { color: var(--navy); font-weight: 600; }
+.samples { display:grid; grid-template-columns:1fr 1fr 1fr; gap:22px; }
+.sample { display:flex; flex-direction:column; background:var(--card); border:1px solid var(--line); border-radius:var(--r); overflow:hidden; text-decoration:none; transition:transform .2s, box-shadow .2s; }
+.sample:hover { transform:translateY(-3px); box-shadow:0 18px 40px rgba(26,35,50,.10); }
+.sample .img { background:var(--soft); padding:22px 22px 0; height:230px; overflow:hidden; border-bottom:1px solid var(--line); }
+.sample .img img { width:150%; max-width:none; height:auto; border-radius:6px 6px 0 0; box-shadow:0 10px 26px rgba(26,35,50,.14); }
+.sample .body { padding:20px 22px 22px; display:flex; flex-direction:column; flex:1; }
+.sample .area { font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); font-weight:600; }
+.sample h3 { margin:8px 0 8px; font-size:19px; }
+.sample p { margin:0 0 16px; color:var(--muted); font-size:15px; flex:1; }
+.sample .dl { font-weight:600; color:var(--navy); font-size:15px; }
+.sample .dl::after { content:" ↓"; color:var(--accent); }
+.listcard .img { display:flex; flex-direction:column; justify-content:flex-start; gap:8px; padding:26px 30px; background:var(--navy); }
+.listcard .img div { background:rgba(255,255,255,.08); border-radius:6px; padding:9px 12px; color:#dfe4ec; font-size:13px; line-height:1.35; }
+.listcard .img div span { color:#e9a68d; margin-right:6px; font-variant-numeric:tabular-nums; }
 
-/* areas */
-.areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
-.area { display: flex; justify-content: space-between; align-items: center; text-decoration: none; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; transition: border-color .15s, transform .15s; }
-.area:hover { border-color: var(--accent); transform: translateY(-1px); }
-.area b { font-family: var(--serif); color: var(--navy); font-size: 18px; font-weight: 600; }
-.area span { color: var(--muted); font-size: 14px; white-space: nowrap; }
+/* pricing */
+.pricing { background:var(--card); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.tiers { display:grid; grid-template-columns:repeat(5, 1fr); gap:12px; }
+.tier { border:1px solid var(--line); border-radius:12px; padding:16px 16px 14px; background:var(--paper); }
+.tier b { display:block; font-size:14px; color:var(--muted); font-weight:500; }
+.tier strong { display:block; font-family:var(--serif); font-size:25px; color:var(--navy); font-weight:600; margin:2px 0; }
+.tier span { font-size:13px; color:var(--faint); }
+.tier.hot { border-color:var(--accent); background:var(--sel); }
+.tier.hot b { color:var(--accent); font-weight:600; }
+.pricing .row { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:18px; margin-top:28px; padding-top:24px; border-top:1px solid var(--line); }
+.pricing .row p { margin:0; color:var(--muted); font-size:15.5px; max-width:640px; }
 
-/* use */
-.use { background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.cols3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; }
-.cols3 h3 { font-size: 20px; margin-bottom: 10px; }
-.cols3 p { color: var(--muted); margin: 0; font-size: 15.5px; }
+/* catalog */
+.catalog { padding-top:88px; padding-bottom:140px; }
+.cat-tools { position:sticky; top:72px; z-index:12; background:var(--paper); padding:14px 0 12px; border-bottom:1px solid var(--line); }
+.search { position:relative; }
+.search input { width:100%; font:16px var(--sans); padding:15px 16px 15px 46px; border:1.5px solid var(--line2); border-radius:12px; background:#fff; color:var(--ink); outline:none; transition:border-color .15s, box-shadow .15s; }
+.search input:focus { border-color:var(--navy); box-shadow:0 0 0 4px rgba(26,35,50,.08); }
+.search svg { position:absolute; left:16px; top:50%; transform:translateY(-50%); color:var(--faint); }
+.chips { display:flex; gap:8px; overflow-x:auto; padding:12px 0 2px; scrollbar-width:none; }
+.chips::-webkit-scrollbar { display:none; }
+.chip { flex:0 0 auto; border:1px solid var(--line2); background:#fff; border-radius:999px; padding:7px 14px; font:500 14px var(--sans); cursor:pointer; color:var(--ink); }
+.chip[aria-pressed="true"] { background:var(--navy); border-color:var(--navy); color:#fff; }
+.chip b { font-weight:600; opacity:.55; margin-left:6px; }
+.chip.sel { border-color:var(--accent); color:var(--accent); }
+.chip.sel[aria-pressed="true"] { background:var(--accent); color:#fff; }
+.cat-head { display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin:18px 0 0; color:var(--muted); font-size:14px; }
+.cat-head button { background:none; border:0; color:var(--accent); font:600 14px var(--sans); cursor:pointer; padding:0; }
+.g-area { font-family:var(--serif); font-size:26px; color:var(--navy); margin:34px 0 6px; }
+.g-sub { font-size:12.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--faint); font-weight:600; margin:20px 0 8px; }
+.item { display:grid; grid-template-columns:24px 40px 1fr auto; gap:6px 12px; align-items:start; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; margin:8px 0; cursor:pointer; transition:border-color .12s, background .12s; }
+.item:hover { border-color:var(--line2); }
+.item.on { background:var(--sel); border-color:#e3b5a4; }
+.item input { width:20px; height:20px; margin:2px 0 0; accent-color:var(--accent); cursor:pointer; }
+.item .no { color:var(--faint); font-variant-numeric:tabular-nums; font-size:14px; padding-top:1px; }
+.item .t { font-weight:500; color:var(--ink); line-height:1.4; }
+.item .kw { grid-column:3 / 5; color:var(--faint); font-size:13px; line-height:1.45; display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical; overflow:hidden; }
+.item .meta { color:var(--faint); font-size:13px; white-space:nowrap; padding-top:2px; text-align:right; }
+.more { display:block; margin:22px auto 0; }
+.empty { color:var(--muted); text-align:center; padding:44px 0; }
 
-/* faq */
-.faq { max-width: 820px; }
-details { border-bottom: 1px solid var(--line); padding: 4px 0; }
-summary { list-style: none; cursor: pointer; padding: 20px 40px 20px 0; position: relative; font-family: var(--serif); font-size: 20px; color: var(--navy); font-weight: 600; }
-summary::-webkit-details-marker { display: none; }
-summary::after { content: "+"; position: absolute; right: 4px; top: 16px; font-size: 26px; color: var(--accent); font-family: var(--sans); font-weight: 400; transition: transform .2s; }
-details[open] summary::after { transform: rotate(45deg); }
-details p { margin: 0 0 22px; color: var(--muted); }
+/* order bar */
+.bar { position:fixed; left:0; right:0; bottom:0; z-index:40; background:rgba(255,255,255,.97); backdrop-filter:blur(8px); border-top:1px solid var(--line); box-shadow:0 -10px 30px rgba(26,35,50,.08); transform:translateY(110%); transition:transform .25s; padding-bottom:env(safe-area-inset-bottom); }
+.bar.show { transform:none; }
+.bar .wrap { display:flex; align-items:center; gap:16px; padding-top:12px; padding-bottom:12px; }
+.bar .info { flex:1; min-width:0; font-size:14px; color:var(--muted); }
+.bar .info b { color:var(--navy); font-size:16px; }
+.bar .info .lk { background:none; border:0; padding:0; color:var(--accent); font:600 13.5px var(--sans); cursor:pointer; margin-left:8px; }
+.bar .btn[aria-disabled="true"] { background:#cdd2da; box-shadow:none; pointer-events:none; }
+.drawer { display:none; max-height:40vh; overflow:auto; border-bottom:1px solid var(--line); }
+.drawer.open { display:block; }
+.drawer .r { display:flex; gap:10px; padding:8px 0; border-bottom:1px solid #f1eee8; font-size:14px; }
+.drawer .r span:first-child { color:var(--faint); min-width:34px; }
+.drawer .r button { margin-left:auto; background:none; border:0; color:var(--accent); cursor:pointer; font:500 13px var(--sans); }
 
-/* cta */
-.band { background: var(--navy); color: #fff; border-radius: 22px; padding: 56px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
-.band h2 { color: #fff; }
-.band p { color: #c8d0de; margin: 12px 0 0; max-width: 560px; }
-.band .btn-accent { white-space: nowrap; }
+/* use + faq */
+.cols { display:grid; grid-template-columns:repeat(3, 1fr); gap:40px; }
+.cols h3 { margin-bottom:8px; }
+.cols p { color:var(--muted); margin:0; font-size:15.5px; }
+.faq { max-width:820px; }
+details { border-bottom:1px solid var(--line); }
+summary { list-style:none; cursor:pointer; padding:22px 44px 22px 0; position:relative; font-family:var(--serif); font-size:20px; color:var(--navy); font-weight:600; }
+summary::-webkit-details-marker { display:none; }
+summary::after { content:"+"; position:absolute; right:6px; top:18px; font:400 28px var(--sans); color:var(--accent); transition:transform .2s; }
+details[open] summary::after { transform:rotate(45deg); }
+details p { margin:0 0 22px; color:var(--muted); }
 
-/* contact */
-.contact { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
-.contact-box { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 30px; }
-.contact-box a { color: var(--navy); font-weight: 600; text-decoration: none; }
-.contact-box div { padding: 12px 0; border-bottom: 1px solid var(--line); }
-.contact-box div:last-child { border-bottom: 0; }
-.contact-box small { display: block; color: var(--muted); font-size: 13px; }
+/* contact + footer */
+.contact { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; background:var(--navy); color:#d8dde7; border-radius:22px; padding:56px; }
+.contact h2 { color:#fff; }
+.contact p { margin:14px 0 0; font-size:17px; }
+.contact .lines a { display:block; color:#fff; text-decoration:none; font-family:var(--serif); font-size:24px; padding:14px 0; border-bottom:1px solid rgba(255,255,255,.14); }
+.contact .lines a:last-child { border-bottom:0; }
+.contact .lines small { display:block; font-family:var(--sans); font-size:12.5px; letter-spacing:.12em; text-transform:uppercase; color:#e9a68d; margin-bottom:2px; }
+footer { padding:40px 0 140px; color:var(--faint); font-size:14px; }
+footer .wrap { display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+footer a { color:var(--muted); }
+footer .links { display:flex; gap:22px; flex-wrap:wrap; }
+.note { font-size:13px; color:var(--faint); margin-top:6px; max-width:560px; }
+.toast { position:fixed; left:50%; bottom:96px; transform:translateX(-50%); background:var(--navy); color:#fff; padding:10px 16px; border-radius:10px; font-size:14px; opacity:0; transition:opacity .2s; pointer-events:none; z-index:50; }
+.toast.show { opacity:1; }
+.reveal { opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease; }
+.reveal.in { opacity:1; transform:none; }
 
-footer { border-top: 1px solid var(--line); padding: 40px 0 48px; color: var(--muted); font-size: 14px; }
-.foot { display: flex; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
-.foot a { color: var(--muted); }
-.foot .links { display: flex; gap: 22px; flex-wrap: wrap; }
-
-.reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
-.reveal.in { opacity: 1; transform: none; }
-
-@media (max-width: 960px) {
-  .hero-grid, .split, .contact { grid-template-columns: 1fr; gap: 44px; }
-  .grid4 { grid-template-columns: 1fr 1fr; }
-  .stats .wrap { grid-template-columns: 1fr 1fr; }
-  .stat b { font-size: 26px; }
-  .cols3, .steps { grid-template-columns: 1fr; }
-  .band { flex-direction: column; align-items: flex-start; padding: 40px 30px; }
-  .doc { max-width: 520px; }
+@media (max-width:1000px) {
+  .hero-grid, .research .wrap, .contact { grid-template-columns:1fr; gap:40px; }
+  .paper { max-width:520px; margin:0 auto; }
+  .what { grid-template-columns:1fr 1fr; }
+  .what div:nth-child(3) { border-left:0; }
+  .what div:nth-child(n+3) { border-top:1px solid var(--line); }
+  .samples { grid-template-columns:1fr 1fr; }
+  .tiers { grid-template-columns:repeat(3, 1fr); }
+  .cols { grid-template-columns:1fr; gap:26px; }
 }
-@media (max-width: 760px) {
-  body { font-size: 16px; }
-  section { padding: 68px 0; }
-  .menu { display: none; position: absolute; top: 72px; left: 0; right: 0; background: var(--paper); flex-direction: column; align-items: stretch; gap: 0; padding: 8px 24px 20px; border-bottom: 1px solid var(--line); }
-  .menu.open { display: flex; }
-  .menu a { padding: 12px 0; border-bottom: 1px solid var(--line); }
-  .menu .btn { margin-top: 12px; justify-content: center; border-bottom: 0; }
-  .burger { display: block; }
-  .grid4, .cards2 { grid-template-columns: 1fr; }
-  .doc-back { inset: 12px -10px -12px 10px; }
+@media (max-width:760px) {
+  body { font-size:16px; }
+  section { padding:68px 0; }
+  .wrap { padding:0 18px; }
+  .nav { height:64px; }
+  html { scroll-padding-top:70px; }
+  .menu { display:none; position:absolute; top:64px; left:0; right:0; flex-direction:column; align-items:stretch; gap:0; background:var(--paper); padding:6px 18px 18px; border-bottom:1px solid var(--line); }
+  .menu.open { display:flex; }
+  .menu a { padding:14px 0; border-bottom:1px solid var(--line); }
+  .menu .btn { margin-top:14px; border-bottom:0; }
+  .burger { display:block; }
+  .hero { padding:36px 0 24px; }
+  .hero .cta .btn { flex:1; }
+  .paper .tag { display:none; }
+  .strip .wrap { grid-template-columns:1fr 1fr; }
+  .stat { padding:18px 14px; }
+  .stat:nth-child(3) { border-left:0; padding-left:0; }
+  .stat:nth-child(n+3) { border-top:1px solid var(--line); }
+  .stat b { font-size:25px; }
+  .what { grid-template-columns:1fr; }
+  .what div { border-left:0 !important; border-top:1px solid var(--line); }
+  .what div:first-child { border-top:0; }
+  .samples { grid-template-columns:1fr; }
+  .tiers { grid-template-columns:1fr 1fr; }
+  .cat-tools { top:64px; }
+  .item { grid-template-columns:22px 1fr auto; padding:13px 14px; }
+  .item .no { display:none; }
+  .item .kw { grid-column:2 / 4; }
+  .contact { padding:34px 24px; border-radius:18px; }
+  .contact .lines a { font-size:20px; }
+  .bar .wrap { gap:10px; }
+  .bar .btn { padding:13px 14px; font-size:15px; }
 }
-@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+@media (prefers-reduced-motion:reduce) { .reveal { opacity:1; transform:none; transition:none; } html { scroll-behavior:auto; } .btn, .sample { transition:none; } }
 </style>
 </head>
 <body>
 
-<header id="top">
+<header class="top" id="top">
   <div class="wrap nav">
-    <a class="logo" href="#top" aria-label="JurisPoint, na začiatok">JURIS<span class="rule">§</span>POINT</a>
-    <nav class="menu" id="menu">
-      <a href="#ako">Ako to funguje</a>
-      <a href="#ukazky">Ukážky</a>
-      <a href="#oblasti">Oblasti práva</a>
+    <a class="logo" href="/" aria-label="JurisPoint, úvodná stránka">JURIS<i>§</i>POINT</a>
+    <nav class="menu" id="menu" aria-label="Hlavná navigácia">
+      <a href="#ukazky">Ukážky zdarma</a>
+      <a href="#cennik">Cenník</a>
       <a href="#otazky">Otázky</a>
       <a href="#kontakt">Kontakt</a>
-      <a class="btn btn-primary" href="katalog/">Katalóg analýz</a>
+      <a class="btn btn-dark" href="#katalog">Katalóg analýz</a>
     </nav>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
   </div>
@@ -209,217 +275,323 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 48px; color: var(--m
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">Analýzy súdnej judikatúry pre advokátov</span>
-      <h1>Ako súdy rozhodujú vo Vašej otázke. <em>Prehľadne, s&nbsp;citáciami.</em></h1>
-      <p class="lead">Každá analýza odpovedá na jednu konkrétnu právnu otázku, na ktorú zákon nedáva jednoznačnú odpoveď. Nájdete v nej kľúčové rozhodnutia so spisovou značkou, doslovné citácie použiteľné v podaní a praktický postup pre obe strany sporu.</p>
+      <span class="kicker">Analýzy súdnej judikatúry</span>
+      <h1>Ako súdy rozhodujú <em>vo Vašej otázke.</em></h1>
+      <p class="lead">Každá analýza rieši jednu konkrétnu právnu otázku, na ktorú zákon nedáva jednoznačnú odpoveď. Kľúčové rozhodnutia so spisovou značkou, doslovné citácie použiteľné v podaní a praktický postup pre obe strany sporu.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="katalog/">Prezrieť katalóg analýz →</a>
-        <a class="btn btn-ghost" href="#ukazky">Dve ukážky zdarma</a>
+        <a class="btn btn-accent" href="#katalog">Vybrať z 250 analýz</a>
+        <a class="btn btn-line" href="#ukazky">Ukážka zdarma</a>
       </div>
-      <p class="note">Vyberiete si len témy, ktoré Vás zaujímajú. Platí sa jednorazovo, bez predplatného.</p>
+      <p class="fine">Platíte len za témy, ktoré si vyberiete. Jednorazovo, bez predplatného.</p>
     </div>
-    <div class="doc reveal" aria-hidden="true">
-      <div class="doc-back"></div>
-      <div class="doc-card">
-        <div class="doc-top"><span>Analýza judikatúry</span><span>Rodinné právo</span></div>
-        <h3>Stačí samotný konflikt rodičov na zamietnutie striedavej starostlivosti?</h3>
-        <ul>
-          <li><span class="dot">1</span><div><b>Kľúčové rozhodnutia</b><small>so spisovou značkou a dátumom</small></div></li>
-          <li><span class="dot">2</span><div><b>Doslovné citácie</b><small>overiteľné v plnom znení rozhodnutia</small></div></li>
-          <li><span class="dot">3</span><div><b>Väčšinový aj menšinový názor</b><small>ak sa súdy rozchádzajú</small></div></li>
-          <li><span class="dot">4</span><div><b>Praktický postup</b><small>pre navrhovateľa aj odporcu</small></div></li>
-        </ul>
-        <div class="cite">Samotný konflikt či zhoršená komunikácia rodičov nie sú automatickou prekážkou striedavej starostlivosti. Rozhodujúci je najlepší záujem dieťaťa.<span>Väčšinový názor · z ukážky zdarma, 10 rozhodnutí ÚS SR a krajských súdov</span></div>
-      </div>
+    <div class="paper reveal" aria-hidden="true">
+      <div class="back sheet"><img src="/img/ukazka1-titul.webp" alt="" width="640" height="906"></div>
+      <div class="front sheet"><img src="/img/ukazka-prehlad.webp" alt="" width="1100" height="1557"></div>
+      <div class="tag"><b>Prehľad rozhodnutí</b>Súd, spisová značka, dátum a pozícia každého rozhodnutia na jednom mieste.</div>
     </div>
   </div>
 </section>
 
-<div class="stats">
+<div class="strip">
   <div class="wrap">
     <div class="stat"><b>250</b><span>analýz v katalógu</span></div>
     <div class="stat"><b>7</b><span>oblastí práva</span></div>
-    <div class="stat"><b>2024 až 2026</b><span>aktuálna rozhodovacia prax</span></div>
-    <div class="stat"><b>Pár minút</b><span>od platby po doručenie e‑mailom</span></div>
+    <div class="stat"><b>2025 a 2026</b><span>prevažne aktuálna prax</span></div>
+    <div class="stat"><b>od 1,40 €</b><span>za analýzu</span></div>
   </div>
 </div>
 
 <section id="obsah">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Čo nájdete v každej analýze</span>
+    <div class="head reveal">
+      <span class="kicker">Čo nájdete v každej analýze</span>
       <h2>Odpoveď z judikatúry, pripravená na použitie</h2>
-      <p>Analýzy sú stručné a štruktúrované tak, aby ste sa v otázke zorientovali za pár minút a citácie mohli rovno použiť.</p>
     </div>
-    <div class="grid4">
-      <div class="feat reveal"><div class="ic">?</div><h3>Konkrétna otázka</h3><p>Každá analýza rieši jednu otázku zo skutočných sporov, na ktorú zákon nedáva jednoznačnú odpoveď.</p></div>
-      <div class="feat reveal"><div class="ic">§</div><h3>Rozhodnutia a citácie</h3><p>Kľúčové rozhodnutia so spisovou značkou a doslovné citácie, ktoré môžete použiť v podaní.</p></div>
-      <div class="feat reveal"><div class="ic">⚖</div><h3>Oba pohľady</h3><p>Ak sa súdy rozchádzajú, uvádzame väčšinový aj menšinový názor a ich dôvody.</p></div>
-      <div class="feat reveal"><div class="ic">→</div><h3>Praktický postup</h3><p>Na konci odporúčaný postup pre obe strany sporu, teda na čo sa zamerať v konaní.</p></div>
+    <div class="what reveal">
+      <div><span class="n">01</span><h3>Skúmaná otázka</h3><p>Jedna konkrétna otázka z praxe, presne sformulovaná na začiatku analýzy.</p></div>
+      <div><span class="n">02</span><h3>Prehľad rozhodnutí</h3><p>Súd, spisová značka, dátum a pozícia každého rozhodnutia v jednej tabuľke.</p></div>
+      <div><span class="n">03</span><h3>Väčšinový aj menšinový názor</h3><p>Ak sa súdy rozchádzajú, vidíte obe línie a rozhodnutia, ktoré ich zastávajú.</p></div>
+      <div><span class="n">04</span><h3>Praktický postup</h3><p>Na čo sa zamerať v konaní, zvlášť pre každú stranu sporu.</p></div>
     </div>
   </div>
 </section>
 
 <section class="research">
-  <div class="wrap split">
+  <div class="wrap">
     <div class="reveal">
-      <span class="eyebrow">Ručná rešerš</span>
-      <p class="quote">Odpoveď sme hľadali priamo v judikatúre. Rozhodnutia sme vyberali jednotlivo, nie pomocou AI.</p>
+      <span class="kicker">Ručná rešerš</span>
+      <blockquote>Odpoveď sme hľadali priamo v judikatúre. Rozhodnutia sme vyhľadávali a vyberali jednotlivo, nie pomocou AI.</blockquote>
     </div>
-    <ul class="checks reveal">
-      <li><b>Každá citácia je doslovná</b> a so spisovou značkou, takže si ju overíte v plnom znení rozhodnutia.</li>
-      <li><b>Rešerš nenahrádza Vašu prácu, ale dopĺňa ju.</b> Často v analýze nájdete aj rozhodnutie, na ktoré by ste inak nenarazili.</li>
-      <li><b>Šetrí čas.</b> Namiesto hodín v databázach máte prehľad, ako súdy v danej otázke rozhodujú.</li>
+    <ul class="reveal">
+      <li><b>Doslovné citácie so spisovou značkou.</b> Každú si overíte v plnom znení rozhodnutia.</li>
+      <li><b>Prehľad namiesto hodín v databázach.</b> V otázke sa zorientujete za pár minút.</li>
+      <li><b>Často aj rozhodnutie, ktoré by ste inak nenašli.</b> Rešerš Vašu prácu nenahrádza, dopĺňa ju.</li>
     </ul>
   </div>
 </section>
 
-<section id="ako">
+<section id="ukazky">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Ako to funguje</span>
-      <h2>Tri kroky, žiadne predplatné</h2>
-    </div>
-    <div class="steps">
-      <div class="step reveal"><h3>Vyberte si témy</h3><p>V katalógu analýz zakliknite témy, ktoré Vás zaujímajú. Hľadať môžete podľa oblasti práva alebo kľúčového slova.</p></div>
-      <div class="step reveal"><h3>Zaplaťte kartou</h3><p>Bezpečná platba cez Stripe kartou, Apple Pay alebo Google Pay. Faktúru dostanete automaticky.</p></div>
-      <div class="step reveal"><h3>Analýzy prídu e‑mailom</h3><p>Vybrané analýzy vo formáte PDF Vám pošleme e‑mailom spravidla do niekoľkých minút.</p></div>
-    </div>
-    <p class="aside reveal">Potrebujete faktúru vopred a platbu prevodom z účtu kancelárie? Napíšte nám na <a href="mailto:jurispointsk@gmail.com">jurispointsk@gmail.com</a>.</p>
-  </div>
-</section>
-
-<section class="samples" id="ukazky">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Ukážky zdarma</span>
+    <div class="head reveal">
+      <span class="kicker">Zdarma, bez registrácie</span>
       <h2>Pozrite sa, ako analýzy vyzerajú</h2>
-      <p>Dve celé analýzy si môžete stiahnuť bez registrácie.</p>
+      <p>Dve celé analýzy na stiahnutie a zoznam všetkých tém s kľúčovými slovami a predpismi.</p>
     </div>
-    <div class="cards2">
-      <div class="sample reveal">
-        <span class="tag">Rodinné právo</span>
-        <h3>Striedavá starostlivosť</h3>
-        <p>Stačí samotný konflikt rodičov na zamietnutie striedavej starostlivosti, alebo súdy skúmajú niečo iné?</p>
-        <a class="btn btn-ghost" href="https://drive.google.com/uc?export=download&id=1XgftIvjgyibeNTzTa-i2IckVtqUerCGB">Stiahnuť PDF</a>
-      </div>
-      <div class="sample reveal">
-        <span class="tag">Trestné právo</span>
-        <h3>Kamerový záznam ako dôkaz</h3>
-        <p>Je kamerový záznam mestskej polície použiteľný ako dôkaz v trestnom konaní a za akých podmienok?</p>
-        <a class="btn btn-ghost" href="https://drive.google.com/uc?export=download&id=1DebYU2AugeCQBMPwfMe0_0hk5HycLg2d">Stiahnuť PDF</a>
-      </div>
+    <div class="samples">
+      <a class="sample reveal" href="https://drive.google.com/uc?export=download&id=1XgftIvjgyibeNTzTa-i2IckVtqUerCGB" target="_blank" rel="noopener">
+        <div class="img"><img src="/img/ukazka1-vyrez.webp" alt="Prehľad rozhodnutí z ukážky o striedavej starostlivosti" width="900" height="557" loading="lazy"></div>
+        <div class="body"><span class="area">Rodinné právo</span><h3>Konflikt rodičov a striedavá starostlivosť</h3><p>Stačí samotný konflikt rodičov na zamietnutie striedavej osobnej starostlivosti? Desať rozhodnutí ÚS SR a krajských súdov.</p><span class="dl">Stiahnuť ukážku (PDF)</span></div>
+      </a>
+      <a class="sample reveal" href="https://drive.google.com/uc?export=download&id=1DebYU2AugeCQBMPwfMe0_0hk5HycLg2d" target="_blank" rel="noopener">
+        <div class="img"><img src="/img/ukazka2-vyrez.webp" alt="Prehľad rozhodnutí z ukážky o kamerovom zázname" width="900" height="557" loading="lazy"></div>
+        <div class="body"><span class="area">Trestné právo</span><h3>Kamerový záznam mestskej polície ako dôkaz</h3><p>Je záznam z kamier mestskej polície použiteľný ako dôkaz v trestnom konaní a za akých podmienok?</p><span class="dl">Stiahnuť ukážku (PDF)</span></div>
+      </a>
+      <a class="sample listcard reveal" href="/zoznam-tem.pdf" target="_blank" rel="noopener">
+        <div class="img"><div><span>174.</span>Použiteľnosť kamerového záznamu mestskej polície ako dôkaz v trestnom konaní</div><div><span>115.</span>Konflikt a zhoršená komunikácia rodičov ako prekážka striedavej osobnej starostlivosti</div><div><span>85.</span>Odporovateľnosť právnych úkonov (§ 42a OZ)</div><div><span>215.</span>Reťazenie výpovedí z pracovného pomeru</div><div><span>130.</span>Neodkladné opatrenie vo veciach výživného</div></div>
+        <div class="body"><span class="area">Všetkých 250 tém</span><h3>Zoznam tém s kľúčovými slovami</h3><p>Prehľad celého katalógu podľa oblastí práva, s kľúčovými slovami a predpismi, ktorých sa analýzy týkajú.</p><span class="dl">Stiahnuť zoznam (PDF)</span></div>
+      </a>
     </div>
-    <p class="listlink reveal">Všetky témy s kľúčovými slovami nájdete aj v <a href="zoznam-tem.pdf">zozname tém (PDF)</a>.</p>
   </div>
 </section>
 
-<section id="oblasti">
+<section class="pricing" id="cennik">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Oblasti práva</span>
-      <h2>250 analýz, roztriedených podľa odvetví</h2>
-      <p>Prevažne z rozhodovacej praxe rokov 2025 a 2026.</p>
+    <div class="head reveal">
+      <span class="kicker">Cenník</span>
+      <h2>Čím viac tém, tým nižšia cena za analýzu</h2>
+      <p>Témy si vyberáte sami, cena sa určí podľa počtu. Minimálna objednávka je päť analýz.</p>
     </div>
-    <div class="areas reveal">
-      <a class="area" href="katalog/"><b>Civilné právo</b><span>113 analýz</span></a>
-      <a class="area" href="katalog/"><b>Trestné právo</b><span>68 analýz</span></a>
-      <a class="area" href="katalog/"><b>Rodinné právo</b><span>26 analýz</span></a>
-      <a class="area" href="katalog/"><b>Správne právo</b><span>23 analýz</span></a>
-      <a class="area" href="katalog/"><b>Ústavné právo a súdna organizácia</b><span>9 analýz</span></a>
-      <a class="area" href="katalog/"><b>Pracovné právo</b><span>6 analýz</span></a>
-      <a class="area" href="katalog/"><b>Obchodné právo</b><span>5 analýz</span></a>
+    <div class="tiers reveal" id="tiers"></div>
+    <div class="row reveal">
+      <p>Platba kartou, Apple Pay alebo Google Pay cez Stripe. Faktúru aj analýzy dostanete e‑mailom. Potrebujete faktúru vopred a platbu prevodom? Napíšte nám.</p>
+      <button type="button" class="btn btn-dark" id="allbtn">Celý katalóg za 349,99 €</button>
     </div>
+  </div>
+</section>
+
+<section class="catalog" id="katalog">
+  <div class="wrap">
+    <div class="head reveal" style="margin-bottom:24px">
+      <span class="kicker">Katalóg analýz</span>
+      <h2>Vyberte si témy pre svoju prax</h2>
+      <p>Hľadajte podľa názvu, paragrafu alebo kľúčového slova. Zaškrtnite témy a objednajte.</p>
+    </div>
+  </div>
+  <div class="cat-tools">
+    <div class="wrap">
+      <div class="search">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="Napr. výživné, § 24 ZoR, kamerový záznam, premlčanie…" autocomplete="off" aria-label="Hľadať v katalógu">
+      </div>
+      <div class="chips" id="areas"></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="cat-head"><span id="found"></span><button type="button" id="clearsel" hidden>Zrušiť výber</button></div>
+    <div id="list"></div>
   </div>
 </section>
 
 <section class="use">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Využitie</span>
-      <h2>Pre prax aj odbornú činnosť</h2>
+    <div class="head reveal">
+      <span class="kicker">Využitie</span>
+      <h2>Pre konanie aj odbornú činnosť</h2>
     </div>
-    <div class="cols3">
-      <div class="reveal"><h3>Konanie pred súdom</h3><p>Podklady pre argumentáciu pri zastupovaní a obhajobe klientov, s citáciami pripravenými do podania.</p></div>
-      <div class="reveal"><h3>Články a prednášky</h3><p>Hotový prehľad judikatúry pre odborné články, prednášky a inú publikačnú činnosť.</p></div>
-      <div class="reveal"><h3>Voľné použitie obsahu</h3><p>Obsah môžete voľne citovať a spracúvať vo vlastných textoch. Nie je povolené ďalej šíriť samotné PDF súbory.</p></div>
+    <div class="cols reveal">
+      <div><h3>Zastupovanie a obhajoba</h3><p>Podklad pre argumentáciu pred súdom, s citáciami pripravenými do podania.</p></div>
+      <div><h3>Články a prednášky</h3><p>Hotový prehľad judikatúry pre odborné články, prednášky a publikačnú činnosť.</p></div>
+      <div><h3>Voľné použitie obsahu</h3><p>Obsah môžete voľne citovať a spracúvať vo vlastných textoch. Ďalej šíriť samotné PDF súbory nie je dovolené.</p></div>
     </div>
   </div>
 </section>
 
-<section id="otazky">
+<section id="otazky" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Časté otázky</span>
+    <div class="head reveal">
+      <span class="kicker">Časté otázky</span>
       <h2>Otázky a odpovede</h2>
     </div>
     <div class="faq reveal">
+      <details><summary>Ako a kedy dostanem analýzy?</summary><p>Po zaplatení Vám vybrané analýzy pošleme vo formáte PDF na e‑mail zadaný pri platbe, spravidla do niekoľkých minút. Faktúru Vám pošle platobná brána Stripe.</p></details>
       <details><summary>Ako analýzy vznikajú?</summary><p>Za každou analýzou stojí ručná rešerš. Rozhodnutia sme vyhľadávali a vyberali jednotlivo podľa skúmanej otázky, nie pomocou AI. Citácie sú doslovné a so spisovou značkou.</p></details>
-      <details><summary>Akých súdov sa analýzy týkajú?</summary><p>Ide o rozhodovaciu prax slovenských súdov, prevažne z rokov 2025 a 2026. Pri každej téme v katalógu vidíte ročník a v zozname tém aj kľúčové slová a predpisy.</p></details>
-      <details><summary>Ako a kedy dostanem analýzy?</summary><p>Po zaplatení Vám vybrané analýzy pošleme e‑mailom vo formáte PDF, spravidla do niekoľkých minút. Faktúru Vám pošle platobný systém Stripe v samostatnom e‑maile.</p></details>
-      <details><summary>Môžem dostať faktúru vopred a zaplatiť prevodom?</summary><p>Áno. Napíšte nám čísla tém a fakturačné údaje kancelárie na jurispointsk@gmail.com. Vystavíme faktúru a po úhrade Vám analýzy pošleme.</p></details>
-      <details><summary>Môžem obsah analýz použiť vo svojich textoch?</summary><p>Áno. Obsah môžete voľne citovať a spracúvať v podaniach, článkoch či prednáškach a nemusíte nás uvádzať. Nie je povolené ďalej šíriť samotné PDF súbory.</p></details>
-      <details><summary>Je to predplatné?</summary><p>Nie. Platíte jednorazovo len za analýzy, ktoré si vyberiete. Cenník nájdete v katalógu.</p></details>
+      <details><summary>Z akých rokov sú rozhodnutia?</summary><p>Analýzy zachytávajú prevažne rozhodovaciu prax z rokov 2025 a 2026. Ročník vidíte pri každej téme v katalógu, stav judikatúry je uvedený na titulnej strane analýzy.</p></details>
+      <details><summary>Môžem dostať faktúru vopred a zaplatiť prevodom?</summary><p>Áno. Pošlite nám čísla tém a fakturačné údaje kancelárie na jurispointsk@gmail.com. Vystavíme faktúru a po úhrade Vám analýzy pošleme.</p></details>
+      <details><summary>Je to predplatné?</summary><p>Nie. Platíte jednorazovo len za analýzy, ktoré si vyberiete, a zostávajú Vám natrvalo.</p></details>
     </div>
   </div>
 </section>
 
-<section style="padding-top:0">
+<section id="kontakt" style="padding-top:0">
   <div class="wrap">
-    <div class="band reveal">
+    <div class="contact reveal">
       <div>
-        <h2>Vyberte si témy, ktoré Vás zaujímajú</h2>
-        <p>V katalógu prehľadne podľa oblastí práva, s vyhľadávaním. Zaplatíte len za analýzy, ktoré si vyberiete.</p>
+        <span class="kicker" style="color:#e9a68d">Kontakt</span>
+        <h2 style="margin-top:14px">Hľadáte konkrétnu tému?</h2>
+        <p>Napíšte nám alebo zavolajte. Radi Vám poradíme, ktoré analýzy sa hodia pre Vašu prax.</p>
       </div>
-      <a class="btn btn-accent" href="katalog/">Otvoriť katalóg →</a>
-    </div>
-  </div>
-</section>
-
-<section id="kontakt" style="padding-top:24px">
-  <div class="wrap contact">
-    <div class="reveal">
-      <span class="eyebrow">Kontakt</span>
-      <h2 style="margin-top:14px">Máte otázku?</h2>
-      <p class="lead" style="margin-top:16px">Napíšte nám alebo zavolajte. Radi Vám pomôžeme vybrať analýzy pre Vašu prax.</p>
-    </div>
-    <div class="contact-box reveal">
-      <div><small>E‑mail</small><a href="mailto:jurispointsk@gmail.com">jurispointsk@gmail.com</a></div>
-      <div><small>Telefón</small><a href="tel:+421902197834">+421 902 197 834</a></div>
-      <div><small>Katalóg analýz</small><a href="katalog/">Prezrieť témy a cenník</a></div>
+      <div class="lines">
+        <a href="mailto:jurispointsk@gmail.com"><small>E‑mail</small>jurispointsk@gmail.com</a>
+        <a href="tel:+421902197834"><small>Telefón</small>+421 902 197 834</a>
+      </div>
     </div>
   </div>
 </section>
 </main>
 
 <footer>
-  <div class="wrap foot">
+  <div class="wrap">
     <div>
-      <div style="font-family:var(--serif);color:var(--navy);font-weight:600;font-size:16px;margin-bottom:6px">JurisPoint</div>
-      Prevádzkovateľ: Michal Stano (JurisPoint), Za humnami 173/16, 919 09 Šelpice<br>
-      IČO: 57971153 · DIČ: 1131411457 · nie je platiteľom DPH<br>
-      Zapísaný v živnostenskom registri Okresného úradu Trnava, č.&nbsp;250&#8209;64032 · <a href="mailto:jurispointsk@gmail.com">jurispointsk@gmail.com</a>
+      <div style="font-family:var(--serif);color:var(--navy);font-weight:600;font-size:16px">JurisPoint</div>
+      <div class="note">Analýzy sú odborným podkladom, nie právnym poradenstvom. Pred použitím v konaní si overte znenie citovaných rozhodnutí a aktuálne znenie predpisov.</div>
     </div>
     <div class="links">
-      <a href="obchodne-podmienky/">Obchodné podmienky</a>
-      <a href="ochrana-osobnych-udajov/">Ochrana osobných údajov</a>
+      <a href="/obchodne-podmienky/">Obchodné podmienky</a>
+      <a href="/ochrana-osobnych-udajov/">Ochrana osobných údajov</a>
       <span>© 2026 JurisPoint</span>
     </div>
   </div>
 </footer>
 
+<div class="bar" id="bar" aria-live="polite">
+  <div class="wrap" style="display:block;padding-top:0;padding-bottom:0"><div class="drawer" id="drawer"></div></div>
+  <div class="wrap">
+    <div class="info" id="info"></div>
+    <a class="btn btn-accent" id="buy" href="#" aria-disabled="true">Objednať</a>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
 <script>
 (function () {
-  var h = document.querySelector("header");
-  var onScroll = function () { h.classList.toggle("scrolled", window.scrollY > 8); };
+  var CATALOG = [{"i":1,"y":2026,"a":"Civilné právo","s":"Civilný proces","t":"Inštitút neodkladného opatrenia podľa CSP a jeho presah do iných odvetví práva (napr. správneho práva)","p":7,"kw":"neodkladné opatrenie, predbežné opatrenie, právomoc súdu, civilný vs. správny súd, kompetenčný spor, kompetenčný senát, obydlie, nedotknuteľnosť obydlia, vstup do obydlia, súkromnoprávny vzťah, § 324 CSP, čl. 21 Ústavy SR"},{"i":2,"y":2026,"a":"Civilné právo","s":"Civilný proces","t":"Judikatúra vo veciach elektronických podaní","p":8,"kw":"elektronické podanie, e-podanie, elektronická schránka, ÚPVS, slovensko.sk, kvalifikovaný elektronický podpis, KEP, autorizácia podania, koncipient, dovolanie, povinné zastúpenie advokátom, doplnenie podania, zachovanie lehoty, doručovanie advokátovi, elektronické doručovanie, § 125 CSP, § 121 CSP, § 429 CSP, § 25 zák. č. 305/2013 Z. z."},{"i":3,"y":2026,"a":"Civilné právo","s":"Civilný proces","t":"Listina v cudzom jazyku ako dôkaz v konaní","p":7,"kw":"listina v cudzom jazyku, cudzojazyčná listina, preklad listiny, úradný preklad, tlmočník, prekladateľ, štátny jazyk, listinný dôkaz, dokazovanie, materinský jazyk, náklady prekladu, § 204 CSP, § 155 CSP"},{"i":4,"y":2026,"a":"Civilné právo","s":"Civilný proces","t":"Miestna a kauzálna príslušnosť v upomínacom konaní","p":7,"kw":"upomínacie konanie, platobný rozkaz, elektronický platobný rozkaz, odpor, postúpenie veci, miestna príslušnosť, kauzálna príslušnosť, vecná príslušnosť, pracovnoprávny spor, obchodnoprávny spor, súd podľa výberu žalobcu, zákon o upomínacom konaní, § 13 CSP, § 15 CSP, § 19 CSP, § 22 CSP, § 23 CSP, § 43 CSP"},{"i":5,"y":2026,"a":"Civilné právo","s":"Civilný proces","t":"Ospravedlniteľný dôvod na zrušenie rozsudku pre zmeškanie žalovaného v zmysle § 277 ods. 2 CSP","p":12,"kw":"rozsudok pre zmeškanie, zrušenie rozsudku pre zmeškanie, ospravedlniteľný dôvod, ospravedlnenie neúčasti, neúčasť na pojednávaní, nedostavenie sa, pracovná neschopnosť, PN, choroba, hospitalizácia, substitúcia advokáta, dopravná zápcha, porucha auta, COVID, náhla nepredvídateľná udalosť, § 274 CSP, § 277 CSP, § 183 CSP"},{"i":6,"y":2026,"a":"Civilné právo","s":"Civilný proces","t":"Vzťah medzi sudcami ako dôvod na vylúčenie súdu","p":8,"kw":"vylúčenie sudcu, vylúčenie súdu, zaujatosť, námietka zaujatosti, predpojatosť, rodinný vzťah, príbuzenstvo, kolegiálne vzťahy, funkcionár súdu, predseda súdu, advokát príbuzný, delegácia veci, objektívny test nestrannosti, nestrannosť súdu, § 49 CSP"},{"i":7,"y":2025,"a":"Civilné právo","s":"Civilný proces","t":"Doktrína zmareného dôkazu","p":5,"kw":"zmarenie dôkazu, doktrína zmareného dôkazu, spoliation, zničenie dôkazu, zatajenie dôkazu, dôkazné bremeno, dokazovanie, common law, čl. 8 CSP, § 191 CSP, § 344 TZ"},{"i":8,"y":2025,"a":"Civilné právo","s":"Civilný proces","t":"Konanie s osobou, ktorá bola mŕtva už v čase podania žaloby","p":6,"kw":"mŕtvy žalovaný, úmrtie strany, nedostatok procesnej subjektivity, strana sporu, dedič, procesné nástupníctvo, zastavenie konania, žaloba proti mŕtvemu, § 60 CSP, § 61 CSP, § 63 CSP, § 161 CSP"},{"i":9,"y":2025,"a":"Civilné právo","s":"Civilný proces","t":"Miestna príslušnosť súdu v spore o určenie neexistencie záložného práva k nehnuteľnosti","p":4,"kw":"miestna príslušnosť, záložné právo, určenie neexistencie záložného práva, nehnuteľnosť, forum rei sitae, premlčanie, výlučná príslušnosť, § 13 CSP, § 20 CSP, § 19 CSP"},{"i":10,"y":2025,"a":"Civilné právo","s":"Civilný proces","t":"Možnosť odvolacieho súdu opätovne zrušiť rozhodnutie prvoinštančného súdu","p":6,"kw":"odvolací súd, opätovné zrušenie rozsudku, kasácia, zákaz opätovného zrušenia, apelačný princíp, zmena rozsudku, § 390 CSP, § 389 CSP"},{"i":11,"y":2025,"a":"Civilné právo","s":"Civilný proces","t":"Návrh na schválenie zmieru","p":5,"kw":"zmier, súdny zmier, schválenie zmieru, odvolacie konanie, plná moc, podpis advokáta, osobitné splnomocnenie, § 148 CSP, § 398 CSP, § 399 CSP"},{"i":12,"y":2025,"a":"Civilné právo","s":"Civilný proces","t":"Odvolanie proti zrušeniu kontroly neodkladného opatrenia technickými prostriedkami","p":6,"kw":"neodkladné opatrenie, kontrola technickými prostriedkami, elektronický náramok, domáce násilie, odvolanie, prípustnosť odvolania, § 33 zák. č. 78/2015 Z. z., § 325 CSP, § 357 CSP"},{"i":13,"y":2025,"a":"Civilné právo","s":"Civilný proces","t":"Odvolanie súhlasu so späťvzatím žaloby","p":4,"kw":"späťvzatie žaloby, súhlas žalovaného, odvolanie súhlasu, neodvolateľnosť súhlasu, zastavenie konania, § 146 CSP, § 144 CSP"},{"i":14,"y":2025,"a":"Civilné právo","s":"Civilný proces","t":"Podpis elektronického podania a nepodpísaná príloha s opisom rozhodujúcich skutočností","p":7,"kw":"elektronické podanie, kvalifikovaný elektronický podpis, KEP, nepodpísaná príloha, vady podania, formalizmus, prístup k súdu, žaloba, § 125 CSP, § 12 zák. č. 307/2016 Z. z., § 23 zák. č. 305/2013 Z. z."},{"i":15,"y":2025,"a":"Civilné právo","s":"Civilný proces","t":"Prejudicialita v konaniach o náhradu za vecné bremeno podľa zákona č. 66/2009 Z. z.","p":6,"kw":"prejudicialita, viazanosť právoplatným rozhodnutím, vecné bremeno, náhrada za vecné bremeno, zákonné vecné bremeno, energetika, res iudicata, bezdôvodné obohatenie, § 220 CSP, zák. č. 66/2009 Z. z."},{"i":16,"y":2025,"a":"Civilné právo","s":"Civilný proces","t":"Vylúčenie sudcu v prípade, kedy je žalovanou stranou súd","p":7,"kw":"vylúčenie sudcu, zaujatosť, súd ako žalovaný, žaloba proti súdu, nestrannosť, § 49 CSP, § 51 CSP"},{"i":17,"y":2025,"a":"Civilné právo","s":"Civilný proces","t":"Zastavenie prerušeného konania na základe späťvzatia žaloby aj bez rozhodnutia o jeho pokračovaní","p":5,"kw":"prerušenie konania, späťvzatie žaloby, zastavenie konania, pokračovanie v konaní, trovy konania, § 163 CSP, § 146 CSP, § 145 CSP"},{"i":18,"y":2026,"a":"Civilné právo","s":"Dedičské právo","t":"Účastníctvo v dodatočnom konaní o dedičstve","p":6,"kw":"dedičstvo, dodatočné konanie o dedičstve, novoobjavený majetok, účastníci dedičského konania, dedičia, okruh dedičov, viazanosť, res iudicata, notár, § 211 CMP"},{"i":19,"y":2025,"a":"Civilné právo","s":"Dedičské právo","t":"Dohoda o vyporiadaní dedičstva a odvolanie jedného z dedičov","p":6,"kw":"dedičské konanie, dohoda dedičov, vyporiadanie dedičstva, odvolanie dediča, všeobecná hodnota nehnuteľnosti, ocenenie dedičstva, notár, § 482 OZ, § 484 OZ, § 48 OZ"},{"i":20,"y":2025,"a":"Civilné právo","s":"Dedičské právo","t":"Právne predpoklady preukázania vysídlenia poručiteľa a prechodu majetku na štát v dedičskom konaní","p":11,"kw":"dedičské konanie, presídlenie, výmena obyvateľstva s Maďarskom, konfiškácia, Benešove dekréty, prechod majetku na štát, reštitúcie, § 2 zák. č. 148/1947 Zb., § 3 zák. č. 503/2003 Z. z."},{"i":21,"y":2025,"a":"Civilné právo","s":"Dedičské právo","t":"Prechod ručiteľského záväzku na dedičov","p":5,"kw":"ručenie, ručiteľ, prechod záväzku na dedičov, dedičia, zodpovednosť dediča za dlhy poručiteľa, úver, obmedzenie zodpovednosti, § 470 OZ, § 579 OZ, § 306 ObZ"},{"i":22,"y":2025,"a":"Civilné právo","s":"Duševné vlastníctvo","t":"Prerušenie konania pri konaní o výmaze dizajnu pred EUIPO","p":4,"kw":"dizajn Spoločenstva, EUIPO, výmaz dizajnu, neplatnosť dizajnu, prerušenie konania, porušenie dizajnu, duševné vlastníctvo, čl. 91 nariadenia (ES) č. 6/2002"},{"i":23,"y":2025,"a":"Civilné právo","s":"Exekúcia a dražby","t":"Postavenie exekútora","p":12,"kw":"súdny exekútor, postavenie exekútora, orgán verejnej moci, podnikateľ, zrušenie BSM, zodpovednosť exekútora za škodu, bezdôvodné obohatenie, § 148a OZ, § 2 ObZ, § 5 EP"},{"i":24,"y":2025,"a":"Civilné právo","s":"Exekúcia a dražby","t":"Pripojenie dražobného spisu v konaní o neplatnosť dobrovoľnej dražby","p":5,"kw":"dobrovoľná dražba, neplatnosť dražby, dražobný spis, dokazovanie, dražobník, § 21 zák. č. 527/2002 Z. z., § 17 zák. č. 527/2002 Z. z."},{"i":25,"y":2025,"a":"Civilné právo","s":"Medzinárodné právo procesné a cezhraničné spory","t":"Európsky exekučný titul a príslušnosť súdu","p":4,"kw":"európsky exekučný titul, osvedčenie, notárska zápisnica, príslušnosť súdu, nariadenie 805/2004, spotrebiteľ, cezhraničný výkon, § 21 CSP"},{"i":26,"y":2025,"a":"Civilné právo","s":"Medzinárodné právo procesné a cezhraničné spory","t":"Limited partnership","p":6,"kw":"limited partnership, zahraničná spoločnosť, Spojené kráľovstvo, právna subjektivita, apostila, výpis z registra, § 22 ObZ"},{"i":27,"y":2025,"a":"Civilné právo","s":"Medzinárodné právo procesné a cezhraničné spory","t":"Právna subjektivita zahraničnej osoby","p":7,"kw":"zahraničná osoba, zahraničný žalobca, právna subjektivita, procesná subjektivita, výpis z registra, apostila, plná moc, § 22 ObZ, § 61 CSP"},{"i":28,"y":2026,"a":"Civilné právo","s":"Premlčanie a preklúzia","t":"Riadne uplatnenie nároku na náhradu škody v adhéznom konaní","p":15,"kw":"adhézne konanie, poškodený, uplatnenie nároku na náhradu škody v trestnom konaní, premlčanie, spočívanie premlčacej doby, náhrada škody, odkaz na civilný proces, trestné konanie, litispendencia, vedomosť o škode, vedomosť o škodcovi, § 106 OZ, § 112 OZ, § 420 OZ, § 46 TP, § 287 TP, § 288 TP"},{"i":29,"y":2026,"a":"Civilné právo","s":"Premlčanie a preklúzia","t":"Žaloba o nahradenie prejavu vôle (premlčanie a dobré mravy)","p":11,"kw":"nahradenie prejavu vôle, prevod vlastníctva bytu, zákon o vlastníctve bytov, premlčanie, námietka premlčania, dobré mravy, rozpor s dobrými mravmi, zneužitie práva, šikana, obec, bytové družstvo, § 3 OZ, § 100 OZ, § 101 OZ, zák. č. 182/1993 Z. z."},{"i":30,"y":2025,"a":"Civilné právo","s":"Premlčanie a preklúzia","t":"Premlčanie bezdôvodného obohatenia v spotrebiteľských sporoch","p":5,"kw":"premlčanie, bezdôvodné obohatenie, spotrebiteľský úver, bezúročnosť, subjektívna premlčacia doba, vedomosť spotrebiteľa, zásada efektivity, právo EÚ, § 107 OZ, § 451 OZ"},{"i":31,"y":2025,"a":"Civilné právo","s":"Premlčanie a preklúzia","t":"Premlčanie nároku poškodeného voči poisťovateľovi","p":11,"kw":"premlčanie, poisťovateľ, PZP, povinné zmluvné poistenie, priamy nárok voči poisťovni, náhrada škody, R 37/2022, veľký senát, § 104 OZ, § 106 OZ, § 15 zák. č. 381/2001 Z. z."},{"i":32,"y":2025,"a":"Civilné právo","s":"Premlčanie a preklúzia","t":"Začiatok plynutia premlčacej doby regresného nároku Sociálnej poisťovne","p":8,"kw":"regres Sociálnej poisťovne, regresný nárok, premlčanie, dávky, pracovný úraz, trestné konanie, § 238 zák. č. 461/2003 Z. z., § 106 OZ, § 112 OZ"},{"i":33,"y":2026,"a":"Civilné právo","s":"Spoluvlastníctvo a BSM","t":"Dohoda o cene nehnuteľnosti v rámci konania o vyporiadaní BSM","p":5,"kw":"vyporiadanie BSM, bezpodielové spoluvlastníctvo manželov, cena nehnuteľnosti, dohoda o cene, ocenenie, trhová cena, rozhodujúci okamih ocenenia, odvolanie, úradná povinnosť, znalecký posudok, rozvod, § 366 CSP, § 380 CSP, § 383 CSP"},{"i":34,"y":2026,"a":"Civilné právo","s":"Spoluvlastníctvo a BSM","t":"Náhrada za užívanie spoluvlastníckeho podielu","p":8,"kw":"užívanie spoločnej veci, spoluvlastnícky podiel, podielové spoluvlastníctvo, náhrada za užívanie, nájomné, bezdôvodné obohatenie, výlučné užívanie, užívanie nad rámec podielu, spoluvlastník, § 137 OZ, § 139 OZ, § 451 OZ"},{"i":35,"y":2026,"a":"Civilné právo","s":"Spoluvlastníctvo a BSM","t":"Predkupné právo pri prevode podielu na spoločnej nehnuteľnosti v pozemkovom spoločenstve","p":6,"kw":"predkupné právo, pozemkové spoločenstvo, spoločná nehnuteľnosť, ponuková povinnosť, ponuka, prevod podielu, lehota dvoch mesiacov, zhromaždenie, výbor spoločenstva, relatívna neplatnosť, absolútna neplatnosť, urbár, § 9 zák. č. 97/2013 Z. z., § 14 zák. č. 97/2013 Z. z., § 140 OZ, § 40a OZ"},{"i":36,"y":2026,"a":"Civilné právo","s":"Spoluvlastníctvo a BSM","t":"Rozširovanie rozsahu bezpodielového spoluvlastníctva manželov (BSM)","p":9,"kw":"vyporiadanie BSM, bezpodielové spoluvlastníctvo manželov, rozšírenie predmetu vyporiadania, trojročná lehota, domnienka vyporiadania, zákonná domnienka, iudicium duplex, rozvod, zánik BSM, zmena žaloby, § 149 OZ, § 150 OZ, § 143 OZ, § 153 CSP"},{"i":37,"y":2026,"a":"Civilné právo","s":"Spoluvlastníctvo a BSM","t":"Zriadenie vecného bremena súdom pri zrušení a vyporiadaní podielového spoluvlastníctva","p":4,"kw":"vecné bremeno, zriadenie vecného bremena súdom, zrušenie spoluvlastníctva, vyporiadanie podielového spoluvlastníctva, reálna deľba, rozdelenie veci, bez návrhu, § 142 OZ"},{"i":38,"y":2026,"a":"Civilné právo","s":"Spoluvlastníctvo a BSM","t":"Zrušenie a vyporiadanie podielového spoluvlastníctva prikázaním veci","p":8,"kw":"zrušenie a vyporiadanie podielového spoluvlastníctva, prikázanie veci, primeraná náhrada, vyplatenie podielu, kritériá prikázania, investície, zhodnotenie veci, bytová potreba, spoluvlastník, iudicium duplex, § 142 OZ"},{"i":39,"y":2025,"a":"Civilné právo","s":"Spoluvlastníctvo a BSM","t":"Forma súhlasu druhého manžela týkajúca sa predaja spoločnej veci","p":7,"kw":"BSM, bezpodielové spoluvlastníctvo manželov, súhlas manžela, predaj spoločnej veci, konkludentný súhlas, relatívna neplatnosť, § 145 OZ, § 40a OZ"},{"i":40,"y":2025,"a":"Civilné právo","s":"Spoluvlastníctvo a BSM","t":"Podielové spoluvlastníctvo a užívanie spoločných priestorov treťou osobou","p":9,"kw":"podielové spoluvlastníctvo, spoločné priestory, bytový dom, nájomné, bezdôvodné obohatenie, aktívna legitimácia, spoločenstvo vlastníkov, správca, § 139 OZ, § 9 zák. č. 182/1993 Z. z."},{"i":41,"y":2025,"a":"Civilné právo","s":"Spoluvlastníctvo a BSM","t":"Predkupné právo","p":9,"kw":"predkupné právo, spoluvlastník, porušenie predkupného práva, blízka osoba, darovanie, nahradenie prejavu vôle, relatívna neplatnosť, § 140 OZ, § 603 OZ, § 605 OZ, § 116 OZ"},{"i":42,"y":2025,"a":"Civilné právo","s":"Spoluvlastníctvo a BSM","t":"Refundačná náhrada a vyporiadanie výnosu týkajúceho sa veci, ktorá v čase zániku BSM už nie je jeho súčasťou","p":12,"kw":"BSM, vyporiadanie BSM, refundačná náhrada, vnos, investícia, výnos veci, zánik BSM, § 150 OZ, § 143 OZ"},{"i":43,"y":2025,"a":"Civilné právo","s":"Spoluvlastníctvo a BSM","t":"Širšie vyporiadanie podielového spoluvlastníctva","p":9,"kw":"podielové spoluvlastníctvo, vyporiadanie v širšom zmysle, investície do spoločnej veci, bezdôvodné obohatenie, premlčanie, trovy konania, § 142 OZ, § 137 OZ, § 139 OZ, § 107 OZ"},{"i":44,"y":2025,"a":"Civilné právo","s":"Spoluvlastníctvo a BSM","t":"Vyporiadanie podielového spoluvlastníctva a znalecké dokazovanie pri reálnom rozdelení","p":7,"kw":"podielové spoluvlastníctvo, reálne rozdelenie, geometrický plán, znalecké dokazovanie, deliteľnosť pozemku, spôsoby vyporiadania, § 142 OZ"},{"i":45,"y":2025,"a":"Civilné právo","s":"Spoluvlastníctvo a BSM","t":"Vyporiadanie podielového spoluvlastníctva kombináciou prvého a druhého spôsobu","p":7,"kw":"podielové spoluvlastníctvo, reálne rozdelenie, primeraná náhrada, kombinácia spôsobov vyporiadania, vyrovnanie, § 142 OZ"},{"i":46,"y":2026,"a":"Civilné právo","s":"Spotrebiteľské právo","t":"Peer-to-peer zmluvy a spotrebiteľská ochrana","p":7,"kw":"P2P pôžičky, peer to peer, crowdfunding, Zinc, spotrebiteľský úver, spotrebiteľ, platforma, zmluva o pôžičke, neplatnosť pre neurčitosť, ochrana spotrebiteľa, § 39 OZ, § 52 OZ, § 657 OZ"},{"i":47,"y":2025,"a":"Civilné právo","s":"Spotrebiteľské právo","t":"Bezúročnosť a bezpoplatkovosť úveru","p":9,"kw":"spotrebiteľský úver, RPMN, bezúročnosť, bezpoplatkovosť, celková čiastka, odchýlka, sankcia, § 11 zák. č. 129/2010 Z. z., § 19 zák. č. 129/2010 Z. z."},{"i":48,"y":2025,"a":"Civilné právo","s":"Spotrebiteľské právo","t":"Definícia pojmu spotrebiteľ vo vzťahu k správcom bytových domov","p":7,"kw":"spotrebiteľ, pojem spotrebiteľa, správca bytového domu, právnická osoba, smernica 93/13/EHS, nekalé podmienky, § 52 OZ, § 8a zák. č. 182/1993 Z. z."},{"i":49,"y":2025,"a":"Civilné právo","s":"Spotrebiteľské právo","t":"Následky neplatnosti predčasného zosplatnenia spotrebiteľského úveru","p":12,"kw":"spotrebiteľský úver, predčasné zosplatnenie, neplatné zosplatnenie, splátky, ne ultra petitum, viazanosť žalobou, § 53 OZ, § 565 OZ, § 294 CSP"},{"i":50,"y":2025,"a":"Civilné právo","s":"Spotrebiteľské právo","t":"Postavenie Štátneho fondu rozvoja bývania pri poskytovaní podpory vo forme úveru","p":6,"kw":"Štátny fond rozvoja bývania, ŠFRB, úver, spotrebiteľská zmluva, dodávateľ, obchodný vs. občiansky zákonník, § 52 OZ, § 261 ObZ"},{"i":51,"y":2025,"a":"Civilné právo","s":"Spotrebiteľské právo","t":"Predčasné zosplatnenie úveru dojednané vo všeobecných obchodných podmienkach","p":13,"kw":"predčasné zosplatnenie, spotrebiteľský úver, všeobecné obchodné podmienky, VOP, splátky, premlčanie, § 53 OZ, § 565 OZ, § 103 OZ"},{"i":52,"y":2025,"a":"Civilné právo","s":"Spotrebiteľské právo","t":"Vplyv bezúročnosti a bezpoplatkovosti spotrebiteľského úveru na výšku a počet splátok","p":5,"kw":"bezúročnosť, bezpoplatkovosť, spotrebiteľský úver, výška splátok, počet splátok, istina, § 53 OZ"},{"i":53,"y":2025,"a":"Civilné právo","s":"Spotrebiteľské právo","t":"Vzťah medzi Slovenskou kanceláriou poisťovateľov a fyzickou osobou podľa zákona o povinnom zmluvnom poistení","p":7,"kw":"Slovenská kancelária poisťovateľov, SKP, regres, PZP, spotrebiteľ, fyzická osoba, § 24 zák. č. 381/2001 Z. z., § 450 OZ"},{"i":54,"y":2025,"a":"Civilné právo","s":"Spotrebiteľské právo","t":"Zásada ne ultra petitum a priznávanie splatných splátok","p":11,"kw":"ne ultra petitum, viazanosť návrhom, zosplatnenie úveru, splatné splátky, spotrebiteľský úver, § 216 CSP, § 53 OZ"},{"i":55,"y":2025,"a":"Civilné právo","s":"Spotrebiteľské právo","t":"Zosplatnenie revolvingového úveru","p":12,"kw":"revolvingový úver, kreditná karta, zosplatnenie, predčasná splatnosť, spotrebiteľský úver, § 565 OZ, § 53 OZ, § 563 OZ"},{"i":56,"y":2026,"a":"Civilné právo","s":"Trovy konania a advokácia","t":"Náhrada trov konania a oslobodenie od súdnych poplatkov","p":6,"kw":"trovy konania, náhrada trov, oslobodenie od súdnych poplatkov, súdny poplatok, moderácia trov, dôvody hodné osobitného zreteľa, sociálne pomery, majetkové pomery, trovy štátu, § 254 CSP, § 255 CSP, § 257 CSP"},{"i":57,"y":2026,"a":"Civilné právo","s":"Trovy konania a advokácia","t":"Poskytovanie právnych služieb a dobré mravy (§ 18 ods. 4 zákona o advokácii)","p":11,"kw":"advokát, zmluva o poskytovaní právnych služieb, odmena advokáta, dohoda o odmene, hodinová odmena, podielová odmena, tarifná odmena, dobré mravy, neplatnosť zmluvy, faktúra advokáta, vrátenie odmeny, informačná povinnosť advokáta, § 18 ZoA, § 3 OZ, § 39 OZ, § 37 OZ"},{"i":58,"y":2026,"a":"Civilné právo","s":"Trovy konania a advokácia","t":"Rozhodovanie o náhrade trov konania s ohľadom na pomer úspechu strany konania","p":7,"kw":"trovy konania, pomer úspechu, čiastočný úspech, príslušenstvo pohľadávky, úroky z omeškania, istina, výpočet trov, percentuálny výpočet, § 255 CSP"},{"i":59,"y":2026,"a":"Civilné právo","s":"Trovy konania a advokácia","t":"Výška DPH pri advokátskych trovách","p":7,"kw":"DPH, daň z pridanej hodnoty, sadzba DPH, zmena sadzby, 23 %, 20 %, trovy advokáta, odmena advokáta, náhrada trov konania, deň vykonania úkonu, zák. č. 222/2004 Z. z."},{"i":60,"y":2026,"a":"Civilné právo","s":"Trovy konania a advokácia","t":"Zohľadnenie úroku z omeškania pri percentuálnom výpočte náhrady trov konania","p":6,"kw":"trovy konania, úrok z omeškania, príslušenstvo, istina, percentuálny výpočet trov, pomer úspechu, základ pre výpočet trov, § 255 CSP, § 256 CSP, § 121 OZ"},{"i":61,"y":2025,"a":"Civilné právo","s":"Trovy konania a advokácia","t":"Platobný rozkaz vydaný sudcom. Odvolanie proti výroku o trovách konania","p":12,"kw":"platobný rozkaz, trovy konania, odvolanie, výška trov, prípustnosť odvolania, vyšší súdny úradník, § 357 CSP, § 262 CSP, § 239 CSP"},{"i":62,"y":2025,"a":"Civilné právo","s":"Trovy konania a advokácia","t":"Rozhodovanie o trovách pri neodkladných a zabezpečovacích opatreniach vydaných pred začatím konania vo veci samej","p":9,"kw":"trovy konania, neodkladné opatrenie, zabezpečovacie opatrenie, pred začatím konania, rozhodnutie o trovách, § 262 CSP, § 336 CSP"},{"i":63,"y":2025,"a":"Civilné právo","s":"Trovy konania a advokácia","t":"Trovy konania pri moderovaní výšky zmluvnej pokuty súdom","p":4,"kw":"trovy konania, zmluvná pokuta, moderácia zmluvnej pokuty, úvaha súdu, pomer úspechu, § 255 CSP, § 142 OSP, § 301 ObZ"},{"i":64,"y":2026,"a":"Civilné právo","s":"Vecné práva a nehnuteľnosti","t":"Materiálna publicita katastra nehnuteľností a dobromyseľnosť nadobúdateľa","p":4,"kw":"kataster nehnuteľností, materiálna publicita, dobromyseľnosť nadobúdateľa, dobrá viera, nemo plus iuris, domnienka správnosti zápisu, nadobudnutie od nevlastníka, vlastnícke právo"},{"i":65,"y":2026,"a":"Civilné právo","s":"Vecné práva a nehnuteľnosti","t":"Náhrada za zriadenie vecného bremena (jednorazová vs. opakovaná)","p":7,"kw":"vecné bremeno, náhrada za vecné bremeno, jednorazová náhrada, opakujúce sa platby, výška náhrady, znalecký posudok, zákonné vecné bremeno, preklúzia, vlastník pozemku, § 135c OZ"},{"i":66,"y":2026,"a":"Civilné právo","s":"Vecné práva a nehnuteľnosti","t":"Posudzovanie právoplatnosti vyvlastňovacieho výmeru v civilnom konaní","p":14,"kw":"vyvlastnenie, vyvlastňovací výmer, právoplatnosť, doložka právoplatnosti, vlastnícke právo, určovacia žaloba, štát, dôkazné bremeno, nulita správneho aktu, predbežná otázka, reštitúcie, § 194 CSP, § 135 OSP"},{"i":67,"y":2026,"a":"Civilné právo","s":"Vecné práva a nehnuteľnosti","t":"Vydanie a vypratanie poľnohospodárskeho pozemku podľa zákona č. 504/2003 Z. z.","p":10,"kw":"nájom poľnohospodárskeho pozemku, zákonný nájom, vydanie pozemku, vypratanie, výzva na vypratanie, skončenie nájmu, prekvapivé rozhodnutie, poučovacia povinnosť, nájomca, pôda, § 12 zák. č. 504/2003 Z. z., § 12a zák. č. 504/2003 Z. z., § 382 CSP"},{"i":68,"y":2026,"a":"Civilné právo","s":"Vecné práva a nehnuteľnosti","t":"Vyvlastnenie z obdobia pred rokom 1950 a dôkazné bremeno preukázania jeho právoplatnosti","p":5,"kw":"vyvlastnenie, vyvlastňovací výmer, pred rokom 1950, doložka právoplatnosti, náhrada za vyvlastnenie, nezachovaný spis, dôkazné bremeno, štát, vlastnícke právo, určovacia žaloba"},{"i":69,"y":2026,"a":"Civilné právo","s":"Vecné práva a nehnuteľnosti","t":"Zriadenie vecného bremena práva cesty súdom","p":4,"kw":"vecné bremeno, právo cesty, nevyhnutná cesta, prístup k pozemku, zriadenie vecného bremena súdom, faktický prístup, § 151o OZ"},{"i":70,"y":2025,"a":"Civilné právo","s":"Vecné práva a nehnuteľnosti","t":"Záložné právo a jeho zánik","p":3,"kw":"záložné právo, zánik záložného práva, záložná zmluva, uplynutie času, výmaz záložného práva, § 151md OZ"},{"i":71,"y":2025,"a":"Civilné právo","s":"Vecné práva a nehnuteľnosti","t":"Bytová náhrada po ukončení nájmu","p":7,"kw":"bytová náhrada, nájom bytu, skončenie nájmu, vypratanie bytu, prístrešie, dobré mravy, § 712a OZ, § 712c OZ, § 713 OZ, § 3 OZ"},{"i":72,"y":2025,"a":"Civilné právo","s":"Vecné práva a nehnuteľnosti","t":"Náhrada za zákonné vecné bremeno","p":14,"kw":"zákonné vecné bremeno, náhrada za vecné bremeno, jednorazová náhrada, opakovaná náhrada, premlčanie, energetika, § 4 zák. č. 66/2009 Z. z., § 23 zák. č. 182/1993 Z. z."},{"i":73,"y":2025,"a":"Civilné právo","s":"Vecné práva a nehnuteľnosti","t":"Neprimeranosť sumy poskytnutého úveru vo vzťahu k hodnote zálohu","p":5,"kw":"záložné právo, záložná zmluva, nepomer úveru a zálohu, dobré mravy, neplatnosť, výkon záložného práva, dražba, § 853 OZ, § 3 OZ"},{"i":74,"y":2025,"a":"Civilné právo","s":"Vecné práva a nehnuteľnosti","t":"Viazanosť dedičov prejavom vôle poručiteľa","p":5,"kw":"kúpna zmluva, vklad do katastra, smrť predávajúceho, dedičia, viazanosť prejavom vôle, prechod práv a povinností, § 579 OZ, § 133 OZ, § 47 OZ"},{"i":75,"y":2025,"a":"Civilné právo","s":"Vecné práva a nehnuteľnosti","t":"Vymedzenie zabezpečovanej pohľadávky v záložnej zmluve","p":8,"kw":"záložná zmluva, zabezpečovaná pohľadávka, budúca pohľadávka, najvyššia hodnota istiny, neurčitosť, § 151b OZ, § 151c OZ, § 37 OZ"},{"i":76,"y":2025,"a":"Civilné právo","s":"Vecné práva a nehnuteľnosti","t":"Výmer o vlastníctve pôdy a jeho právne účinky","p":6,"kw":"výmer o vlastníctve pôdy, prídelová listina, pozemková reforma, vklad do katastra, verejná listina, ROEP, § 11 zák. č. 180/1995 Z. z., § 12 zák. č. 180/1995 Z. z."},{"i":77,"y":2025,"a":"Civilné právo","s":"Vecné práva a nehnuteľnosti","t":"Vypratanie nehnuteľnosti","p":10,"kw":"vypratanie nehnuteľnosti, dražba, vlastník, obydlie, ochrana obydlia, neplatnosť dražby, § 126 OZ, § 3 OZ, § 21 zák. č. 527/2002 Z. z."},{"i":78,"y":2025,"a":"Civilné právo","s":"Vecné práva a nehnuteľnosti","t":"Vypratanie nehnuteľností nachádzajúcich sa v zvernici","p":5,"kw":"zvernica, poľovníctvo, vlastník pozemku, obmedzenie vlastníckeho práva, vypratanie, prístup k pozemku, § 135c OZ"},{"i":79,"y":2025,"a":"Civilné právo","s":"Vecné práva a nehnuteľnosti","t":"Zmiernenie majetkových krívd spôsobených cirkvám a náboženským spoločnostiam","p":10,"kw":"reštitúcie, cirkev, náboženské spoločnosti, zmiernenie majetkových krívd, vydanie pozemku, vydávacia zmluva, zák. č. 282/1993 Z. z., § 2 zák. č. 161/2005 Z. z."},{"i":80,"y":2025,"a":"Civilné právo","s":"Vydržanie","t":"Dôvodnosť námietok a miera skutkového prieskumu v konaní o potvrdení vydržania","p":9,"kw":"vydržanie, potvrdenie vydržania, mimosporové konanie, námietky, dobromyseľnosť, skutkový prieskum, § 359a CMP, § 359h CMP, § 134 OZ"},{"i":81,"y":2025,"a":"Civilné právo","s":"Vydržanie","t":"Nútené spoločenstvo v konaní o potvrdenie vydržania vlastníctva","p":10,"kw":"vydržanie, potvrdenie vydržania, nútené spoločenstvo, úmrtie účastníka, procesné nástupníctvo, § 78 CSP, § 359c CMP"},{"i":82,"y":2025,"a":"Civilné právo","s":"Vydržanie","t":"Posúdenie dobromyseľnosti vstupu do držby na základe zákona č. 138-1991 Zb.","p":10,"kw":"vydržanie, dobromyseľnosť, obec, prechod majetku na obce, náležitá opatrnosť, nulitný titul, zák. č. 138/1991 Zb."},{"i":83,"y":2025,"a":"Civilné právo","s":"Vydržanie","t":"Posudzovanie vydržania nehnuteľnosti bez výslovného návrhu účastníka konania","p":7,"kw":"vydržanie, dobromyseľnosť, oprávnená držba, právny titul, neformálny titul, posúdenie bez návrhu, § 130 OZ, § 134 OZ"},{"i":84,"y":2025,"a":"Civilné právo","s":"Vydržanie","t":"ROEP a držba v kontexte vydržania","p":8,"kw":"ROEP, register obnovenej evidencie pozemkov, vydržanie, dobromyseľnosť, určenie vlastníckeho práva, § 7 zák. č. 180/1995 Z. z., § 134 OZ"},{"i":85,"y":2026,"a":"Civilné právo","s":"Záväzky, zmluvy a zastúpenie","t":"Odporovateľnosť právnych úkonov (§ 42a OZ)","p":7,"kw":"odporovateľnosť, odporovacia žaloba, neúčinnosť právneho úkonu, vymáhateľná pohľadávka, náležitá starostlivosť, osoba blízka, ukrátenie veriteľa, dlžník, dôkazné bremeno, R 44/2001, § 42a OZ, § 42b OZ"},{"i":86,"y":2026,"a":"Civilné právo","s":"Záväzky, zmluvy a zastúpenie","t":"Odstúpenie od zmluvy","p":6,"kw":"odstúpenie od zmluvy, dôvod odstúpenia, účinky odstúpenia, zánik zmluvy, trovy konania, späťvzatie žaloby, zastavenie konania, § 48 OZ, § 146 CSP"},{"i":87,"y":2026,"a":"Civilné právo","s":"Záväzky, zmluvy a zastúpenie","t":"Pasívna vecná legitimácia pri bezdôvodnom obohatení (rybárske právo a vodné plochy)","p":5,"kw":"bezdôvodné obohatenie, pasívna vecná legitimácia, rybárske právo, rybársky revír, vodná plocha, vodná nádrž, pobrežné pozemky, vodný zákon, zákon o rybárstve, vlastník pozemku, § 451 OZ, zák. č. 364/2004 Z. z., zák. č. 139/2002 Z. z., zák. č. 216/2018 Z. z."},{"i":88,"y":2025,"a":"Civilné právo","s":"Záväzky, zmluvy a zastúpenie","t":"Platnosť zmluvy podpísanej za obidve strany tou istou osobou","p":8,"kw":"zmluva podpísaná tou istou osobou, konflikt záujmov, zastúpenie, vecné bremeno, dobré mravy, neplatnosť, § 22 OZ, § 39 OZ"},{"i":89,"y":2025,"a":"Civilné právo","s":"Záväzky, zmluvy a zastúpenie","t":"Posúdenie aktívnej a pasívnej vecnej legitimácie","p":4,"kw":"bezdôvodné obohatenie, aktívna legitimácia, pasívna legitimácia, dedičské konanie, účet tretej osoby, § 456 OZ, § 451 OZ"},{"i":90,"y":2025,"a":"Civilné právo","s":"Záväzky, zmluvy a zastúpenie","t":"Prísľub zaplatenia dlhu ako esenciálna náležitosť uznania dlhu podľa § 558 OZ a vplyv jeho absencie na premlčanie (§ 110 OZ)","p":10,"kw":"uznanie dlhu, prísľub zaplatenia, premlčanie, desaťročná premlčacia doba, § 558 OZ, § 110 OZ"},{"i":91,"y":2025,"a":"Civilné právo","s":"Záväzky, zmluvy a zastúpenie","t":"Výzva na vrátenie daru podľa § 630 Občianskeho zákonníka pri darovaní nehnuteľnosti","p":5,"kw":"vrátenie daru, darovanie nehnuteľnosti, výzva na vrátenie daru, ústna forma, hrubé porušenie dobrých mravov, § 630 OZ"},{"i":92,"y":2025,"a":"Civilné právo","s":"Záväzky, zmluvy a zastúpenie","t":"Zákonný úrok z omeškania","p":10,"kw":"úrok z omeškania, zákonný úrok, moderácia úroku, dobré mravy, sadzba úroku, § 517 OZ, § 3 OZ"},{"i":93,"y":2026,"a":"Civilné právo","s":"Zodpovednosť za škodu a ochrana osobnosti","t":"Náhrada nemajetkovej ujmy pri prekročení maximálneho týždenného pracovného času (nesprávna transpozícia smernice 2003 88 ES)","p":7,"kw":"nemajetková ujma, pracovný čas, prekročenie týždenného pracovného času, pohotovosť, smernica 2003/88/ES, transpozícia smernice, zodpovednosť štátu, ochrana osobnosti, peňažná satisfakcia, § 13 OZ"},{"i":94,"y":2026,"a":"Civilné právo","s":"Zodpovednosť za škodu a ochrana osobnosti","t":"Náhrada nemajetkovej ujmy spôsobenej pri výkone verejnej moci (8)","p":10,"kw":"nemajetková ujma, zodpovednosť štátu, nezákonné trestné stíhanie, väzba, oslobodenie spod obžaloby, odškodnenie, výška náhrady, sadzba za deň, sadzba za mesiac, zákon o zodpovednosti za škodu pri výkone verejnej moci, § 8 zák. č. 514/2003 Z. z., § 17 zák. č. 514/2003 Z. z."},{"i":95,"y":2026,"a":"Civilné právo","s":"Zodpovednosť za škodu a ochrana osobnosti","t":"Náhrada nemajetkovej ujmy v peniazoch","p":10,"kw":"nemajetková ujma, pozostalí, usmrtenie, smrť blízkej osoby, strata šance na prežitie, lekárska chyba, zdravotná starostlivosť, lege artis, výška odškodnenia, ochrana osobnosti, poisťovňa, § 13 OZ, § 441 OZ, § 427 OZ"},{"i":96,"y":2026,"a":"Civilné právo","s":"Zodpovednosť za škodu a ochrana osobnosti","t":"Náhrada škody z titulu zaplatenia odvodu z hazardných hier za obdobie zákazu prevádzkovania v dôsledku proticovidových opatrení","p":5,"kw":"hazardné hry, odvod z hazardných hier, COVID, proticovidové opatrenia, zákaz prevádzky, náhrada škody, obec, štát, bezdôvodné obohatenie, herne, VLT, § 67 zák. č. 30/2019 Z. z."},{"i":97,"y":2026,"a":"Civilné právo","s":"Zodpovednosť za škodu a ochrana osobnosti","t":"Náhrada škody: náklady na opravu vozidla, ktoré nebolo skutočne opravené","p":6,"kw":"náhrada škody na vozidle, neopravené vozidlo, náklady na opravu, fiktívna oprava, rozdielová metóda, hodnota vozidla, dopravná nehoda, poisťovňa, PZP, dôkazné bremeno, § 442 OZ, § 443 OZ"},{"i":98,"y":2026,"a":"Civilné právo","s":"Zodpovednosť za škodu a ochrana osobnosti","t":"Výška náhrady nemajetkovej ujmy pozostalých príbuzných pri usmrtení blízkej osoby","p":9,"kw":"nemajetková ujma, pozostalí, usmrtenie, smrť blízkej osoby, dopravná nehoda, výška náhrady, spoluzavinenie, zníženie náhrady, manželka, deti, družka, rodičia, súrodenci, PZP, poisťovňa"},{"i":99,"y":2026,"a":"Civilné právo","s":"Zodpovednosť za škodu a ochrana osobnosti","t":"Zníženie regresného nároku podľa ustanovení o znížení náhrady škody","p":8,"kw":"regres poisťovateľa, postihový nárok, povinné zmluvné poistenie, PZP, moderácia náhrady, zníženie náhrady škody, dôvody hodné osobitného zreteľa, R 64/2020, § 12 zák. č. 381/2001 Z. z., § 450 OZ"},{"i":100,"y":2025,"a":"Civilné právo","s":"Zodpovednosť za škodu a ochrana osobnosti","t":"Kumulatívne uplatnenie nárokov na náhradu škody na zdraví a nemajetkovej ujmy","p":8,"kw":"sťaženie spoločenského uplatnenia, nemajetková ujma, ochrana osobnosti, škoda na zdraví, súbeh nárokov, § 444 OZ, § 13 OZ"},{"i":101,"y":2025,"a":"Civilné právo","s":"Zodpovednosť za škodu a ochrana osobnosti","t":"Náhrada nemajetkovej ujmy hasiča za rozvrh služobného času","p":15,"kw":"hasič, hasičský a záchranný zbor, služobný čas, pracovný čas, smernica 2003/88/ES, nemajetková ujma, pohotovosť, § 85 zák. č. 315/2001 Z. z., § 13 OZ"},{"i":102,"y":2025,"a":"Civilné právo","s":"Zodpovednosť za škodu a ochrana osobnosti","t":"Náhrada nemajetkovej ujmy pozostalých a poškodených","p":7,"kw":"nemajetková ujma, pozostalí, usmrtenie, okruh oprávnených osôb, výška náhrady, premlčanie, poisťovateľ, § 13 OZ, § 444 OZ"},{"i":103,"y":2025,"a":"Civilné právo","s":"Zodpovednosť za škodu a ochrana osobnosti","t":"Náhrada nemajetkovej ujmy pri už priznanom primeranom finančnom zadosťučinení","p":9,"kw":"nemajetková ujma, prieťahy v konaní, exekučné konanie, zodpovednosť štátu, finančné zadosťučinenie ústavného súdu, § 17 zák. č. 514/2003 Z. z."},{"i":104,"y":2025,"a":"Civilné právo","s":"Zodpovednosť za škodu a ochrana osobnosti","t":"Náhrada nemajetkovej ujmy za nezákonné trestné stíhanie","p":9,"kw":"nezákonné trestné stíhanie, nemajetková ujma, zodpovednosť štátu, súbežné stíhania, výška náhrady, § 6 zák. č. 514/2003 Z. z."},{"i":105,"y":2025,"a":"Civilné právo","s":"Zodpovednosť za škodu a ochrana osobnosti","t":"Náhrada nemajetkovej ujmy za nezákonnú väzbu. Zavinenie väzby","p":9,"kw":"nezákonná väzba, zavinenie väzby, nemajetková ujma, zodpovednosť štátu, dôkazné bremeno, § 8 zák. č. 514/2003 Z. z., § 71 TP"},{"i":106,"y":2025,"a":"Civilné právo","s":"Zodpovednosť za škodu a ochrana osobnosti","t":"Náhrada škody a nemajetkovej ujmy v trestných veciach","p":7,"kw":"väzba, náhrada škody, zodpovednosť štátu, zavinenie väzby, adhézne konanie, premlčanie nemajetkovej ujmy, § 8 zák. č. 514/2003 Z. z., § 17 zák. č. 514/2003 Z. z., § 101 OZ"},{"i":107,"y":2025,"a":"Civilné právo","s":"Zodpovednosť za škodu a ochrana osobnosti","t":"Náhrada straty na zárobku podľa § 447 Občianskeho zákonníka","p":8,"kw":"strata na zárobku, invalidita, priemerný zárobok, valorizácia, úrazová renta, novela 394/2019, § 447 OZ, § 446 OZ"},{"i":108,"y":2025,"a":"Civilné právo","s":"Zodpovednosť za škodu a ochrana osobnosti","t":"Nemajetková ujma. Dopravná nehoda. Preživší","p":9,"kw":"nemajetková ujma, dopravná nehoda, preživší, blízke osoby, výška náhrady, kritériá výšky, PZP, § 11 OZ, § 13 OZ"},{"i":109,"y":2025,"a":"Civilné právo","s":"Zodpovednosť za škodu a ochrana osobnosti","t":"Nezákonná väzba. Náhrada nemajetkovej ujmy","p":13,"kw":"nezákonná väzba, nemajetková ujma, zodpovednosť štátu, výška náhrady, odškodnenie, § 17 zák. č. 514/2003 Z. z."},{"i":110,"y":2025,"a":"Civilné právo","s":"Zodpovednosť za škodu a ochrana osobnosti","t":"Omeškanie poisťovne v nadväznosti na § 11 ods. 7 zákona o PZP","p":8,"kw":"poisťovňa, omeškanie, poistné plnenie, úrok z omeškania, PZP, sankcia, § 11 zák. č. 381/2001 Z. z., § 517 OZ"},{"i":111,"y":2025,"a":"Civilné právo","s":"Zodpovednosť za škodu a ochrana osobnosti","t":"Regresná náhrada podľa zákona o povinnom zmluvnom poistení","p":11,"kw":"regres poisťovateľa, PZP, moderácia, primeranosť, premlčanie, § 12 zák. č. 381/2001 Z. z., § 450 OZ"},{"i":112,"y":2025,"a":"Civilné právo","s":"Zodpovednosť za škodu a ochrana osobnosti","t":"Zodpovednosť advokáta za škodu spôsobenú pri výkone advokácie","p":13,"kw":"zodpovednosť advokáta, škoda, výkon advokácie, poistenie advokáta, intervenient, premlčanie, § 26 ZoA, § 420 OZ, § 106 OZ"},{"i":113,"y":2025,"a":"Civilné právo","s":"Zodpovednosť za škodu a ochrana osobnosti","t":"Zodpovednosť osoby, ktorá nie je trestne zodpovedná, a nároky po zastavení trestného stíhania","p":10,"kw":"nepríčetnosť, zodpovednosť za škodu, pohrebné, zastavenie trestného stíhania, nemajetková ujma, oslobodenie, § 423 OZ, § 422 OZ, § 449 OZ, § 13 OZ"},{"i":114,"y":2026,"a":"Rodinné právo","s":"Rodičovské práva a styk s dieťaťom","t":"Aktívna legitimácia v konaní o prípustnosti zapretia otcovstva","p":6,"kw":"zapretie otcovstva, prípustnosť zapretia otcovstva, aktívna legitimácia, zákonný zástupca dieťaťa, matrikový otec, opatrovník dieťaťa, najlepší záujem dieťaťa, záujem dieťaťa, § 96 ZoR"},{"i":115,"y":2026,"a":"Rodinné právo","s":"Rodičovské práva a styk s dieťaťom","t":"Konflikt a zhoršená komunikácia rodičov ako prekážka striedavej osobnej starostlivosti","p":7,"kw":"striedavá osobná starostlivosť, striedavka, konflikt rodičov, komunikácia rodičov, najlepší záujem dieťaťa, záujem maloletého, zverenie dieťaťa, úprava výkonu rodičských práv, § 24 ZoR"},{"i":116,"y":2026,"a":"Rodinné právo","s":"Rodičovské práva a styk s dieťaťom","t":"Pozitívne procesné povinnosti súdu pri rozhodovaní o styku a zverení dieťaťa pri podozrení z trestnej činnosti","p":11,"kw":"styk s dieťaťom, zverenie dieťaťa, podozrenie zo sexuálneho zneužívania, domáce násilie, ochrana dieťaťa, obmedzenie styku, zákaz styku, prezumpcia neviny, ESĽP, najlepší záujem dieťaťa, pozitívne povinnosti štátu, čl. 8 Dohovoru"},{"i":117,"y":2026,"a":"Rodinné právo","s":"Rodičovské práva a styk s dieťaťom","t":"Úprava práv a povinností k dieťaťu po dosiahnutí plnoletosti v priebehu odvolacieho konania","p":8,"kw":"plnoletosť dieťaťa, úprava výkonu rodičských práv, rozvod, odvolacie konanie, zastavenie konania, výživné, plnoleté dieťa, § 100 CMP, § 62 ZoR"},{"i":118,"y":2026,"a":"Rodinné právo","s":"Rodičovské práva a styk s dieťaťom","t":"Výkon rozhodnutia o úprave styku s maloletým dieťaťom","p":8,"kw":"výkon rozhodnutia o styku, marenie styku, pokuta, donucovacie prostriedky, odmietanie dieťaťa, názor dieťaťa, najlepší záujem dieťaťa, pestovanie odmietania druhého rodiča, preferenčný rodič, § 382 CMP"},{"i":119,"y":2026,"a":"Rodinné právo","s":"Rodičovské práva a styk s dieťaťom","t":"Zapretie otcovstva ako prejudiciálna otázka v konaní o určení otcovstva","p":7,"kw":"určenie otcovstva, zapretie otcovstva, prejudiciálna otázka, predbežná otázka, domnienka otcovstva, biologický otec, § 109 CMP"},{"i":120,"y":2025,"a":"Rodinné právo","s":"Rodičovské práva a styk s dieťaťom","t":"Možnosť viacerých obvyklých pobytov maloletého dieťaťa","p":7,"kw":"obvyklý pobyt dieťaťa, striedavá starostlivosť, cezhraničné spory, viacero štátov, právomoc súdu, Brusel II"},{"i":121,"y":2025,"a":"Rodinné právo","s":"Rodičovské práva a styk s dieťaťom","t":"Odmietnutie súhlasu s pokračovaním liečby rodičmi neplnoletého dieťaťa","p":7,"kw":"informovaný súhlas, liečba dieťaťa, nahradenie súhlasu rodiča, zdravotná starostlivosť, neodkladné opatrenie, § 6 zák. č. 576/2004 Z. z., § 365 CMP, § 35 ZoR"},{"i":122,"y":2025,"a":"Rodinné právo","s":"Rodičovské práva a styk s dieťaťom","t":"Súhlas druhého rodiča a súdu s podaním civilnej žaloby maloletým dieťaťom","p":10,"kw":"maloleté dieťa, súhlas druhého rodiča, schválenie úkonu súdom, žaloba v mene dieťaťa, odporovacia žaloba, výživné, § 28 OZ, § 35 ZoR"},{"i":123,"y":2025,"a":"Rodinné právo","s":"Rodičovské práva a styk s dieťaťom","t":"Výkon rozhodnutí v judikatúre Ústavného súdu Českej republiky","p":6,"kw":"styk s dieťaťom, výkon rozhodnutia, Ústavný súd ČR, rozširovanie styku, nečinnosť súdu"},{"i":124,"y":2025,"a":"Rodinné právo","s":"Rodičovské práva a styk s dieťaťom","t":"Vykonateľnosť výroku rozhodnutia o úprave styku rodiča s maloletým dieťaťom","p":7,"kw":"styk s dieťaťom, párne a nepárne týždne, vykonateľnosť, určitosť výroku, úprava styku, § 25 ZoR"},{"i":125,"y":2025,"a":"Rodinné právo","s":"Rodičovské práva a styk s dieťaťom","t":"Výsluch maloletého súdom v mimosporovom konaní","p":14,"kw":"výsluch dieťaťa, názor maloletého, kolízny opatrovník, zvukový záznam, mimosporové konanie, § 38 CMP, § 43 ZoR"},{"i":126,"y":2025,"a":"Rodinné právo","s":"Rodičovské práva a styk s dieťaťom","t":"Zákaz styku s maloletým dieťaťom","p":12,"kw":"zákaz styku, obmedzenie styku, maloleté dieťa, najlepší záujem dieťaťa, § 25 ZoR"},{"i":127,"y":2025,"a":"Rodinné právo","s":"Rodičovské práva a styk s dieťaťom","t":"Zrušenie neodkladného opatrenia vo veciach maloletých z dôvodu zmeny pomerov","p":8,"kw":"neodkladné opatrenie, maloletí, zrušenie neodkladného opatrenia, zmena pomerov, § 363 CMP, § 334 CSP"},{"i":128,"y":2024,"a":"Rodinné právo","s":"Rodičovské práva a styk s dieťaťom","t":"Zmena osobnej starostlivosti pri bránení styku s druhým rodičom","p":23,"kw":"zmena osobnej starostlivosti, marenie styku, zverenie dieťaťa, najlepší záujem dieťaťa, § 24 ZoR, § 25 ZoR, § 26 ZoR"},{"i":129,"y":2026,"a":"Rodinné právo","s":"Spôsobilosť na právne úkony, opatrovníctvo a statusové veci","t":"Obmedzenie spôsobilosti na právne úkony osoby vystupovať pred štátnymi orgánmi, súdmi, notármi, prokuratúrou, políciou, správnymi a samosprávnymi orgánmi","p":7,"kw":"obmedzenie spôsobilosti na právne úkony, spôsobilosť na právne úkony, opatrovník, opatrovníctvo, duševná porucha, vystupovanie pred úradmi, ľudské práva, Dohovor o právach osôb so zdravotným postihnutím, § 10 OZ, § 243 CMP"},{"i":130,"y":2025,"a":"Rodinné právo","s":"Výživné","t":"Neodkladné opatrenie vo veciach výživného","p":6,"kw":"neodkladné opatrenie, výživné, nevyhnutná miera výživného, dovolanie, § 366 CMP, § 325 CSP"},{"i":131,"y":2025,"a":"Rodinné právo","s":"Výživné","t":"Potencionalita príjmov rodiča vo väzbe a vo výkone trestu","p":10,"kw":"výživné, väzba, výkon trestu, potencionalita príjmov, povinný rodič, § 75 ZoR, § 62 ZoR"},{"i":132,"y":2025,"a":"Rodinné právo","s":"Výživné","t":"Príspevok na výživu rozvedeného manžela","p":6,"kw":"výživné rozvedeného manžela, príspevok na výživu, päťročná lehota, rozvod, § 72 ZoR"},{"i":133,"y":2025,"a":"Rodinné právo","s":"Výživné","t":"Rozsah výživného v zmysle Metodiky MS SR","p":7,"kw":"výživné, tabuľkové výživné, Metodika MS SR, výpočet výživného, § 62 ZoR"},{"i":134,"y":2025,"a":"Rodinné právo","s":"Výživné","t":"Suma výživného určená na tvorbu úspor a právo dieťaťa podieľať sa na životnej úrovni rodičov","p":17,"kw":"výživné, tvorba úspor, životná úroveň rodiča, nadštandardné výživné, § 63 ZoR, § 62 ZoR"},{"i":135,"y":2025,"a":"Rodinné právo","s":"Výživné","t":"Uplatňovanie princípu najlepšieho záujmu dieťaťa pri plnoletom dieťati","p":9,"kw":"výživné, plnoleté dieťa, najlepší záujem dieťaťa, štúdium, § 78 ZoR, § 62 ZoR"},{"i":136,"y":2025,"a":"Rodinné právo","s":"Výživné","t":"Určenie výživného v prípade zahraničného príjmu povinného rodiča","p":5,"kw":"výživné, zahraničný príjem, sociálne dávky v zahraničí, zisťovanie príjmu, § 62 ZoR, § 63 ZoR"},{"i":137,"y":2025,"a":"Rodinné právo","s":"Výživné","t":"Určenie vyživovacej povinnosti osobe poberajúcej invalidný dôchodok","p":6,"kw":"výživné, invalidný dôchodok, invalidita rodiča, potencionalita príjmov, zmena výživného, § 62 ZoR"},{"i":138,"y":2025,"a":"Rodinné právo","s":"Výživné","t":"Výživné manžela a manželky","p":6,"kw":"výživné medzi manželmi, dobré mravy, nepriznanie výživného, § 71 ZoR, § 75 ZoR"},{"i":139,"y":2024,"a":"Rodinné právo","s":"Výživné","t":"Princíp potenciality príjmov povinného rodiča pri určovaní výživného","p":9,"kw":"výživné, potencionalita príjmov, fiktívny príjem, povinný rodič, § 62 ZoR, § 63 ZoR, § 75 ZoR"},{"i":140,"y":2026,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Časová pôsobnosť Trestného zákona po novele č. 40/2024 Z. z. pri ukladaní trestu","p":5,"kw":"časová pôsobnosť, priaznivejší zákon, novela Trestného zákona, zák. č. 40/2024, ukladanie trestu, retroaktivita, mimoriadne opravné prostriedky, dovolanie, § 2 TZ"},{"i":141,"y":2026,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Nutná obrana","p":10,"kw":"nutná obrana, primeranosť obrany, exces z nutnej obrany, putatívna obrana, teleskopický obušok, zbraň, útok, oslobodenie, § 25 TZ"},{"i":142,"y":2026,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Ohováranie podľa § 373 Trestného zákona","p":10,"kw":"ohováranie, nepravdivý údaj, vážnosť osoby, značná miera, úmysel, nepriamy úmysel, pomsta, osobitný motív, kritika, hodnotiaci úsudok, sloboda prejavu, § 373 TZ, § 140 TZ"},{"i":143,"y":2026,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Porušovanie ochrany rastlín a živočíchov (§ 305 ods. 2 TZ)","p":8,"kw":"ochrana rastlín a živočíchov, chránené živočíchy, ochrana prírody, životné prostredie, priestupok vs. trestný čin, rybárska stráž, stupeň ochrany, § 305 TZ, § 13 zák. č. 543/2002 Z. z."},{"i":144,"y":2026,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Subjektívna stránka trestného činu podvodu podľa § 221 Trestného zákona","p":4,"kw":"podvod, úmysel, subjektívna stránka, podvodný úmysel, omyl, škoda, preukazovanie úmyslu, § 221 TZ"},{"i":145,"y":2026,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Útok na verejného činiteľa podľa § 323 Trestného zákona","p":7,"kw":"útok na verejného činiteľa, verejný činiteľ, policajt, násilie, úmysel, výkon právomoci, prečin, § 323 TZ, § 128 TZ"},{"i":146,"y":2026,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Zanedbanie povinnej výživy podľa § 207 Trestného zákona","p":7,"kw":"zanedbanie povinnej výživy, neplatenie výživného, výživné, náhradné výživné, vyživovacia povinnosť, zavinenie, schopnosť platiť, materiálne plnenie výživného, § 207 TZ, § 86 TZ, § 10 TZ"},{"i":147,"y":2026,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Zločin lúpeže formou spolupáchateľstva, kde neboli páchatelia vopred dohodnutí a jeden z páchateľov použil zbraň","p":6,"kw":"lúpež, spolupáchateľstvo, zbraň, kvalifikovaná skutková podstata, dohoda páchateľov, konkludentný súhlas, hrozba násilia, § 188 TZ"},{"i":148,"y":2025,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Použitie nenávratného finančného príspevku na iný ako určený účel","p":3,"kw":"nenávratný finančný príspevok, eurofondy, dotácia, subvenčný podvod, iný účel, trestná zodpovednosť"},{"i":149,"y":2025,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Určenie priaznivejšej právnej úpravy pri trestných sadzbách","p":4,"kw":"priaznivejší zákon, trestné sadzby, časová pôsobnosť, novela Trestného zákona, porovnanie sadzieb, § 2 TZ, § 38 TZ, § 39 TZ"},{"i":150,"y":2025,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Vyvedenie majetku spoločnosti podľa § 237, § 239 a § 243 Trestného zákona","p":5,"kw":"vyvedenie majetku, poškodzovanie veriteľa, marenie konkurzného konania, správa cudzieho majetku, konateľ, § 237 TZ, § 239 TZ, § 243 TZ"},{"i":151,"y":2025,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Aplikácia § 212 ods. 1 písm. e) Trestného zákona na odcudzenie balíkov lucerny","p":3,"kw":"krádež, poľnohospodárska plodina, lucerna, malá škoda, úroda, § 212 TZ"},{"i":152,"y":2025,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Čo sa považuje za odpad podľa zákona o odpadoch","p":7,"kw":"odpad, zákon o odpadoch, neoprávnené nakladanie s odpadmi, životné prostredie, § 302 TZ, § 2 zák. č. 79/2015 Z. z."},{"i":153,"y":2025,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Dopravné nehody cyklistov na priechode pre chodcov","p":6,"kw":"dopravná nehoda, cyklista, priechod pre chodcov, usmrtenie, ublíženie na zdraví, pravidlá cestnej premávky, § 15 zák. č. 8/2009 Z. z., § 16 zák. č. 8/2009 Z. z."},{"i":154,"y":2025,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Je policajt verejným činiteľom aj v čase, keď nevykonáva služobné úkony","p":6,"kw":"verejný činiteľ, policajt, útok na verejného činiteľa, mimo služobného úkonu, § 128 TZ, § 323 TZ"},{"i":155,"y":2025,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Konkurencia nedania prednosti v jazde a prekročenia rýchlosti pri posudzovaní zavinenia a príčinnej súvislosti pri dopravnej nehode","p":9,"kw":"dopravná nehoda, prednosť v jazde, prekročenie rýchlosti, zavinenie, príčinná súvislosť, § 158 TZ"},{"i":156,"y":2025,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Machinácie pri verejnom obstarávaní a verejnej dražbe podľa § 266 Trestného zákona","p":7,"kw":"verejné obstarávanie, machinácie, verejná dražba, škoda, poškodený, § 266 TZ"},{"i":157,"y":2025,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Materiálny korektív pri zneužívaní právomoci verejného činiteľa","p":8,"kw":"zneužívanie právomoci verejného činiteľa, materiálny korektív, závažnosť činu, odôvodnenie, § 326 TZ, § 10 TZ"},{"i":158,"y":2025,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Miera opatrnosti subjektu uvádzaného do omylu pri trestnom čine podvodu","p":7,"kw":"podvod, omyl, opatrnosť poškodeného, kataster, štátny zamestnanec, § 221 TZ"},{"i":159,"y":2025,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Okolnosť vylučujúca protiprávnosť - oprávnené použitie zbrane a výkon práva a povinností","p":4,"kw":"oprávnené použitie zbrane, výkon práva a povinnosti, okolnosti vylučujúce protiprávnosť, poľovná stráž, § 26 TZ, § 28 TZ"},{"i":160,"y":2025,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Porušovanie povinnosti pri správe cudzieho majetku podľa § 237 a § 238 Trestného zákona","p":12,"kw":"správa cudzieho majetku, porušovanie povinnosti pri správe cudzieho majetku, konateľ, škoda, § 237 TZ, § 238 TZ"},{"i":161,"y":2025,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Premlčanie trestného stíhania pri trestnom čine daňového podvodu podľa § 277a Trestného zákona","p":7,"kw":"premlčanie trestného stíhania, daňový podvod, novela 40/2024, PL. ÚS 3/2024, vznesenie obvinenia, § 87 TZ, § 277a TZ, § 2 TZ"},{"i":162,"y":2025,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Solventnosť páchateľa pri neodvedení dane a poistného a vklad vlastných prostriedkov konateľa","p":5,"kw":"neodvedenie dane a poistného, solventnosť, vklad konateľa, mzdy, dane, § 277 TZ"},{"i":163,"y":2025,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Spolupáchateľstvo pri pokuse o trestný čin ublíženia na zdraví","p":6,"kw":"spolupáchateľstvo, ublíženie na zdraví, pokus, pomoc, účastníctvo, § 20 TZ, § 21 TZ, § 155 TZ"},{"i":164,"y":2025,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Sťaženie obvyklého spôsobu života a faktická konzumpcia","p":7,"kw":"ťažká ujma na zdraví, sťaženie obvyklého spôsobu života, psychická ujma, nebezpečné vyhrážanie, konzumpcia, § 123 TZ, § 156 TZ, § 360 TZ"},{"i":165,"y":2025,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Trestné stíhanie starostu obce pre spreneveru a zneužitie právomoci verejného činiteľa","p":6,"kw":"starosta, obec, sprenevera, zneužívanie právomoci verejného činiteľa, správa cudzieho majetku, § 326 TZ, § 213 TZ, § 237 TZ"},{"i":166,"y":2025,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Trestný čin nadržovania podľa § 339 Trestného zákona","p":5,"kw":"nadržovanie, pomoc páchateľovi, blízka osoba, materiálny korektív, § 339 TZ"},{"i":167,"y":2025,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Trestný čin zatajenia veci podľa § 236 Trestného zákona","p":8,"kw":"zatajenie veci, nález, omyl, krádež, podvod, malá hodnota, § 236 TZ"},{"i":168,"y":2025,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Utýranie zvieraťa v zmysle § 305a ods. 1 písm. c) Trestného zákona","p":6,"kw":"týranie zvierat, utýranie zvieraťa, ochrana zvierat, veterinárna starostlivosť, § 305a TZ, § 22 zák. č. 39/2007 Z. z."},{"i":169,"y":2025,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Vyžadovanie osobitného povolenia a trestný čin neoprávneného podnikania podľa § 251 Trestného zákona","p":10,"kw":"neoprávnené podnikanie, živnostenské oprávnenie, konateľ, malý rozsah, prospech, § 251 TZ"},{"i":170,"y":2025,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Zanedbanie povinnej výživy a týranie blízkej osoby a zverenej osoby","p":7,"kw":"zanedbanie povinnej výživy, týranie blízkej osoby, týranie zverenej osoby, maloleté dieťa, starostlivosť, § 207 TZ, § 208 TZ"},{"i":171,"y":2024,"a":"Trestné právo","s":"Trestné právo hmotné","t":"Prejazd cez železničné priecestie a všeobecné ohrozenie","p":13,"kw":"všeobecné ohrozenie, železničné priecestie, závory, doprava, § 284 TZ, § 285 TZ"},{"i":172,"y":2026,"a":"Trestné právo","s":"Trestné právo procesné","t":"Faktory ovplyvňujúce nárok na bezplatnú obhajobu","p":6,"kw":"bezplatná obhajoba, obhajoba za zníženú odmenu, nedostatok prostriedkov, obhajca, trovy obhajoby, majetkové pomery obvineného, preukazovanie pomerov, § 34 TP, § 40 TP, § 553 TP, § 555 TP"},{"i":173,"y":2026,"a":"Trestné právo","s":"Trestné právo procesné","t":"Obmedzenie možnosti ustanoveného obhajcu nechať sa substitučne zastúpiť","p":12,"kw":"ustanovený obhajca, substitúcia, zastúpenie obhajcu iným advokátom, poverenie advokáta, súhlas obvineného, odvolanie, obhajoba, právo na obhajobu, § 40 TP, § 41 TP, § 42 TP, § 43 TP, § 17 ZoA"},{"i":174,"y":2026,"a":"Trestné právo","s":"Trestné právo procesné","t":"Použiteľnosť kamerového záznamu mestskej polície ako dôkaz v trestnom konaní","p":6,"kw":"kamerový záznam, mestská polícia, obecná polícia, videozáznam, dôkaz, zákonnosť dôkazu, použiteľnosť dôkazu, prípustnosť dôkazu, súkromie"},{"i":175,"y":2026,"a":"Trestné právo","s":"Trestné právo procesné","t":"Prípustnosť dôkazov po zrušení uznesenia o vznesení obvinenia","p":6,"kw":"dôkazy pred vznesením obvinenia, vznesenie obvinenia, zrušenie uznesenia o vznesení obvinenia, použiteľnosť dôkazov, prípustnosť dôkazov, výsluch svedka, kontradiktórnosť, začatie trestného stíhania, § 199 TP, § 206 TP"},{"i":176,"y":2026,"a":"Trestné právo","s":"Trestné právo procesné","t":"Ustanovenie opatrovníka poškodenej právnickej osobe","p":7,"kw":"opatrovník poškodeného, poškodená právnická osoba, konflikt záujmov, kolízia záujmov, štatutárny orgán, súhlas poškodeného s trestným stíhaním, späťvzatie súhlasu, blízka osoba, § 48 TP, § 211 TP, § 35 TP, § 46 TP"},{"i":177,"y":2025,"a":"Trestné právo","s":"Trestné právo procesné","t":"Opätovné prejednanie veci po konaní proti ušlému","p":3,"kw":"konanie proti ušlému, opätovné prejednanie veci, doručovanie, vyhýbanie sa konaniu, § 362 TP"},{"i":178,"y":2025,"a":"Trestné právo","s":"Trestné právo procesné","t":"Spolupracujúci svedok a spravodlivý proces","p":6,"kw":"spolupracujúci svedok, korunný svedok, spoluobvinený, hodnotenie výpovedí, spravodlivý proces, nestrannosť, § 32 TP"},{"i":179,"y":2025,"a":"Trestné právo","s":"Trestné právo procesné","t":"Domová prehliadka verzus obhliadka miesta činu v obydlí a osoba, u ktorej sa úkon vykonáva","p":8,"kw":"domová prehliadka, obhliadka miesta činu, obydlie, príkaz, súhlas, § 105 TP, § 107 TP, § 154 TP"},{"i":180,"y":2025,"a":"Trestné právo","s":"Trestné právo procesné","t":"Náležitosti príkazu na domovú prehliadku a obsah jeho výroku","p":5,"kw":"domová prehliadka, príkaz na domovú prehliadku, náležitosti, výrok, zaistenie vecí, § 100 TP"},{"i":181,"y":2025,"a":"Trestné právo","s":"Trestné právo procesné","t":"Nárok na náhradu škody v trestnom konaní a náprava výroku odvolacím súdom","p":7,"kw":"náhrada škody, adhézne konanie, poškodený, odvolací súd, zmena výroku, § 287 TP, § 46 TP"},{"i":182,"y":2025,"a":"Trestné právo","s":"Trestné právo procesné","t":"Návrh na vykonanie dokazovania zo strany orgánov činných v trestnom konaní","p":4,"kw":"dokazovanie, návrh prokurátora, zraniteľná obeť, výsluch dieťaťa, spravodlivý proces, § 135 TP"},{"i":183,"y":2025,"a":"Trestné právo","s":"Trestné právo procesné","t":"Obnova konania v kontexte novely Trestného zákona (rozšírené vydanie)","p":12,"kw":"obnova konania, priaznivejší zákon, novela Trestného zákona, nová skutočnosť, mimoriadne opravné prostriedky, § 394 TP, § 2 TZ"},{"i":184,"y":2025,"a":"Trestné právo","s":"Trestné právo procesné","t":"Odsúdenie na základe svedectva „z druhej ruky“ a ďalších nepriamych dôkazov","p":7,"kw":"svedectvo z druhej ruky, nepriame dôkazy, svedok z počutia, poškodený nespôsobilý vypovedať"},{"i":185,"y":2025,"a":"Trestné právo","s":"Trestné právo procesné","t":"Opätovné zadržanie obvineného","p":4,"kw":"zadržanie, opätovné zadržanie, 48 hodín, obvinený, osobná sloboda, § 85 TP, § 86 TP"},{"i":186,"y":2025,"a":"Trestné právo","s":"Trestné právo procesné","t":"Pominutie dôvodov väzby pre pomalý postup orgánov činných v trestnom konaní","p":7,"kw":"väzba, pominutie dôvodov väzby, prieťahy, prepustenie z väzby, § 79 TP, § 71 TP"},{"i":187,"y":2025,"a":"Trestné právo","s":"Trestné právo procesné","t":"Porušenie práva na obhajobu pre neprítomnosť obhajcu - rozhodnutia NS SR","p":6,"kw":"právo na obhajobu, neprítomnosť obhajcu, dovolanie, dovolací dôvod, pojednávanie, § 371 TP, § 252 TP"},{"i":188,"y":2025,"a":"Trestné právo","s":"Trestné právo procesné","t":"Poučenie o zákaze sebaobviňovania pred udelením súhlasu s vykonaním obhliadky v obydlí","p":3,"kw":"zákaz sebaobviňovania, poučenie, obhliadka v obydlí, súhlas, § 89a TP"},{"i":189,"y":2025,"a":"Trestné právo","s":"Trestné právo procesné","t":"Použiteľnosť súkromného obrazového záznamu","p":9,"kw":"obrazový záznam, súkromný záznam, kamera, nahrávka, použiteľnosť dôkazu, ochrana osobnosti, § 119 TP, § 12 OZ"},{"i":190,"y":2025,"a":"Trestné právo","s":"Trestné právo procesné","t":"Povolenie obnovy konania čo do výroku o vine po vyhlásení o vine alebo po dohode o vine a treste","p":11,"kw":"obnova konania, vyhlásenie o vine, dohoda o vine a treste, výrok o vine, § 394 TP, § 257 TP"},{"i":191,"y":2025,"a":"Trestné právo","s":"Trestné právo procesné","t":"Právo na obhajobu a prístup k obhajcovi - rozhodnutia Ústavného súdu SR a ESĽP","p":4,"kw":"právo na obhajobu, prístup k obhajcovi, vzdanie sa práva, použiteľnosť dôkazov, ESĽP"},{"i":192,"y":2025,"a":"Trestné právo","s":"Trestné právo procesné","t":"Úradný záznam ako dôkaz v trestnom konaní","p":7,"kw":"úradný záznam, policajný záznam, dôkaz, čítanie listín, predostretie, § 119 TP, § 264 TP, § 269 TP"},{"i":193,"y":2025,"a":"Trestné právo","s":"Trestné právo procesné","t":"Vylúčenie sudcu v súvislosti s rozhodovaním o procesných skutočnostiach v prípravnom konaní","p":7,"kw":"vylúčenie sudcu, prípravné konanie, odpočúvanie, väzba, zaujatosť, § 31 TP, § 32 TP"},{"i":194,"y":2025,"a":"Trestné právo","s":"Trestné právo procesné","t":"Zastavenie trestného stíhania ako náprava porušenia práva na prejednanie veci v primeranej lehote","p":22,"kw":"prieťahy, primeraná lehota, zastavenie trestného stíhania, kompenzácia, zníženie trestu, § 9 TP, čl. 6 Dohovoru"},{"i":195,"y":2025,"a":"Trestné právo","s":"Trestné právo procesné","t":"Záväzný pokyn odvolacieho súdu pri oslobodzujúcom rozsudku","p":8,"kw":"záväzný pokyn, odvolací súd, oslobodzujúci rozsudok, hodnotenie dôkazov, § 327 TP, § 322 TP"},{"i":196,"y":2025,"a":"Trestné právo","s":"Trestné právo procesné","t":"Zjednodušené vyhotovenie rozsudku vo vzťahu k výroku o náhrade škody","p":11,"kw":"zjednodušené vyhotovenie rozsudku, náhrada škody, poškodený, vzdanie sa odvolania, § 172 TP"},{"i":197,"y":2026,"a":"Trestné právo","s":"Ukladanie a výkon trestov","t":"Osvedčenie sa v skúšobnej dobe (§ 50 ods. 4 až 6 TZ)","p":6,"kw":"podmienečné odsúdenie, skúšobná doba, osvedčenie sa, neosvedčenie, fikcia osvedčenia, lehota dvoch rokov, probácia, § 50 TZ"},{"i":198,"y":2026,"a":"Trestné právo","s":"Ukladanie a výkon trestov","t":"Trestný čin vraždy a mladistvý páchateľ","p":9,"kw":"vražda, úkladná vražda, mladistvý, mladistvý páchateľ, trestná sadzba, zníženie trestu, podmienečný odklad, § 145 TZ, § 144 TZ, § 117 TZ, § 118 TZ, § 39 TZ"},{"i":199,"y":2025,"a":"Trestné právo","s":"Ukladanie a výkon trestov","t":"Reformatio in peius a súhrnný trest po obnove konania","p":5,"kw":"reformatio in peius, súhrnný trest, obnova konania, § 405 TP, § 42 TZ"},{"i":200,"y":2025,"a":"Trestné právo","s":"Ukladanie a výkon trestov","t":"Zahladenie odsúdenia a hodnotenie recidívy","p":4,"kw":"zahladenie odsúdenia, recidíva, priťažujúca okolnosť, fikcia neodsúdenia, § 37 TZ, § 38 TZ, § 39 TZ"},{"i":201,"y":2025,"a":"Trestné právo","s":"Ukladanie a výkon trestov","t":"Započítanie doby vykonaného trestu odňatia slobody","p":2,"kw":"započítanie väzby, započítanie trestu, obmedzenie osobnej slobody, § 45 TZ"},{"i":202,"y":2025,"a":"Trestné právo","s":"Ukladanie a výkon trestov","t":"Rozhodovanie súdu o ochrannom liečení po zániku trestnosti činu","p":7,"kw":"ochranné liečenie, zánik trestnosti, novela 2024, časová pôsobnosť, § 405b TP, § 2 TZ, § 84 TZ"},{"i":203,"y":2025,"a":"Trestné právo","s":"Ukladanie a výkon trestov","t":"Splnenie podmienok na uznanie cudzieho rozhodnutia","p":6,"kw":"uznanie cudzieho rozhodnutia, výkon trestu v SR, obvyklý pobyt, EÚ, odsúdený, § 4 zák. č. 549/2011 Z. z., § 16 zák. č. 549/2011 Z. z."},{"i":204,"y":2025,"a":"Trestné právo","s":"Ukladanie a výkon trestov","t":"Trest prepadnutia veci pri porušení predpisov o označení tovaru","p":10,"kw":"prepadnutie veci, tabakové výrobky, kontrolné známky, výnos z trestnej činnosti, § 60 TZ, § 279 TZ"},{"i":205,"y":2025,"a":"Trestné právo","s":"Ukladanie a výkon trestov","t":"Ukladanie trestu prepadnutia majetku: rozhodnutia ÚS SR a NS SR","p":6,"kw":"prepadnutie majetku, PL. ÚS 1/2021, zaistenie majetku, § 58 TZ"},{"i":206,"y":2025,"a":"Trestné právo","s":"Ukladanie a výkon trestov","t":"Ukončenie ochranného sexuologického liečenia","p":8,"kw":"ochranné liečenie, sexuologické liečenie, prepustenie, zmena formy liečenia, znalecký posudok, § 73 TZ, § 74 TZ, § 446 TP, § 448 TP"},{"i":207,"y":2025,"a":"Trestné právo","s":"Ukladanie a výkon trestov","t":"Zohľadnenie právoplatného odsúdenia súdom iného členského štátu EÚ na účely trestného konania v SR","p":9,"kw":"zahraničné odsúdenie, odsúdenie v inom štáte EÚ, recidíva, súhrnný trest, § 7b TZ, § 488a TP"},{"i":208,"y":2026,"a":"Obchodné právo","s":"Konkurz a reštrukturalizácia","t":"Postup súdu podľa § 47 ods. 4 zákona o konkurze a reštrukturalizácii","p":8,"kw":"konkurz, prerušenie konania, pokračovanie v konaní, správca konkurznej podstaty, zastavenie konania, späťvzatie žaloby, trovy konania, reštrukturalizácia, § 47 zák. č. 7/2005 Z. z., § 206j zák. č. 7/2005 Z. z."},{"i":209,"y":2025,"a":"Obchodné právo","s":"Konkurz a reštrukturalizácia","t":"Procesný postup súdu pri úmrtí žalovaného konateľa úpadcu v spore o zmluvnú pokutu za nepodanie návrhu na konkurz včas","p":7,"kw":"konkurz, konateľ úpadcu, zmluvná pokuta, nepodanie návrhu na konkurz, úmrtie žalovaného, procesné nástupníctvo, § 63 CSP, § 11 zák. č. 7/2005 Z. z."},{"i":210,"y":2025,"a":"Obchodné právo","s":"Obchodné záväzkové vzťahy","t":"Aplikácia § 265 Obchodného zákonníka a zásada poctivého obchodného styku","p":9,"kw":"poctivý obchodný styk, dobré mravy, obchodné záväzky, odopretie ochrany, zneužitie práva, § 265 ObZ, § 39 OZ, § 3 OZ"},{"i":211,"y":2025,"a":"Obchodné právo","s":"Obchodné záväzkové vzťahy","t":"Nárok na preplatenie tzv. prác naviac na základe zmluvy o dielo","p":10,"kw":"zmluva o dielo, práce naviac, pevná cena, bezdôvodné obohatenie, zhotoviteľ, stavebné dielo, § 549 ObZ, § 547 ObZ, § 451 OZ"},{"i":212,"y":2025,"a":"Obchodné právo","s":"Zastúpenie podnikateľa","t":"Rozsah zastupiteľského oprávnenia podľa § 15 Obchodného zákonníka (podnikové zmocnenie)","p":8,"kw":"podnikové zmocnenie, zastúpenie podnikateľa, zamestnanec, obvyklý úkon, prekročenie oprávnenia, § 15 ObZ, § 16 ObZ"},{"i":213,"y":2025,"a":"Pracovné právo","s":"Antidiskriminácia a rovnaké zaobchádzanie","t":"Náhrada nemajetkovej ujmy v antidiskriminačných sporoch","p":12,"kw":"diskriminácia, antidiskriminačný zákon, rovnaké zaobchádzanie, nemajetková ujma, výška náhrady, mobbing, obťažovanie, § 9 ADZ, § 13 OZ"},{"i":214,"y":2025,"a":"Pracovné právo","s":"Bezpečnosť práce a choroby z povolania","t":"Zodpovednosť za pracovný úraz","p":8,"kw":"pracovný úraz, zodpovednosť zamestnávateľa, BOZP, porušenie predpisov, zbavenie sa zodpovednosti, § 195 ZP, § 196 ZP, § 197 ZP"},{"i":215,"y":2026,"a":"Pracovné právo","s":"Vznik a skončenie pracovného pomeru","t":"Reťazenie výpovedí z pracovného pomeru","p":7,"kw":"reťazenie výpovedí, viacero výpovedí, opakovaná výpoveď, okamžité skončenie pracovného pomeru, dve okamžité skončenia, neplatnosť skončenia pracovného pomeru, žaloba o neplatnosť výpovede, náhrada mzdy, relatívna neplatnosť, prekluzívna lehota dva mesiace, doručenie výpovede, odmietnutie prevzatia, § 61 ZP, § 77 ZP, § 79 ZP, § 142 ZP, § 38 ZP"},{"i":216,"y":2025,"a":"Pracovné právo","s":"Vznik a skončenie pracovného pomeru","t":"Neplatnosť skončenia pracovného pomeru a prekluzívna lehota","p":7,"kw":"neplatnosť skončenia pracovného pomeru, prekluzívna lehota, dva mesiace, určovacia žaloba, trvanie pracovného pomeru, § 77 ZP"},{"i":217,"y":2025,"a":"Pracovné právo","s":"Vznik a skončenie pracovného pomeru","t":"Okolnosti významné pre priznanie alebo nepriznanie náhrady mzdy z neplatného skončenia pracovného pomeru","p":7,"kw":"náhrada mzdy, neplatné skončenie pracovného pomeru, 12 mesiacov, zníženie náhrady mzdy, § 79 ZP"},{"i":218,"y":2024,"a":"Pracovné právo","s":"Vznik a skončenie pracovného pomeru","t":"Organizačné zmeny ako podmienka platnosti výpovede pre nadbytočnosť","p":19,"kw":"výpoveď, nadbytočnosť, organizačné zmeny, rozhodnutie zamestnávateľa, neplatnosť výpovede, § 63 ZP, § 61 ZP"},{"i":219,"y":2026,"a":"Správne právo","s":"Dane a poplatky","t":"Dôkazné bremeno daňového subjektu pri dani z príjmov právnickej osoby a čestné vyhlásenie ako dôkaz","p":8,"kw":"dôkazné bremeno, daňový subjekt, daň z príjmov právnickej osoby, vklad konateľa, čestné vyhlásenie, daňová kontrola, správca dane, pôvod prostriedkov, § 29 zák. č. 511/1992 Zb., § 25 DP"},{"i":220,"y":2025,"a":"Správne právo","s":"Dane a poplatky","t":"Posúdenie oprávnenosti daňových výdavkov pri dani z príjmov v súvislosti s deklarovaným dodávateľom","p":7,"kw":"daňové výdavky, daň z príjmov, deklarovaný dodávateľ, reálnosť obchodu, fiktívne faktúry, dôkazné bremeno, správca dane"},{"i":221,"y":2025,"a":"Správne právo","s":"Disciplinárne konanie","t":"Aktívna procesná legitimácia na podanie správnej žaloby vo veciach disciplinárneho konania","p":6,"kw":"disciplinárne konanie, správna žaloba, aktívna legitimácia, exekútor, komora, § 177 SSP, § 178 SSP"},{"i":222,"y":2026,"a":"Správne právo","s":"Sociálne zabezpečenie","t":"Započítanie obdobia poberania invalidného dôchodku z osobitného systému sociálneho zabezpečenia","p":6,"kw":"invalidný dôchodok, predčasný starobný dôchodok, doba poistenia, osobitný systém sociálneho zabezpečenia, príslušníci ozbrojených zborov, vojaci, Sociálna poisťovňa, § 60 zák. č. 461/2003 Z. z., § 15 zák. č. 461/2003 Z. z., zák. č. 328/2002 Z. z."},{"i":223,"y":2025,"a":"Správne právo","s":"Sociálne zabezpečenie","t":"(Pracovný) úraz vodiča MKD počas vykonávania odpočinku","p":10,"kw":"pracovný úraz, vodič, medzinárodná kamiónová doprava, odpočinok, úrazová renta, Sociálna poisťovňa, § 8 zák. č. 461/2003 Z. z., § 195 ZP"},{"i":224,"y":2025,"a":"Správne právo","s":"Sociálne zabezpečenie","t":"Rozhodné obdobie štátnej služby pri priznaní odchodného","p":4,"kw":"odchodné, štátna služba, služobný pomer, policajt, odborná príprava, § 58 zák. č. 328/2002 Z. z."},{"i":225,"y":2026,"a":"Správne právo","s":"Správne delikty a priestupky","t":"Aplikácia zásady lex posterior mitius v konaní pred správnym súdom","p":6,"kw":"lex posterior mitius, priaznivejšia úprava, správny delikt, sankcia, pokuta, ex offo, retroaktivita, rozhodujúci čas, § 195 SSP, § 135 SSP, § 454 SSP, čl. 50 Ústavy SR"},{"i":226,"y":2026,"a":"Správne právo","s":"Správne delikty a priestupky","t":"Uloženie pokuty v blokovom konaní osobe pozbavenej spôsobilosti na právne úkony","p":6,"kw":"blokové konanie, pokuta, priestupok, spôsobilosť na právne úkony, pozbavenie spôsobilosti, procesná spôsobilosť, opatrovník, § 15 SP, § 16 SP"},{"i":227,"y":2025,"a":"Správne právo","s":"Správne delikty a priestupky","t":"Neprimeraná sankcia uložená v správnom konaní pre porušenie povinností podľa zákona o potravinách","p":8,"kw":"správny delikt, potraviny, pokuta, moderácia sankcie, neprimeraná sankcia, § 28 zák. č. 152/1995 Z. z."},{"i":228,"y":2025,"a":"Správne právo","s":"Správne delikty a priestupky","t":"Správne trestanie v období pandémie COVID-19 (uzavretie maloobchodných prevádzok)","p":8,"kw":"COVID, pandémia, pokuta, správne trestanie, covidová amnestia, uzavretie prevádzok, úrad verejného zdravotníctva, § 57 zák. č. 355/2007 Z. z., § 48 zák. č. 355/2007 Z. z."},{"i":229,"y":2026,"a":"Správne právo","s":"Správne súdnictvo","t":"Doručovanie do cudziny v konaní pred správnym súdom podľa § 74 SSP","p":6,"kw":"doručovanie do cudziny, cudzina, zahraničie, medzinárodná právna pomoc, nariadenie 2020/1784, správne súdnictvo, § 74 SSP, § 25 SSP"},{"i":230,"y":2026,"a":"Správne právo","s":"Správne súdnictvo","t":"Poriadková pokuta podľa § 78 ods. 1 písm. e) a f) Správneho súdneho poriadku","p":7,"kw":"poriadková pokuta, rušenie pojednávania, urážka, hrubé urážlivé podanie, sankcia, pojednávanie, § 78 SSP, § 102 CSP"},{"i":231,"y":2026,"a":"Správne právo","s":"Správne súdnictvo","t":"Právne limity prepustenia zo služobného pomeru v kontexte dôkaznej sily zvukových nahrávok","p":10,"kw":"služobný pomer, prepustenie, finančná správa, colník, nahrávka, zvukový záznam, nezákonný dôkaz, nezákonne získaný dôkaz, súhlas s nahrávaním, zneužitie práva, šikana na pracovisku, § 258 zák. č. 35/2019 Z. z., § 123 SSP, § 25 SSP"},{"i":232,"y":2026,"a":"Správne právo","s":"Správne súdnictvo","t":"Prieskum zákonnosti rozhodnutia výberovej komisie pre hromadné výberové konanie na funkciu sudcu","p":6,"kw":"výberové konanie na sudcu, psychologický posudok, psychológ, neodporúča, výberová komisia, súdna rada, kandidát na sudcu, § 28c zák. č. 385/2000 Z. z., § 12 vyhl. č. 307/2022 Z. z."},{"i":233,"y":2026,"a":"Správne právo","s":"Správne súdnictvo","t":"Včasnosť podania námietky zaujatosti proti sudcovi správneho súdu podľa § 91 SSP","p":11,"kw":"námietka zaujatosti, zaujatosť sudcu, včasnosť námietky, vylúčenie sudcu, rozvrh práce, lehota siedmich dní, nestrannosť, poplatok za námietku, § 91 SSP, § 87 SSP"},{"i":234,"y":2026,"a":"Správne právo","s":"Správne súdnictvo","t":"Verejnosť ako „opomenutý účastník“ v konaní o odňatí poľnohospodárskej pôdy na nepoľnohospodárske účely","p":6,"kw":"opomenutý účastník, verejnosť, EIA, posudzovanie vplyvov na životné prostredie, odňatie poľnohospodárskej pôdy, účastník správneho konania, životné prostredie, § 17 zák. č. 220/2004 Z. z., § 24 zák. č. 24/2006 Z. z., § 14 SP, § 179 SSP"},{"i":235,"y":2025,"a":"Správne právo","s":"Správne súdnictvo","t":"Bankové tajomstvo a ochrana osobných údajov pri práve na slobodný prístup k informáciám","p":6,"kw":"slobodný prístup k informáciám, infozákon, bankové tajomstvo, ochrana osobných údajov, povinná osoba, § 8 zák. č. 211/2000 Z. z., § 12 zák. č. 211/2000 Z. z., § 91 zák. č. 483/2001 Z. z."},{"i":236,"y":2025,"a":"Správne právo","s":"Správne súdnictvo","t":"Limity posudzovania zrejmej bezúspešnosti sporu Centrom právnej pomoci","p":11,"kw":"Centrum právnej pomoci, právna pomoc, zrejmá bezúspešnosť sporu, materiálna núdza, § 6 zák. č. 327/2005 Z. z., § 8 zák. č. 327/2005 Z. z."},{"i":237,"y":2025,"a":"Správne právo","s":"Správne súdnictvo","t":"Prepustenie príslušníka finančnej správy zo služobného pomeru","p":8,"kw":"služobný pomer, finančná správa, prepustenie, výsluhový dôchodok, vek 55 rokov, § 192 zák. č. 73/1998 Z. z., § 258 zák. č. 35/2019 Z. z."},{"i":238,"y":2026,"a":"Správne právo","s":"Stavebné právo a kataster","t":"Uplatňovanie výnimky z povinnosti vydať rozhodnutie o umiestnení stavby podľa § 39a ods. 3 písm. d) stavebného zákona z roku 1976","p":3,"kw":"umiestnenie stavby, územné rozhodnutie, výnimka, existujúca stavba, areál, kataster, stavebný zákon, § 39a zák. č. 50/1976 Zb."},{"i":239,"y":2025,"a":"Správne právo","s":"Stavebné právo a kataster","t":"Nepodstatná odchýlka od projektovej dokumentácie v stavebnom konaní","p":4,"kw":"stavebné konanie, zmena stavby, nepodstatná odchýlka, projektová dokumentácia, stavebný zákon"},{"i":240,"y":2025,"a":"Správne právo","s":"Stavebné právo a kataster","t":"Nevykonanie dôkazu, výsluch svedka, v stavebnom konaní","p":4,"kw":"stavebné konanie, dokazovanie, výsluch svedka, nevykonanie dôkazu, zistenie skutkového stavu"},{"i":241,"y":2025,"a":"Správne právo","s":"Stavebné právo a kataster","t":"Spochybnenie svetlotechnického posudku","p":6,"kw":"svetlotechnický posudok, preslnenie, denné osvetlenie, stavebné konanie, nezávislosť posudku, námietky suseda"},{"i":242,"y":2026,"a":"Ústavné právo a súdna organizácia","s":"Právo na zákonného sudcu","t":"Právo na zákonného sudcu","p":6,"kw":"zákonný sudca, prideľovanie vecí, rozvrh práce, náhodné pridelenie, súdny register, nesprávna registrácia, spravovací a kancelársky poriadok, čl. 48 Ústavy SR, § 3 zák. č. 757/2004 Z. z."},{"i":243,"y":2025,"a":"Ústavné právo a súdna organizácia","s":"Právo na zákonného sudcu","t":"Definícia a zmena zákonného sudcu podľa judikatúry Najvyššieho súdu SR","p":9,"kw":"zákonný sudca, zmena sudcu, rozvrh práce, senát, § 51 zák. č. 757/2004 Z. z."},{"i":244,"y":2025,"a":"Ústavné právo a súdna organizácia","s":"Právo na zákonného sudcu","t":"Dôsledky nerovnomerného prideľovania vecí sudcom","p":9,"kw":"prideľovanie vecí, zaťaženie sudcov, rozvrh práce, prerozdelenie vecí, § 51 zák. č. 757/2004 Z. z."},{"i":245,"y":2025,"a":"Ústavné právo a súdna organizácia","s":"Právo na zákonného sudcu","t":"Prísediaci ako zákonní sudcovia a ich výber","p":7,"kw":"prísediaci, zákonný sudca, výber do senátu, náhrada prísediaceho, § 277 TP"},{"i":246,"y":2025,"a":"Ústavné právo a súdna organizácia","s":"Právo na zákonného sudcu","t":"Rozhodnutia Najvyššieho súdu SR podľa § 371 ods. 1 písm. b) Trestného poriadku","p":8,"kw":"nezákonné zloženie súdu, zákonný sudca, dovolací dôvod, senát, § 371 TP"},{"i":247,"y":2025,"a":"Ústavné právo a súdna organizácia","s":"Právo na zákonného sudcu","t":"Zákonnosť sudcu pri zmenách rozvrhu práce (prerozdelenie vecí a § 52 ods. 7)","p":5,"kw":"rozvrh práce, prerozdelenie vecí, zákonný sudca"},{"i":248,"y":2025,"a":"Ústavné právo a súdna organizácia","s":"Právo na zákonného sudcu","t":"Zákonnosť sudcu pri zmenách rozvrhu práce (všeobecné východiská, ÚS SR)","p":8,"kw":"rozvrh práce, zloženie senátu, zákonný sudca, § 51 zák. č. 757/2004 Z. z."},{"i":249,"y":2026,"a":"Ústavné právo a súdna organizácia","s":"Prieťahy v konaní a spravodlivý proces","t":"Výška náhrady nemajetkovej ujmy pri porušení práva na spravodlivý proces a práva na prístup k súdu v dôsledku nedoručenia listín tvoriacich obsah súdneho spisu","p":8,"kw":"nemajetková ujma, spravodlivý proces, prístup k súdu, nedoručenie, doručovanie, súdny spis, ESĽP, odškodnenie, výška náhrady, čl. 6 Dohovoru, čl. 8 Dohovoru"},{"i":250,"y":2025,"a":"Ústavné právo a súdna organizácia","s":"Prieťahy v konaní a spravodlivý proces","t":"Právo na konanie bez zbytočných prieťahov v rozhodovacej praxi Ústavného súdu SR","p":10,"kw":"prieťahy v konaní, právo na konanie bez zbytočných prieťahov, ústavná sťažnosť, finančné zadosťučinenie, čl. 48 Ústavy SR"}];
+  var TIERS = [{"n": 5, "price": "19,99 €", "per": "4,00 €", "url": "https://buy.stripe.com/14A8wPbi9aDu0LP3bpcMM02"}, {"n": 10, "price": "34,99 €", "per": "3,50 €", "url": "https://buy.stripe.com/bJe6oH1Hz12Ucuxh2fcMM03"}, {"n": 20, "price": "59,99 €", "per": "3,00 €", "url": "https://buy.stripe.com/6oU14n0DveTKamp7rFcMM04"}, {"n": 30, "price": "84,99 €", "per": "2,83 €", "url": "https://buy.stripe.com/fZu7sL9a19zq7adbHVcMM07"}, {"n": 40, "price": "104,99 €", "per": "2,62 €", "url": "https://buy.stripe.com/dRm8wPfyp6nebqt4ftcMM08"}, {"n": 50, "price": "124,99 €", "per": "2,50 €", "url": "https://buy.stripe.com/aFadR95XPdPGeCF27lcMM05"}, {"n": 75, "price": "169,99 €", "per": "2,27 €", "url": "https://buy.stripe.com/5kQ4gz2LD6nefGJeU7cMM09"}, {"n": 100, "price": "199,99 €", "per": "2,00 €", "url": "https://buy.stripe.com/aFa5kDcmddPGgKNeU7cMM06"}, {"n": 150, "price": "249,99 €", "per": "1,67 €", "url": "https://buy.stripe.com/eVq5kD0Dv26Y1PTdQ3cMM0a"}, {"n": 250, "price": "349,99 €", "per": "1,40 €", "url": "https://buy.stripe.com/28E14n3PH3b27ad8vJcMM0b", "all": true}];
+  var EXEC = "https://script.google.com/macros/s/AKfycbyFLJh1mFOWF8bHsK2cgxSpkCBK8aAk6B6Y-9bmTBus4_hX5-_0Ls8TDQFpOich_MrK/exec";
+  var MAX = 250, MIN = 5, KEY = "jp-katalog-vyber";
+  var IS_CAT = /^\/katalog/.test(location.pathname);
+  var REF = (function () { try { return (new URLSearchParams(location.search).get("r") || "").replace(/[^A-Za-z0-9_-]/g, "").slice(0, 40); } catch (e) { return ""; } })();
+  try { fetch(EXEC, { method: "POST", mode: "no-cors", credentials: "omit", keepalive: true, body: JSON.stringify({ v: 1, r: REF, p: IS_CAT ? "katalog" : "web" }) }).catch(function () {}); } catch (e) {}
+
+  var el = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  var norm = function (s) { return String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/§\s*/g, "§ "); };
+  var byId = {}; CATALOG.forEach(function (x) { byId[x.i] = x; x._q = norm([x.t, x.s, x.a, x.kw, x.i, x.y].join(" ")); });
+  var sel = {};
+  try { (JSON.parse(localStorage.getItem(KEY) || "[]") || []).forEach(function (i) { if (byId[i]) sel[i] = 1; }); } catch (e) {}
+  var area = "", query = "", expanded = false, LIMIT = 30;
+
+  // header + menu
+  var hdr = document.querySelector("header.top");
+  var onScroll = function () { hdr.classList.toggle("scrolled", window.scrollY > 8); };
   window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
-  var b = document.getElementById("burger"), m = document.getElementById("menu");
-  b.addEventListener("click", function () { var o = m.classList.toggle("open"); b.setAttribute("aria-expanded", o); });
-  m.addEventListener("click", function (e) { if (e.target.tagName === "A") { m.classList.remove("open"); b.setAttribute("aria-expanded", false); } });
-  var els = document.querySelectorAll(".reveal");
-  if (!("IntersectionObserver" in window)) { els.forEach(function (e) { e.classList.add("in"); }); return; }
-  var io = new IntersectionObserver(function (es) { es.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } }); }, { threshold: 0.12 });
-  els.forEach(function (e) { io.observe(e); });
+  var burger = el("burger"), menu = el("menu");
+  burger.addEventListener("click", function () { var o = menu.classList.toggle("open"); burger.setAttribute("aria-expanded", o); });
+  menu.addEventListener("click", function (e) { if (e.target.tagName === "A") { menu.classList.remove("open"); burger.setAttribute("aria-expanded", false); } });
+
+  // pricing
+  el("tiers").innerHTML = TIERS.map(function (t) {
+    return '<div class="tier' + (t.n === 100 || t.all ? " hot" : "") + '"><b>' + (t.all ? "Celý katalóg" : t.n + " analýz") + '</b><strong>' + t.price + '</strong><span>' + t.per + ' za analýzu</span></div>';
+  }).join("");
+
+  function count() { return Object.keys(sel).length; }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(Object.keys(sel).map(Number))); } catch (e) {} }
+  function toast(m) { var t = el("toast"); t.textContent = m; t.classList.add("show"); clearTimeout(toast.h); toast.h = setTimeout(function () { t.classList.remove("show"); }, 2000); }
+  function encode() {
+    var max = CATALOG.length, bits = [], out = "", A = "0123456789abcdefghijklmnopqrstuv";
+    for (var i = 1; i <= max; i++) bits.push(sel[i] ? 1 : 0);
+    while (bits.length % 5) bits.push(0);
+    for (var j = 0; j < bits.length; j += 5) out += A[bits[j] * 16 + bits[j + 1] * 8 + bits[j + 2] * 4 + bits[j + 3] * 2 + bits[j + 4]];
+    return "k1-" + out.replace(/0+$/, "");
+  }
+  function tierFor(n) { for (var i = 0; i < TIERS.length; i++) if (n <= TIERS[i].n) return TIERS[i]; return null; }
+  function plural(n, a, b, c) { return n === 1 ? a : (n >= 2 && n <= 4 ? b : c); }
+
+  function renderAreas() {
+    var counts = {}, names = [];
+    CATALOG.forEach(function (x) { counts[x.a] = (counts[x.a] || 0) + 1; if (names.indexOf(x.a) < 0) names.push(x.a); });
+    var html = '<button class="chip" data-a="" aria-pressed="' + (area === "") + '">Všetky<b>' + CATALOG.length + '</b></button>';
+    html += names.map(function (a) { return '<button class="chip" data-a="' + esc(a) + '" aria-pressed="' + (area === a) + '">' + esc(a.replace(" a súdna organizácia", "")) + '<b>' + counts[a] + '</b></button>'; }).join("");
+    html += '<button class="chip sel" data-a="__sel" aria-pressed="' + (area === "__sel") + '">Vybraté<b>' + count() + '</b></button>';
+    el("areas").innerHTML = html;
+  }
+  function renderList() {
+    var qw = norm(query).split(/\s+/).filter(Boolean);
+    var rows = CATALOG.filter(function (x) {
+      if (area === "__sel") { if (!sel[x.i]) return false; }
+      else if (area && x.a !== area) return false;
+      return qw.every(function (w) { return x._q.indexOf(w) >= 0; });
+    });
+    el("found").textContent = rows.length + " " + plural(rows.length, "téma", "témy", "tém") + (query ? " pre „" + query + "“" : "");
+    if (!rows.length) { el("list").innerHTML = '<div class="empty">' + (area === "__sel" ? "Zatiaľ ste nevybrali žiadnu tému." : "Nič sa nenašlo. Skúste iné slovo alebo nám napíšte, akú tému hľadáte.") + '</div>'; return; }
+    var total = rows.length, cut = !expanded && !area && !query && total > LIMIT;
+    if (cut) rows = rows.slice(0, LIMIT);
+    var html = "", lastA = "", lastS = "";
+    rows.forEach(function (x) {
+      if (x.a !== lastA) { html += '<h3 class="g-area">' + esc(x.a) + '</h3>'; lastA = x.a; lastS = ""; }
+      if (x.s !== lastS) { html += '<div class="g-sub">' + esc(x.s) + '</div>'; lastS = x.s; }
+      html += '<label class="item' + (sel[x.i] ? " on" : "") + '" data-i="' + x.i + '"><input type="checkbox"' + (sel[x.i] ? " checked" : "") + ' aria-label="Vybrať tému ' + x.i + '"><span class="no">' + x.i + '.</span><span class="t">' + esc(x.t) + '</span><span class="meta">' + x.y + ' · ' + x.p + ' s.</span>' + (x.kw ? '<span class="kw">' + esc(x.kw) + '</span>' : '') + '</label>';
+    });
+    if (cut) html += '<button type="button" class="btn btn-line more" id="more">Zobraziť všetkých ' + total + ' tém</button>';
+    el("list").innerHTML = html;
+  }
+  var catVisible = false;
+  function renderBar() {
+    var n = count(), t = tierFor(n), info, ok = false;
+    if (n === 0) info = '<b>Vyberte si témy</b> · minimum je päť';
+    else if (n < MIN) info = '<b>' + n + ' ' + plural(n, "téma", "témy", "tém") + '</b> · vyberte ešte ' + (MIN - n);
+    else if (!t) info = '<b>' + n + ' tém</b> · maximum je ' + MAX;
+    else { ok = true; info = '<b>' + n + ' ' + plural(n, "téma", "témy", "tém") + '</b> · balík ' + (t.all ? "celý katalóg" : t.n + " analýz") + (n < t.n ? '<span style="display:block;font-size:13px">Môžete pridať ešte ' + (t.n - n) + ' bez doplatku.</span>' : ''); }
+    if (n) info += '<button class="lk" type="button" id="showsel">' + (el("drawer").classList.contains("open") ? "skryť výber" : "zobraziť výber") + '</button>';
+    el("info").innerHTML = info;
+    var b = el("buy");
+    b.setAttribute("aria-disabled", ok ? "false" : "true");
+    b.textContent = ok ? "Objednať · " + t.price : "Objednať";
+    b.href = ok ? t.url + "?locale=sk&client_reference_id=" + encodeURIComponent(encode() + (REF ? "-" + REF : "")) : "#";
+    el("clearsel").hidden = !n;
+    el("bar").classList.toggle("show", n > 0 || catVisible);
+    renderDrawer();
+  }
+  function renderDrawer() {
+    var ids = Object.keys(sel).map(Number).sort(function (a, b) { return a - b; });
+    el("drawer").innerHTML = ids.map(function (i) { return '<div class="r"><span>' + i + '.</span><span>' + esc(byId[i].t) + '</span><button type="button" data-rm="' + i + '">odobrať</button></div>'; }).join("") || '<div class="r">Nič nie je vybraté.</div>';
+  }
+  function toggle(i, on) {
+    if (on && !sel[i] && count() >= MAX) { toast("Maximum je " + MAX + " tém."); return false; }
+    if (on) sel[i] = 1; else delete sel[i];
+    save(); renderBar(); renderAreas(); return true;
+  }
+  function toCatalog() { el("katalog").scrollIntoView({ behavior: "smooth" }); }
+
+  el("list").addEventListener("change", function (e) {
+    var inp = e.target; if (!inp || inp.type !== "checkbox") return;
+    var it = inp.closest(".item"); if (!it) return;
+    var i = Number(it.dataset.i), on = inp.checked;
+    if (!toggle(i, on)) { inp.checked = !!sel[i]; return; }
+    it.classList.toggle("on", on);
+    if (area === "__sel" && !on) renderList();
+  });
+  el("list").addEventListener("click", function (e) { if (e.target.id === "more") { expanded = true; renderList(); } });
+  el("areas").addEventListener("click", function (e) {
+    var c = e.target.closest(".chip"); if (!c) return;
+    area = c.dataset.a; renderAreas(); renderList();
+    var y = el("list").getBoundingClientRect().top + window.scrollY - 230;
+    if (window.scrollY > y) window.scrollTo(0, y);
+  });
+  var qt; el("q").addEventListener("input", function (e) { clearTimeout(qt); qt = setTimeout(function () { query = e.target.value.trim(); renderList(); }, 140); });
+  el("info").addEventListener("click", function (e) { if (e.target.id === "showsel") { el("drawer").classList.toggle("open"); renderBar(); } });
+  el("drawer").addEventListener("click", function (e) { var r = e.target.dataset.rm; if (!r) return; toggle(Number(r), false); renderList(); });
+  el("clearsel").addEventListener("click", function () { sel = {}; save(); el("drawer").classList.remove("open"); renderBar(); renderAreas(); renderList(); toast("Výber bol zrušený."); });
+  el("allbtn").addEventListener("click", function () { CATALOG.forEach(function (x) { sel[x.i] = 1; }); save(); area = "__sel"; renderBar(); renderAreas(); renderList(); toCatalog(); toast("Vybraný celý katalóg, všetkých " + CATALOG.length + " analýz."); });
+  el("buy").addEventListener("click", function (e) { if (el("buy").getAttribute("aria-disabled") === "true") { e.preventDefault(); toCatalog(); } });
+
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (es) { catVisible = es[0].isIntersecting; renderBar(); }, { rootMargin: "0px 0px -40% 0px" }).observe(el("katalog"));
+    var io = new IntersectionObserver(function (es) { es.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } }); }, { threshold: 0.1 });
+    document.querySelectorAll(".reveal").forEach(function (e) { io.observe(e); });
+  } else { document.querySelectorAll(".reveal").forEach(function (e) { e.classList.add("in"); }); catVisible = true; }
+
+  renderAreas(); renderList(); renderBar();
+  if (IS_CAT && !location.hash) setTimeout(function () { el("katalog").scrollIntoView(); }, 30);
 })();
 </script>
 </body>
