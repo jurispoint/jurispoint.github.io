@@ -485,6 +485,15 @@ footer .links { display:flex; gap:22px; flex-wrap:wrap; }
   var MAX = 250, MIN = 5, KEY = "jp-katalog-vyber";
   var IS_CAT = /^\/katalog/.test(location.pathname);
   var REF = (function () { try { return (new URLSearchParams(location.search).get("r") || "").replace(/[^A-Za-z0-9_-]/g, "").slice(0, 40); } catch (e) { return ""; } })();
+  var KOD = (function () {
+    var k = "";
+    try { k = (new URLSearchParams(location.search).get("kod") || "").toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 20); } catch (e) {}
+    try {
+      if (k) localStorage.setItem("jp_kod", JSON.stringify({ k: k, t: Date.now() }));
+      else { var o = JSON.parse(localStorage.getItem("jp_kod") || "null"); if (o && o.k && Date.now() - o.t < 8 * 86400000) k = o.k; }
+    } catch (e) {}
+    return k;
+  })();
 
   var el = function (id) { return document.getElementById(id); };
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
@@ -533,6 +542,7 @@ footer .links { display:flex; gap:22px; flex-wrap:wrap; }
   el("cookieno").addEventListener("click", function () { setConsent("n"); });
   el("cookieset").addEventListener("click", function () { el("cookie").classList.add("show"); });
   track("view", location.pathname + (location.hash || ""));
+  if (KOD && /[?&]kod=/.test(location.search)) track("kod", KOD);
   var t0 = Date.now(), hidden0 = 0, hiddenAt = 0, maxScroll = 0, seen = [], left = false;
   window.addEventListener("scroll", function () { var h = document.documentElement; var p = Math.round((window.scrollY + window.innerHeight) / h.scrollHeight * 100); if (p > maxScroll) maxScroll = p; }, { passive: true });
   function leave() { if (left) return; left = true; var secs = Math.round((Date.now() - t0 - hidden0) / 1000); track("odchod", secs + " s, posun " + Math.min(maxScroll, 100) + " %, videl: " + (seen.join(" ") || "úvod")); }
@@ -560,6 +570,7 @@ footer .links { display:flex; gap:22px; flex-wrap:wrap; }
   function count() { return Object.keys(sel).length; }
   function save() { try { localStorage.setItem(KEY, JSON.stringify(Object.keys(sel).map(Number))); } catch (e) {} }
   function toast(m) { var t = el("toast"); t.textContent = m; t.classList.add("show"); clearTimeout(toast.h); toast.h = setTimeout(function () { t.classList.remove("show"); }, 2000); }
+  if (KOD) setTimeout(function () { var t = el("toast"); t.textContent = "Váš osobný zľavový kód " + KOD + " sa pri platbe vyplní automaticky."; t.classList.add("show"); clearTimeout(toast.h); toast.h = setTimeout(function () { t.classList.remove("show"); }, 6000); }, 1200);
   function encode() {
     var max = CATALOG.length, bits = [], out = "", A = "0123456789abcdefghijklmnopqrstuv";
     for (var i = 1; i <= max; i++) bits.push(sel[i] ? 1 : 0);
@@ -610,7 +621,7 @@ footer .links { display:flex; gap:22px; flex-wrap:wrap; }
     var b = el("buy");
     b.setAttribute("aria-disabled", ok ? "false" : "true");
     b.textContent = ok ? "Objednať · " + t.price : "Objednať";
-    b.href = ok ? t.url + "?locale=sk&client_reference_id=" + encodeURIComponent(encode() + (REF ? "-" + REF : "")) : "#";
+    b.href = ok ? t.url + "?locale=sk&client_reference_id=" + encodeURIComponent(encode() + (REF ? "-" + REF : "")) + (KOD ? "&prefilled_promo_code=" + encodeURIComponent(KOD) : "") : "#";
     el("clearsel").hidden = !n;
     el("bar").classList.toggle("show", n > 0 || catVisible);
     renderDrawer();
