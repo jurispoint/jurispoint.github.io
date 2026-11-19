@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Návštevnosť · JurisPoint</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --navy:#1a2332; --ink:#1f2633; --muted:#5f6a7a; --faint:#8a94a3; --line:#e4e1da; --paper:#faf8f4; --card:#fff; --soft:#f2eee6; --accent:#c1502e; --ok:#2f7d4f; }
+* { box-sizing:border-box; }
+body { margin:0; font:15px/1.5 Inter, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; color:var(--ink); background:var(--paper); }
+.wrap { max-width:1100px; margin:0 auto; padding:24px 18px 60px; }
+h1, h2 { font-family:"Source Serif 4", Georgia, serif; color:var(--navy); font-weight:600; margin:0; }
+h1 { font-size:28px; }
+h2 { font-size:20px; margin:34px 0 12px; }
+.top { display:flex; justify-content:space-between; align-items:center; gap:14px; flex-wrap:wrap; }
+.seg { display:flex; gap:6px; background:var(--card); border:1px solid var(--line); border-radius:10px; padding:4px; }
+.seg button { border:0; background:none; padding:8px 12px; border-radius:7px; font:500 14px Inter, sans-serif; cursor:pointer; color:var(--ink); }
+.seg button.on { background:var(--navy); color:#fff; }
+.muted { color:var(--muted); font-size:13.5px; }
+.kpis { display:grid; grid-template-columns:repeat(4, 1fr); gap:12px; margin-top:20px; }
+.kpi { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+.kpi b { display:block; font-family:"Source Serif 4", Georgia, serif; font-size:30px; color:var(--navy); line-height:1.15; }
+.kpi span { color:var(--muted); font-size:13.5px; }
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+.bars div { display:grid; grid-template-columns:150px 1fr 40px; gap:10px; align-items:center; margin:6px 0; font-size:14px; }
+.bars i { display:block; height:10px; border-radius:5px; background:var(--accent); opacity:.85; }
+.bars em { font-style:normal; color:var(--muted); text-align:right; }
+table { width:100%; border-collapse:collapse; font-size:14px; }
+th { text-align:left; font-weight:600; color:var(--muted); font-size:12.5px; text-transform:uppercase; letter-spacing:.06em; padding:8px 8px; border-bottom:1px solid var(--line); }
+td { padding:9px 8px; border-bottom:1px solid #f0ede7; vertical-align:top; }
+.sess { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:12px 14px; margin:8px 0; }
+.sess .h { display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; font-size:14px; }
+.sess .h b { color:var(--navy); }
+.chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+.chip { font-size:12.5px; background:var(--soft); border-radius:999px; padding:3px 10px; color:var(--ink); }
+.chip.hot { background:#fbe7df; color:var(--accent); font-weight:600; }
+.chip.dl { background:#e6f2ea; color:var(--ok); font-weight:600; }
+.login { max-width:420px; margin:80px auto; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:24px; }
+.login input { width:100%; font:16px Inter, sans-serif; padding:12px; border:1px solid var(--line); border-radius:10px; margin:12px 0; }
+.btn { background:var(--navy); color:#fff; border:0; border-radius:10px; padding:12px 16px; font:600 15px Inter, sans-serif; cursor:pointer; }
+a { color:var(--navy); }
+.empty { color:var(--muted); padding:10px 0; }
+@media (max-width:760px) { .kpis { grid-template-columns:1fr 1fr; } .grid2 { grid-template-columns:1fr; } .bars div { grid-template-columns:110px 1fr 34px; } }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+(function () {
+  var EXEC = "https://script.google.com/macros/s/AKfycbyFLJh1mFOWF8bHsK2cgxSpkCBK8aAk6B6Y-9bmTBus4_hX5-_0Ls8TDQFpOich_MrK/exec";
+  try { localStorage.setItem("jp_ja", "1"); } catch (e) {}
+  var app = document.getElementById("app");
+  var key = ""; try { key = localStorage.getItem("jp_stats_key") || ""; } catch (e) {}
+  var days = 1, data = null;
+  var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  var NAMES = { view: "Zobrazenie", sekcia: "Časť webu", ukazka1: "Stiahol ukážku 1", ukazka2: "Stiahol ukážku 2", zoznam: "Stiahol zoznam tém", hladanie: "Hľadal", filter: "Filter", vyber: "Vybral", objednat: "Klikol Objednať", cely_katalog: "Celý katalóg", kontakt: "Kontakt", cookies: "Cookies", odchod: "Odišiel" };
+  var SEC = { obsah: "obsah analýz", ukazky: "ukážky", cennik: "cenník", katalog: "katalóg", otazky: "otázky", kontakt: "kontakt" };
+
+  function login(msg) {
+    app.innerHTML = '<div class="login"><h1>Návštevnosť webu</h1><p class="muted">Zadajte prístupový kľúč. Zapamätá sa v tomto prehliadači a Vaše návštevy sa odteraz nebudú počítať.</p><input id="k" type="password" placeholder="Prístupový kľúč" autocomplete="off"><button class="btn" id="go">Zobraziť</button><p class="muted" style="color:#a33">' + (msg || "") + '</p></div>';
+    document.getElementById("go").onclick = function () { key = document.getElementById("k").value.trim(); try { localStorage.setItem("jp_stats_key", key); } catch (e) {} load(); };
+  }
+  function load() {
+    if (!key) return login("");
+    app.innerHTML = '<div class="wrap"><p class="muted">Načítavam…</p></div>';
+    fetch(EXEC + "?stats=" + encodeURIComponent(key) + "&days=" + (days === 1 ? 1 : days)).then(function (r) { return r.json(); }).then(function (j) {
+      if (!j || !j.rows) throw new Error("x"); data = j; render();
+    }).catch(function () { try { localStorage.removeItem("jp_stats_key"); } catch (e) {} key = ""; login("Kľúč nie je správny alebo sa údaje nepodarilo načítať."); });
+  }
+  function today() { var d = new Date(); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
+  function render() {
+    var rows = data.rows.filter(function (r) { return r[2] !== "test" && (days !== 1 || r[0].slice(0, 10) === today()); });
+    var S = {}, order = [];
+    rows.forEach(function (r) {
+      var id = r[1] || r[0]; if (!S[id]) { S[id] = { id: id, start: r[0], end: r[0], ev: [], r: "", who: "", city: "", src: r[8], dev: r[9], secs: 0, page: r[3] }; order.push(id); }
+      var s = S[id]; s.end = r[0]; s.ev.push({ e: r[2], x: r[7], p: r[3] }); if (r[4]) { s.r = r[4]; s.who = r[5]; s.city = r[6]; }
+      if (r[2] === "odchod") { var m = /^(\d+) s/.exec(r[7]); if (m) s.secs = Math.max(s.secs, Number(m[1])); }
+    });
+    var list = order.map(function (k) { return S[k]; }).reverse();
+    var cnt = function (f) { return list.filter(f).length; };
+    var has = function (s, e) { return s.ev.some(function (x) { return x.e === e; }); };
+    var withT = list.filter(function (s) { return s.secs > 0; });
+    var avg = withT.length ? Math.round(withT.reduce(function (a, s) { return a + s.secs; }, 0) / withT.length) : 0;
+    var fmtT = function (t) { return t >= 60 ? Math.floor(t / 60) + " min " + (t % 60) + " s" : t + " s"; };
+    var html = '<div class="wrap"><div class="top"><div><h1>Návštevnosť jurispoint.sk</h1><div class="muted">Vlastné meranie bez cookies, bez nás dvoch. Aktualizované ' + esc(data.generated) + '.</div></div>';
+    html += '<div class="seg">' + [[1, "Dnes"], [7, "7 dní"], [30, "30 dní"], [90, "90 dní"]].map(function (d) { return '<button data-d="' + d[0] + '" class="' + (days === d[0] ? "on" : "") + '">' + d[1] + '</button>'; }).join("") + '</div></div>';
+    html += '<div class="kpis">' + [
+      [list.length, "návštev"], [cnt(function (s) { return s.r; }), "z našich e‑mailov"], [fmtT(avg), "priemerný čas"],
+      [cnt(function (s) { return has(s, "sekcia") && s.ev.some(function (x) { return x.e === "sekcia" && x.x === "katalog"; }) || s.page === "katalog"; }), "pozreli katalóg"],
+      [cnt(function (s) { return has(s, "ukazka1") || has(s, "ukazka2"); }), "stiahli ukážku"], [cnt(function (s) { return has(s, "zoznam"); }), "stiahli zoznam tém"],
+      [cnt(function (s) { return has(s, "vyber"); }), "vybrali témy"], [cnt(function (s) { return has(s, "objednat"); }), "klikli na Objednať (Stripe)"]
+    ].map(function (k) { return '<div class="kpi"><b>' + k[0] + '</b><span>' + k[1] + '</span></div>'; }).join("") + '</div>';
+
+    function bars(title, map) {
+      var arr = Object.keys(map).map(function (k) { return [k, map[k]]; }).sort(function (a, b) { return b[1] - a[1]; }).slice(0, 8);
+      var mx = arr.length ? arr[0][1] : 1;
+      return '<div class="card"><h2 style="margin:0 0 8px">' + title + '</h2><div class="bars">' + (arr.map(function (a) { return '<div><span>' + esc(a[0]) + '</span><i style="width:' + Math.max(4, a[1] / mx * 100) + '%"></i><em>' + a[1] + '</em></div>'; }).join("") || '<div class="empty">Zatiaľ nič.</div>') + '</div></div>';
+    }
+    var src = {}, dev = {}, q = {}, sec = {};
+    list.forEach(function (s) {
+      var k = s.src === "mail" ? "z nášho e‑mailu" : (s.src === "priamo" ? "priamo (adresa, záložka)" : s.src); src[k] = (src[k] || 0) + 1;
+      var d = s.dev === "mobil" ? "mobil" : (s.dev === "tablet" ? "tablet" : "počítač"); dev[d] = (dev[d] || 0) + 1;
+      s.ev.forEach(function (x) { if (x.e === "hladanie") { var t = x.x.replace(/ \(\d+\)$/, ""); q[t] = (q[t] || 0) + 1; } if (x.e === "sekcia") { var n = SEC[x.x] || x.x; sec[n] = (sec[n] || 0) + 1; } });
+    });
+    html += '<div class="grid2" style="margin-top:16px">' + bars("Odkiaľ prišli", src) + bars("Zariadenie", dev) + bars("Čo si pozreli", sec) + bars("Čo hľadali v katalógu", q) + '</div>';
+
+    var adv = list.filter(function (s) { return s.r; });
+    html += '<h2>Advokáti z našich e‑mailov</h2>';
+    if (!adv.length) html += '<div class="empty">V tomto období nikto z oslovených neotvoril web.</div>';
+    else html += '<div class="card" style="padding:4px 8px"><table><tr><th>Advokát</th><th>Kedy</th><th>Čo robil</th></tr>' + adv.map(function (s) {
+      return '<tr><td><b>' + esc(s.who || s.r) + '</b><div class="muted">' + esc(s.city) + '</div></td><td>' + esc(fmtD(s.start)) + '</td><td>' + summary(s) + '</td></tr>';
+    }).join("") + '</table></div>';
+
+    html += '<h2>Jednotlivé návštevy</h2>';
+    html += list.map(function (s) {
+      return '<div class="sess"><div class="h"><span><b>' + esc(s.who || (s.r ? s.r : "Anonymný návštevník")) + '</b> ' + (s.city ? '<span class="muted">· ' + esc(s.city) + '</span>' : '') + '</span><span class="muted">' + esc(fmtD(s.start)) + ' · ' + esc(s.src === "mail" ? "z e‑mailu" : s.src) + ' · ' + esc(s.dev === "pocitac" ? "počítač" : s.dev) + (s.secs ? ' · ' + fmtT(s.secs) : '') + '</span></div>' + summary(s) + '</div>';
+    }).join("") || '<div class="empty">V tomto období zatiaľ žiadne návštevy.</div>';
+    html += '<p class="muted" style="margin-top:28px">Podrobné grafy pre návštevníkov, ktorí povolili cookies: <a href="https://analytics.google.com/" target="_blank" rel="noopener">Google Analytics</a>. Platby a nedokončené objednávky: <a href="https://dashboard.stripe.com/" target="_blank" rel="noopener">Stripe</a>.</p></div>';
+    app.innerHTML = html;
+    app.querySelectorAll(".seg button").forEach(function (b) { b.onclick = function () { days = Number(b.dataset.d); load(); }; });
+  }
+  function fmtD(t) { return Number(t.slice(8, 10)) + ". " + Number(t.slice(5, 7)) + ". o " + t.slice(11, 16); }
+  function summary(s) {
+    var out = [];
+    s.ev.forEach(function (x) {
+      if (x.e === "view") out.push('<span class="chip">otvoril ' + esc(x.p === "katalog" ? "katalóg" : (x.p === "web" ? "web" : x.p)) + '</span>');
+      else if (x.e === "sekcia") out.push('<span class="chip">' + esc(SEC[x.x] || x.x) + '</span>');
+      else if (x.e === "ukazka1" || x.e === "ukazka2" || x.e === "zoznam") out.push('<span class="chip dl">' + NAMES[x.e] + '</span>');
+      else if (x.e === "objednat") out.push('<span class="chip hot">Objednať: ' + esc(x.x) + '</span>');
+      else if (x.e === "vyber") out.push('<span class="chip">vybral ' + esc(x.x) + '</span>');
+      else if (x.e === "hladanie") out.push('<span class="chip">hľadal „' + esc(x.x) + '“</span>');
+      else if (x.e === "odchod") out.push('<span class="chip">' + esc(x.x.replace(/, videl:.*/, "")) + '</span>');
+      else if (x.e === "cookies") out.push('<span class="chip">cookies ' + esc(x.x) + '</span>');
+      else if (x.e !== "filter") out.push('<span class="chip">' + esc((NAMES[x.e] || x.e) + (x.x ? " " + x.x : "")) + '</span>');
+    });
+    return '<div class="chips">' + out.join("") + '</div>';
+  }
+  load();
+})();
+</script>
+</body>
+</html>
