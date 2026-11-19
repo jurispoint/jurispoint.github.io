@@ -1,1 +1,426 @@
-<!DOCTYPE html><html lang="sk"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=katalog/"><title>JurisPoint</title></head><body><a href="katalog/">Katalóg analýz judikatúry JurisPoint</a></body></html>
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JurisPoint · Analýzy súdnej judikatúry pre advokátov</title>
+<meta name="description" content="Analýzy súdnej judikatúry pre advokátsku prax. Každá analýza odpovedá na konkrétnu právnu otázku: kľúčové rozhodnutia so spisovou značkou, doslovné citácie a praktický postup pre obe strany sporu.">
+<meta property="og:title" content="JurisPoint · Analýzy súdnej judikatúry pre advokátov">
+<meta property="og:description" content="Ako súdy rozhodujú vo Vašej otázke. Ručná rešerš, doslovné citácie, praktický postup.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="sk_SK">
+<meta property="og:site_name" content="JurisPoint">
+<meta name="theme-color" content="#1d2a43">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1d2a43; --navy-2: #2b3b5c; --ink: #222a36; --muted: #5d6878; --line: #e3e0d8;
+  --paper: #fbf9f5; --card: #ffffff; --accent: #b9532f; --accent-2: #9e4426; --soft: #f3eee6;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: Inter, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--sans); color: var(--ink); background: var(--paper); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+h1, h2, h3 { font-family: var(--serif); color: var(--navy); font-weight: 600; line-height: 1.18; margin: 0; letter-spacing: -0.01em; }
+h2 { font-size: clamp(28px, 3.6vw, 40px); }
+h3 { font-size: 21px; }
+.eyebrow { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+.lead { font-size: 19px; color: var(--muted); max-width: 640px; }
+section { padding: 96px 0; }
+.sec-head { max-width: 720px; margin-bottom: 48px; }
+.sec-head .eyebrow { display: block; margin-bottom: 14px; }
+.sec-head p { color: var(--muted); margin: 16px 0 0; font-size: 18px; }
+
+/* header */
+header { position: sticky; top: 0; z-index: 20; background: rgba(251,249,245,.92); backdrop-filter: saturate(150%) blur(8px); border-bottom: 1px solid transparent; transition: border-color .2s; }
+header.scrolled { border-bottom-color: var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+.logo { display: flex; flex-direction: column; align-items: center; text-decoration: none; font-family: var(--serif); color: var(--navy); line-height: 1; letter-spacing: .2em; font-size: 15px; font-weight: 600; }
+.logo .rule { display: flex; align-items: center; gap: 6px; color: var(--accent); font-size: 10px; margin: 3px 0; letter-spacing: 0; }
+.logo .rule::before, .logo .rule::after { content: ""; width: 22px; height: 1px; background: var(--accent); }
+.menu { display: flex; align-items: center; gap: 28px; font-size: 15px; }
+.menu a { text-decoration: none; color: var(--ink); }
+.menu a:hover { color: var(--accent); }
+.menu a.btn-primary, .menu a.btn-primary:hover { color: #fff; }
+.btn { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 600; font-size: 15.5px; border-radius: 10px; padding: 13px 22px; transition: transform .15s, background .15s, box-shadow .15s; border: 1.5px solid transparent; cursor: pointer; }
+.btn:hover { transform: translateY(-1px); }
+.btn-primary { background: var(--navy); color: #fff; box-shadow: 0 6px 18px rgba(29,42,67,.18); }
+.btn-primary:hover { background: var(--navy-2); }
+.btn-ghost { border-color: var(--navy); color: var(--navy); background: transparent; }
+.btn-accent { background: var(--accent); color: #fff; }
+.btn-accent:hover { background: var(--accent-2); }
+.menu .btn { padding: 10px 18px; }
+.burger { display: none; background: none; border: 0; font-size: 26px; color: var(--navy); cursor: pointer; }
+
+/* hero */
+.hero { padding: 72px 0 88px; }
+.hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 64px; align-items: center; }
+.hero h1 { font-size: clamp(36px, 5vw, 58px); margin: 18px 0 22px; }
+.hero h1 em { font-style: normal; color: var(--accent); }
+.hero .cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
+.hero .note { margin-top: 18px; font-size: 14px; color: var(--muted); }
+.doc { position: relative; }
+.doc-card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 30px 30px 26px; box-shadow: 0 24px 60px rgba(29,42,67,.12); position: relative; z-index: 2; }
+.doc-back { position: absolute; inset: 18px -18px -18px 18px; background: var(--soft); border: 1px solid var(--line); border-radius: 16px; z-index: 1; }
+.doc-top { display: flex; justify-content: space-between; align-items: center; font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+.doc-top span:last-child { color: var(--muted); letter-spacing: .06em; }
+.doc h3 { font-size: 22px; margin: 14px 0 18px; }
+.doc ul { list-style: none; padding: 0; margin: 0; }
+.doc li { display: flex; gap: 12px; padding: 11px 0; border-top: 1px solid var(--line); font-size: 15px; }
+.doc li b { display: block; color: var(--navy); font-weight: 600; }
+.doc li small { color: var(--muted); font-size: 13.5px; }
+.dot { flex: 0 0 26px; height: 26px; border-radius: 50%; background: var(--soft); color: var(--accent); display: grid; place-items: center; font-family: var(--serif); font-weight: 700; font-size: 14px; }
+.cite { margin-top: 16px; background: var(--paper); border-left: 3px solid var(--accent); padding: 12px 14px; font-family: var(--serif); font-size: 14.5px; color: #3b4454; font-style: italic; border-radius: 0 8px 8px 0; }
+.cite span { display: block; font-style: normal; font-family: var(--sans); font-size: 12px; color: var(--muted); margin-top: 6px; }
+
+/* stats */
+.stats { background: var(--navy); color: #fff; padding: 34px 0; }
+.stats .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.stat b { display: block; font-family: var(--serif); font-size: 34px; font-weight: 600; }
+.stat span { color: #c8d0de; font-size: 14.5px; }
+
+/* features */
+.grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.feat { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 26px 24px; }
+.feat .ic { width: 44px; height: 44px; border-radius: 11px; background: var(--soft); color: var(--accent); display: grid; place-items: center; font-family: var(--serif); font-size: 22px; font-weight: 700; margin-bottom: 18px; }
+.feat h3 { font-size: 19px; margin-bottom: 8px; }
+.feat p { margin: 0; color: var(--muted); font-size: 15.5px; }
+
+/* research */
+.research { background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.quote { font-family: var(--serif); font-size: clamp(24px, 2.8vw, 32px); color: var(--navy); line-height: 1.3; }
+.quote::before { content: "„"; color: var(--accent); }
+.quote::after { content: "“"; color: var(--accent); }
+.checks { list-style: none; padding: 0; margin: 0; }
+.checks li { position: relative; padding: 0 0 18px 36px; color: var(--ink); }
+.checks li::before { content: "§"; position: absolute; left: 0; top: -1px; width: 24px; height: 24px; border-radius: 50%; background: var(--soft); color: var(--accent); display: grid; place-items: center; font-family: var(--serif); font-size: 14px; font-weight: 700; }
+.checks b { color: var(--navy); }
+
+/* steps */
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; counter-reset: s; }
+.step { position: relative; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 30px 26px 26px; }
+.step::before { counter-increment: s; content: counter(s); font-family: var(--serif); font-size: 46px; color: var(--accent); opacity: .9; line-height: 1; display: block; margin-bottom: 14px; }
+.step p { color: var(--muted); margin: 8px 0 0; font-size: 15.5px; }
+.aside { margin-top: 22px; color: var(--muted); font-size: 15.5px; }
+
+/* samples */
+.samples { background: var(--soft); }
+.cards2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.sample { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 30px; display: flex; flex-direction: column; }
+.sample .tag { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+.sample h3 { margin: 10px 0 10px; font-size: 22px; }
+.sample p { color: var(--muted); margin: 0 0 22px; font-size: 15.5px; flex: 1; }
+.sample .btn { align-self: flex-start; }
+.listlink { margin-top: 26px; text-align: center; color: var(--muted); }
+.listlink a { color: var(--navy); font-weight: 600; }
+
+/* areas */
+.areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.area { display: flex; justify-content: space-between; align-items: center; text-decoration: none; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; transition: border-color .15s, transform .15s; }
+.area:hover { border-color: var(--accent); transform: translateY(-1px); }
+.area b { font-family: var(--serif); color: var(--navy); font-size: 18px; font-weight: 600; }
+.area span { color: var(--muted); font-size: 14px; white-space: nowrap; }
+
+/* use */
+.use { background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.cols3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; }
+.cols3 h3 { font-size: 20px; margin-bottom: 10px; }
+.cols3 p { color: var(--muted); margin: 0; font-size: 15.5px; }
+
+/* faq */
+.faq { max-width: 820px; }
+details { border-bottom: 1px solid var(--line); padding: 4px 0; }
+summary { list-style: none; cursor: pointer; padding: 20px 40px 20px 0; position: relative; font-family: var(--serif); font-size: 20px; color: var(--navy); font-weight: 600; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; position: absolute; right: 4px; top: 16px; font-size: 26px; color: var(--accent); font-family: var(--sans); font-weight: 400; transition: transform .2s; }
+details[open] summary::after { transform: rotate(45deg); }
+details p { margin: 0 0 22px; color: var(--muted); }
+
+/* cta */
+.band { background: var(--navy); color: #fff; border-radius: 22px; padding: 56px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.band h2 { color: #fff; }
+.band p { color: #c8d0de; margin: 12px 0 0; max-width: 560px; }
+.band .btn-accent { white-space: nowrap; }
+
+/* contact */
+.contact { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.contact-box { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 30px; }
+.contact-box a { color: var(--navy); font-weight: 600; text-decoration: none; }
+.contact-box div { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.contact-box div:last-child { border-bottom: 0; }
+.contact-box small { display: block; color: var(--muted); font-size: 13px; }
+
+footer { border-top: 1px solid var(--line); padding: 40px 0 48px; color: var(--muted); font-size: 14px; }
+.foot { display: flex; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+.foot a { color: var(--muted); }
+.foot .links { display: flex; gap: 22px; flex-wrap: wrap; }
+
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.in { opacity: 1; transform: none; }
+
+@media (max-width: 960px) {
+  .hero-grid, .split, .contact { grid-template-columns: 1fr; gap: 44px; }
+  .grid4 { grid-template-columns: 1fr 1fr; }
+  .stats .wrap { grid-template-columns: 1fr 1fr; }
+  .stat b { font-size: 26px; }
+  .cols3, .steps { grid-template-columns: 1fr; }
+  .band { flex-direction: column; align-items: flex-start; padding: 40px 30px; }
+  .doc { max-width: 520px; }
+}
+@media (max-width: 760px) {
+  body { font-size: 16px; }
+  section { padding: 68px 0; }
+  .menu { display: none; position: absolute; top: 72px; left: 0; right: 0; background: var(--paper); flex-direction: column; align-items: stretch; gap: 0; padding: 8px 24px 20px; border-bottom: 1px solid var(--line); }
+  .menu.open { display: flex; }
+  .menu a { padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .menu .btn { margin-top: 12px; justify-content: center; border-bottom: 0; }
+  .burger { display: block; }
+  .grid4, .cards2 { grid-template-columns: 1fr; }
+  .doc-back { inset: 12px -10px -12px 10px; }
+}
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="JurisPoint, na začiatok">JURIS<span class="rule">§</span>POINT</a>
+    <nav class="menu" id="menu">
+      <a href="#ako">Ako to funguje</a>
+      <a href="#ukazky">Ukážky</a>
+      <a href="#oblasti">Oblasti práva</a>
+      <a href="#otazky">Otázky</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="btn btn-primary" href="katalog/">Katalóg analýz</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Analýzy súdnej judikatúry pre advokátov</span>
+      <h1>Ako súdy rozhodujú vo Vašej otázke. <em>Prehľadne, s&nbsp;citáciami.</em></h1>
+      <p class="lead">Každá analýza odpovedá na jednu konkrétnu právnu otázku, na ktorú zákon nedáva jednoznačnú odpoveď. Nájdete v nej kľúčové rozhodnutia so spisovou značkou, doslovné citácie použiteľné v podaní a praktický postup pre obe strany sporu.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="katalog/">Prezrieť katalóg analýz →</a>
+        <a class="btn btn-ghost" href="#ukazky">Dve ukážky zdarma</a>
+      </div>
+      <p class="note">Vyberiete si len témy, ktoré Vás zaujímajú. Platí sa jednorazovo, bez predplatného.</p>
+    </div>
+    <div class="doc reveal" aria-hidden="true">
+      <div class="doc-back"></div>
+      <div class="doc-card">
+        <div class="doc-top"><span>Analýza judikatúry</span><span>Rodinné právo</span></div>
+        <h3>Stačí samotný konflikt rodičov na zamietnutie striedavej starostlivosti?</h3>
+        <ul>
+          <li><span class="dot">1</span><div><b>Kľúčové rozhodnutia</b><small>so spisovou značkou a dátumom</small></div></li>
+          <li><span class="dot">2</span><div><b>Doslovné citácie</b><small>overiteľné v plnom znení rozhodnutia</small></div></li>
+          <li><span class="dot">3</span><div><b>Väčšinový aj menšinový názor</b><small>ak sa súdy rozchádzajú</small></div></li>
+          <li><span class="dot">4</span><div><b>Praktický postup</b><small>pre navrhovateľa aj odporcu</small></div></li>
+        </ul>
+        <div class="cite">Samotný konflikt či zhoršená komunikácia rodičov nie sú automatickou prekážkou striedavej starostlivosti. Rozhodujúci je najlepší záujem dieťaťa.<span>Väčšinový názor · z ukážky zdarma, 10 rozhodnutí ÚS SR a krajských súdov</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><b>250</b><span>analýz v katalógu</span></div>
+    <div class="stat"><b>7</b><span>oblastí práva</span></div>
+    <div class="stat"><b>2024 až 2026</b><span>aktuálna rozhodovacia prax</span></div>
+    <div class="stat"><b>Pár minút</b><span>od platby po doručenie e‑mailom</span></div>
+  </div>
+</div>
+
+<section id="obsah">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Čo nájdete v každej analýze</span>
+      <h2>Odpoveď z judikatúry, pripravená na použitie</h2>
+      <p>Analýzy sú stručné a štruktúrované tak, aby ste sa v otázke zorientovali za pár minút a citácie mohli rovno použiť.</p>
+    </div>
+    <div class="grid4">
+      <div class="feat reveal"><div class="ic">?</div><h3>Konkrétna otázka</h3><p>Každá analýza rieši jednu otázku zo skutočných sporov, na ktorú zákon nedáva jednoznačnú odpoveď.</p></div>
+      <div class="feat reveal"><div class="ic">§</div><h3>Rozhodnutia a citácie</h3><p>Kľúčové rozhodnutia so spisovou značkou a doslovné citácie, ktoré môžete použiť v podaní.</p></div>
+      <div class="feat reveal"><div class="ic">⚖</div><h3>Oba pohľady</h3><p>Ak sa súdy rozchádzajú, uvádzame väčšinový aj menšinový názor a ich dôvody.</p></div>
+      <div class="feat reveal"><div class="ic">→</div><h3>Praktický postup</h3><p>Na konci odporúčaný postup pre obe strany sporu, teda na čo sa zamerať v konaní.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="research">
+  <div class="wrap split">
+    <div class="reveal">
+      <span class="eyebrow">Ručná rešerš</span>
+      <p class="quote">Odpoveď sme hľadali priamo v judikatúre. Rozhodnutia sme vyberali jednotlivo, nie pomocou AI.</p>
+    </div>
+    <ul class="checks reveal">
+      <li><b>Každá citácia je doslovná</b> a so spisovou značkou, takže si ju overíte v plnom znení rozhodnutia.</li>
+      <li><b>Rešerš nenahrádza Vašu prácu, ale dopĺňa ju.</b> Často v analýze nájdete aj rozhodnutie, na ktoré by ste inak nenarazili.</li>
+      <li><b>Šetrí čas.</b> Namiesto hodín v databázach máte prehľad, ako súdy v danej otázke rozhodujú.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="ako">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Ako to funguje</span>
+      <h2>Tri kroky, žiadne predplatné</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h3>Vyberte si témy</h3><p>V katalógu analýz zakliknite témy, ktoré Vás zaujímajú. Hľadať môžete podľa oblasti práva alebo kľúčového slova.</p></div>
+      <div class="step reveal"><h3>Zaplaťte kartou</h3><p>Bezpečná platba cez Stripe kartou, Apple Pay alebo Google Pay. Faktúru dostanete automaticky.</p></div>
+      <div class="step reveal"><h3>Analýzy prídu e‑mailom</h3><p>Vybrané analýzy vo formáte PDF Vám pošleme e‑mailom spravidla do niekoľkých minút.</p></div>
+    </div>
+    <p class="aside reveal">Potrebujete faktúru vopred a platbu prevodom z účtu kancelárie? Napíšte nám na <a href="mailto:jurispointsk@gmail.com">jurispointsk@gmail.com</a>.</p>
+  </div>
+</section>
+
+<section class="samples" id="ukazky">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Ukážky zdarma</span>
+      <h2>Pozrite sa, ako analýzy vyzerajú</h2>
+      <p>Dve celé analýzy si môžete stiahnuť bez registrácie.</p>
+    </div>
+    <div class="cards2">
+      <div class="sample reveal">
+        <span class="tag">Rodinné právo</span>
+        <h3>Striedavá starostlivosť</h3>
+        <p>Stačí samotný konflikt rodičov na zamietnutie striedavej starostlivosti, alebo súdy skúmajú niečo iné?</p>
+        <a class="btn btn-ghost" href="https://drive.google.com/uc?export=download&id=1XgftIvjgyibeNTzTa-i2IckVtqUerCGB">Stiahnuť PDF</a>
+      </div>
+      <div class="sample reveal">
+        <span class="tag">Trestné právo</span>
+        <h3>Kamerový záznam ako dôkaz</h3>
+        <p>Je kamerový záznam mestskej polície použiteľný ako dôkaz v trestnom konaní a za akých podmienok?</p>
+        <a class="btn btn-ghost" href="https://drive.google.com/uc?export=download&id=1DebYU2AugeCQBMPwfMe0_0hk5HycLg2d">Stiahnuť PDF</a>
+      </div>
+    </div>
+    <p class="listlink reveal">Všetky témy s kľúčovými slovami nájdete aj v <a href="zoznam-tem.pdf">zozname tém (PDF)</a>.</p>
+  </div>
+</section>
+
+<section id="oblasti">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Oblasti práva</span>
+      <h2>250 analýz, roztriedených podľa odvetví</h2>
+      <p>Prevažne z rozhodovacej praxe rokov 2025 a 2026.</p>
+    </div>
+    <div class="areas reveal">
+      <a class="area" href="katalog/"><b>Civilné právo</b><span>113 analýz</span></a>
+      <a class="area" href="katalog/"><b>Trestné právo</b><span>68 analýz</span></a>
+      <a class="area" href="katalog/"><b>Rodinné právo</b><span>26 analýz</span></a>
+      <a class="area" href="katalog/"><b>Správne právo</b><span>23 analýz</span></a>
+      <a class="area" href="katalog/"><b>Ústavné právo a súdna organizácia</b><span>9 analýz</span></a>
+      <a class="area" href="katalog/"><b>Pracovné právo</b><span>6 analýz</span></a>
+      <a class="area" href="katalog/"><b>Obchodné právo</b><span>5 analýz</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="use">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Využitie</span>
+      <h2>Pre prax aj odbornú činnosť</h2>
+    </div>
+    <div class="cols3">
+      <div class="reveal"><h3>Konanie pred súdom</h3><p>Podklady pre argumentáciu pri zastupovaní a obhajobe klientov, s citáciami pripravenými do podania.</p></div>
+      <div class="reveal"><h3>Články a prednášky</h3><p>Hotový prehľad judikatúry pre odborné články, prednášky a inú publikačnú činnosť.</p></div>
+      <div class="reveal"><h3>Voľné použitie obsahu</h3><p>Obsah môžete voľne citovať a spracúvať vo vlastných textoch. Nie je povolené ďalej šíriť samotné PDF súbory.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="otazky">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Časté otázky</span>
+      <h2>Otázky a odpovede</h2>
+    </div>
+    <div class="faq reveal">
+      <details><summary>Ako analýzy vznikajú?</summary><p>Za každou analýzou stojí ručná rešerš. Rozhodnutia sme vyhľadávali a vyberali jednotlivo podľa skúmanej otázky, nie pomocou AI. Citácie sú doslovné a so spisovou značkou.</p></details>
+      <details><summary>Akých súdov sa analýzy týkajú?</summary><p>Ide o rozhodovaciu prax slovenských súdov, prevažne z rokov 2025 a 2026. Pri každej téme v katalógu vidíte ročník a v zozname tém aj kľúčové slová a predpisy.</p></details>
+      <details><summary>Ako a kedy dostanem analýzy?</summary><p>Po zaplatení Vám vybrané analýzy pošleme e‑mailom vo formáte PDF, spravidla do niekoľkých minút. Faktúru Vám pošle platobný systém Stripe v samostatnom e‑maile.</p></details>
+      <details><summary>Môžem dostať faktúru vopred a zaplatiť prevodom?</summary><p>Áno. Napíšte nám čísla tém a fakturačné údaje kancelárie na jurispointsk@gmail.com. Vystavíme faktúru a po úhrade Vám analýzy pošleme.</p></details>
+      <details><summary>Môžem obsah analýz použiť vo svojich textoch?</summary><p>Áno. Obsah môžete voľne citovať a spracúvať v podaniach, článkoch či prednáškach a nemusíte nás uvádzať. Nie je povolené ďalej šíriť samotné PDF súbory.</p></details>
+      <details><summary>Je to predplatné?</summary><p>Nie. Platíte jednorazovo len za analýzy, ktoré si vyberiete. Cenník nájdete v katalógu.</p></details>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="band reveal">
+      <div>
+        <h2>Vyberte si témy, ktoré Vás zaujímajú</h2>
+        <p>V katalógu prehľadne podľa oblastí práva, s vyhľadávaním. Zaplatíte len za analýzy, ktoré si vyberiete.</p>
+      </div>
+      <a class="btn btn-accent" href="katalog/">Otvoriť katalóg →</a>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" style="padding-top:24px">
+  <div class="wrap contact">
+    <div class="reveal">
+      <span class="eyebrow">Kontakt</span>
+      <h2 style="margin-top:14px">Máte otázku?</h2>
+      <p class="lead" style="margin-top:16px">Napíšte nám alebo zavolajte. Radi Vám pomôžeme vybrať analýzy pre Vašu prax.</p>
+    </div>
+    <div class="contact-box reveal">
+      <div><small>E‑mail</small><a href="mailto:jurispointsk@gmail.com">jurispointsk@gmail.com</a></div>
+      <div><small>Telefón</small><a href="tel:+421902197834">+421 902 197 834</a></div>
+      <div><small>Katalóg analýz</small><a href="katalog/">Prezrieť témy a cenník</a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <div style="font-family:var(--serif);color:var(--navy);font-weight:600;font-size:16px;margin-bottom:6px">JurisPoint</div>
+      Prevádzkovateľ: Michal Stano (JurisPoint), Za humnami 173/16, 919 09 Šelpice<br>
+      IČO: 57971153 · DIČ: 1131411457 · nie je platiteľom DPH<br>
+      Zapísaný v živnostenskom registri Okresného úradu Trnava, č.&nbsp;250&#8209;64032 · <a href="mailto:jurispointsk@gmail.com">jurispointsk@gmail.com</a>
+    </div>
+    <div class="links">
+      <a href="obchodne-podmienky/">Obchodné podmienky</a>
+      <a href="ochrana-osobnych-udajov/">Ochrana osobných údajov</a>
+      <span>© 2026 JurisPoint</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var h = document.querySelector("header");
+  var onScroll = function () { h.classList.toggle("scrolled", window.scrollY > 8); };
+  window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
+  var b = document.getElementById("burger"), m = document.getElementById("menu");
+  b.addEventListener("click", function () { var o = m.classList.toggle("open"); b.setAttribute("aria-expanded", o); });
+  m.addEventListener("click", function (e) { if (e.target.tagName === "A") { m.classList.remove("open"); b.setAttribute("aria-expanded", false); } });
+  var els = document.querySelectorAll(".reveal");
+  if (!("IntersectionObserver" in window)) { els.forEach(function (e) { e.classList.add("in"); }); return; }
+  var io = new IntersectionObserver(function (es) { es.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } }); }, { threshold: 0.12 });
+  els.forEach(function (e) { io.observe(e); });
+})();
+</script>
+</body>
+</html>
