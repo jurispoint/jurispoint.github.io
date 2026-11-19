@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /tel/
+Disallow: /statistiky/
 Sitemap: https://jurispoint.sk/sitemap.xml
