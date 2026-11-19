@@ -48,6 +48,7 @@ header p { color:#dfe5ef; margin:0; max-width:640px; }
 .bar .info b { font-size:15px; }
 .bar .hint { color:var(--muted); font-size:12.5px; }
 .bar .show { background:none; border:none; color:var(--navy); text-decoration:underline; padding:0; font-size:12.5px; cursor:pointer; }
+.allbtn { margin-top:12px; width:100%; background:#fff; color:var(--accent); border:2px solid var(--accent); border-radius:10px; padding:11px 14px; font-size:15px; font-weight:700; cursor:pointer; }
 .buy { background:var(--accent); color:#fff; font-weight:700; border:none; border-radius:10px; padding:12px 16px; font-size:15px; text-decoration:none; white-space:nowrap; }
 .buy[aria-disabled="true"] { background:#c9ced6; pointer-events:none; }
 .drawer { display:none; border-top:1px solid var(--line); max-height:42vh; overflow:auto; }
@@ -85,6 +86,7 @@ footer { color:var(--muted); font-size:12.5px; text-align:center; padding:30px 0
   <div class="box">
     <h2>Cenník</h2>
     <div class="prices" id="prices"></div>
+    <button type="button" class="allbtn" id="allbtn">Chcem celý katalóg: všetkých 250 analýz za 349,99 €</button>
   </div>
 
   <div class="tools">
@@ -123,9 +125,11 @@ footer { color:var(--muted); font-size:12.5px; text-align:center; padding:30px 0
     { n: 40, price: "104,99 €", per: "2,62 €", url: "https://buy.stripe.com/dRm8wPfyp6nebqt4ftcMM08" },
     { n: 50, price: "124,99 €", per: "2,50 €", url: "https://buy.stripe.com/aFadR95XPdPGeCF27lcMM05" },
     { n: 75, price: "169,99 €", per: "2,27 €", url: "https://buy.stripe.com/5kQ4gz2LD6nefGJeU7cMM09" },
-    { n: 100, price: "199,99 €", per: "2,00 €", url: "https://buy.stripe.com/aFa5kDcmddPGgKNeU7cMM06" }
+    { n: 100, price: "199,99 €", per: "2,00 €", url: "https://buy.stripe.com/aFa5kDcmddPGgKNeU7cMM06" },
+    { n: 150, price: "249,99 €", per: "1,67 €", url: "https://buy.stripe.com/eVq5kD0Dv26Y1PTdQ3cMM0a" },
+    { n: 250, price: "349,99 €", per: "1,40 €", url: "https://buy.stripe.com/28E14n3PH3b27ad8vJcMM0b", all: true }
   ];
-  var MAX = 100, MIN = 5, KEY = "jp-katalog-vyber";
+  var MAX = 250, MIN = 5, KEY = "jp-katalog-vyber";
   var el = function (id) { return document.getElementById(id); };
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
   var norm = function (s) { return String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase(); };
@@ -134,7 +138,7 @@ footer { color:var(--muted); font-size:12.5px; text-align:center; padding:30px 0
   try { (JSON.parse(localStorage.getItem(KEY) || "[]") || []).forEach(function (i) { if (byId[i]) sel[i] = 1; }); } catch (e) {}
   var area = "", query = "";
 
-  el("prices").innerHTML = TIERS.map(function (t) { return '<div class="price"><b>' + t.n + ' analýz</b>' + t.price + '<br><span>' + t.per + ' za analýzu</span></div>'; }).join("");
+  el("prices").innerHTML = TIERS.map(function (t) { return '<div class="price"><b>' + (t.all ? 'Celý katalóg (' + t.n + ')' : t.n + ' analýz') + '</b>' + t.price + '<br><span>' + t.per + ' za analýzu</span></div>'; }).join("");
 
   function count() { return Object.keys(sel).length; }
   function save() { try { localStorage.setItem(KEY, JSON.stringify(Object.keys(sel).map(Number))); } catch (e) {} }
@@ -211,6 +215,7 @@ footer { color:var(--muted); font-size:12.5px; text-align:center; padding:30px 0
   var qt; el("q").addEventListener("input", function (e) { clearTimeout(qt); qt = setTimeout(function () { query = e.target.value.trim(); renderList(); }, 150); });
   el("info").addEventListener("click", function (e) { if (e.target.id === "showsel") { el("drawer").classList.toggle("open"); renderBar(); } });
   el("drawer").addEventListener("click", function (e) { var r = e.target.dataset.rm; if (!r) return; toggle(Number(r), false); renderList(); });
+  el("allbtn").addEventListener("click", function () { CATALOG.forEach(function (x) { sel[x.i] = 1; }); save(); renderBar(); renderAreas(); renderList(); el("buy").scrollIntoView({ behavior: "smooth", block: "center" }); toast("Vybraný celý katalóg, všetkých " + CATALOG.length + " analýz."); });
   el("buy").addEventListener("click", function (e) { if (el("buy").getAttribute("aria-disabled") === "true") { e.preventDefault(); return; } });
 
   renderAreas(); renderList(); renderBar();
