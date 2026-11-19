@@ -72,6 +72,7 @@ footer a { color:var(--muted); }
 <li><b>Stripe Payments Europe, Ltd.</b> (Írsko): spracovanie platby a vystavenie faktúry. Stripe môže údaje prenášať aj do USA na základe štandardných zmluvných doložiek EÚ.</li>
 <li><b>Google</b> (Gmail, Google Drive): komunikácia s kupujúcim, dodanie súborov a záznamy o návštevnosti webu.</li>
 <li><b>Google Ireland Limited</b> (Google Analytics): štatistika návštevnosti, len ak ste s ňou súhlasili.</li>
+<li><b>Microsoft Corporation</b> (Microsoft Clarity): záznamy a mapy pohybu na webe, len ak ste s nimi súhlasili.</li>
 <li><b>GitHub</b>: prevádzka webovej stránky a katalógu analýz.</li>
 <li><b>Účtovník alebo účtovná kancelária</b>: vedenie účtovníctva.</li>
 <li><b>Orgány verejnej moci</b>: len ak to vyžaduje zákon.</li>
@@ -96,9 +97,10 @@ footer a { color:var(--muted); }
 </ul>
 <p>Práva uplatníte e-mailom na <a href="mailto:info@jurispoint.sk">info@jurispoint.sk</a>. Odpovieme do jedného mesiaca.</p>
 <h2 id="cookies">7. Cookies a meranie návštevnosti</h2>
-<p>Návštevnosť webu jurispoint.sk meriame dvoma spôsobmi.</p>
+<p>Návštevnosť webu jurispoint.sk meriame troma spôsobmi.</p>
 <p><b>Vlastné meranie bez cookies.</b> Zaznamenávame zobrazenie stránok, časti webu, ktoré si pozriete, čas strávený na stránke, vyhľadávanie v katalógu, stiahnutie ukážok a kliknutie na objednávku, spolu so zdrojom návštevy a typom zariadenia. Na tento účel do Vášho zariadenia nič neukladáme a Vašu IP adresu nezaznamenávame. Ak ste na web prišli cez odkaz z nášho e-mailu alebo správy, priradíme návštevu ku kontaktným údajom podľa čl. 2. Právnym základom je oprávnený záujem na zlepšovaní webu a ponuky (čl. 6 ods. 1 písm. f) GDPR). Záznamy uchovávame najdlhšie 2 roky.</p>
 <p><b>Google Analytics.</b> Analytické cookies Google Analytics (_ga, _ga_*) použijeme len vtedy, ak ich povolíte na lište pri prvej návšteve. Pomáhajú nám vidieť súhrnnú štatistiku návštevnosti. Reklamné funkcie sú vypnuté. Cookies sa uchovávajú najdlhšie 14 mesiacov. Údaje môžu byť prenesené do USA na základe rámca ochrany údajov medzi EÚ a USA. Právnym základom je Váš súhlas (čl. 6 ods. 1 písm. a) GDPR a § 109 ods. 8 zákona č. 452/2021 Z. z. o elektronických komunikáciách). Súhlas môžete kedykoľvek odvolať cez odkaz Nastavenia cookies v pätičke webu.</p>
+<p><b>Microsoft Clarity.</b> Ak cookies povolíte, používame aj nástroj Microsoft Clarity, ktorý zaznamenáva pohyb myši, klikanie a posúvanie stránky, aby sme videli, ktoré časti webu sú zrozumiteľné a kde návštevníci váhajú. Obsah, ktorý zadáte do formulárových polí, sa nezaznamenáva. Clarity používa cookies _clck (najdlhšie 1 rok) a _clsk (1 deň), záznamy návštev sa uchovávajú spravidla 30 dní. Údaje spracúva spoločnosť Microsoft Corporation a môžu byť prenesené do USA na základe rámca ochrany údajov medzi EÚ a USA. Právnym základom je Váš súhlas (čl. 6 ods. 1 písm. a) GDPR a § 109 ods. 8 zákona č. 452/2021 Z. z.), ktorý môžete kedykoľvek odvolať cez odkaz Nastavenia cookies v pätičke webu.</p>
 <p><b>Nevyhnutné úložisko.</b> Prehliadač si pamätá Váš výber tém v katalógu a rozhodnutie o cookies. Tieto údaje zostávajú vo Vašom zariadení a neodosielame ich.</p>
 <h2>8. Zmeny</h2>
 <p>Tieto zásady môžeme aktualizovať. Platné znenie je vždy zverejnené na tejto stránke.</p>
@@ -121,6 +123,8 @@ footer a { color:var(--muted); }
     window.gtag("consent", "default", { ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: "granted" });
     window.gtag("js", new Date());
     var sc = document.createElement("script"); sc.async = true; sc.src = "https://www.googletagmanager.com/gtm.js?id=GTM-NRD2DCZG"; document.head.appendChild(sc);
+    (function (c, l, a, r, i, t, y) { c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); }; t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i; y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y); })(window, document, "clarity", "script", "zg8njrw42e");
+    try { window.clarity("consent"); window.clarity("set", "stranka", "ochrana"); } catch (e) {}
   }
 })();
 </script>
