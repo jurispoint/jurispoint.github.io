@@ -181,6 +181,8 @@ header.top.scrolled { border-bottom-color:var(--line); }
 .drawer .r button { margin-left:auto; background:none; border:0; color:var(--accent); cursor:pointer; font:500 13px var(--sans); }
 
 /* use + faq */
+.why .cols > div { border-top:3px solid var(--accent); padding-top:20px; }
+.why .cols h3 { font-size:22px; }
 .cols { display:grid; grid-template-columns:repeat(3, 1fr); gap:40px; }
 .cols h3 { margin-bottom:8px; }
 .cols p { color:var(--muted); margin:0; font-size:15.5px; }
@@ -310,11 +312,25 @@ footer .links { display:flex; gap:22px; flex-wrap:wrap; }
   </div>
 </div>
 
+<section class="why">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="kicker">Prečo JurisPoint</span>
+      <h2>Menej hľadania, viac argumentov</h2>
+    </div>
+    <div class="cols reveal">
+      <div><h3>Ušetríte hodiny hľadania</h3><p>Rozhodovaciu prax k jednej otázke máte pokope a zorientujete sa v nej za pár minút.</p></div>
+      <div><h3>Nájdete ďalší uhol argumentácie</h3><p>Aj keď si judikatúru hľadáte sami, v analýze často objavíte argument alebo rozhodnutie, ktoré Vám ušlo.</p></div>
+      <div><h3>Ľahšie napíšete článok či prezentáciu</h3><p>Prehľad judikatúry k téme je pevné východisko pre odborné články, prednášky a publikácie.</p></div>
+    </div>
+  </div>
+</section>
+
 <section id="obsah">
   <div class="wrap">
     <div class="head reveal">
       <span class="kicker">Čo nájdete v každej analýze</span>
-      <h2>Odpoveď z judikatúry, pripravená na použitie</h2>
+      <h2>Jedna otázka, celá rozhodovacia prax k nej</h2>
     </div>
     <div class="what reveal">
       <div><span class="n">01</span><h3>Skúmaná otázka</h3><p>Jedna konkrétna otázka z praxe, presne sformulovaná na začiatku analýzy.</p></div>
@@ -333,8 +349,7 @@ footer .links { display:flex; gap:22px; flex-wrap:wrap; }
     </div>
     <ul class="reveal">
       <li><b>Doslovné citácie so spisovou značkou.</b> Každú si overíte v plnom znení rozhodnutia.</li>
-      <li><b>Prehľad namiesto hodín v databázach.</b> V otázke sa zorientujete za pár minút.</li>
-      <li><b>Často aj rozhodnutie, ktoré by ste inak nenašli.</b> Rešerš Vašu prácu nenahrádza, dopĺňa ju.</li>
+      <li><b>Dopĺňa Vašu prácu, nenahrádza ju.</b> Analýza je odborný podklad, vlastné posúdenie veci zostáva na Vás.</li>
     </ul>
   </div>
 </section>
@@ -401,20 +416,6 @@ footer .links { display:flex; gap:22px; flex-wrap:wrap; }
   </div>
 </section>
 
-<section class="use">
-  <div class="wrap">
-    <div class="head reveal">
-      <span class="kicker">Využitie</span>
-      <h2>Pre konanie aj odbornú činnosť</h2>
-    </div>
-    <div class="cols reveal">
-      <div><h3>Zastupovanie a obhajoba</h3><p>Rýchla orientácia v judikatúre pri príprave na konanie. Každé rozhodnutie nájdete podľa spisovej značky a overíte v plnom znení.</p></div>
-      <div><h3>Články a prednášky</h3><p>Prehľad judikatúry ako východisko pre odborné články, prednášky a publikačnú činnosť.</p></div>
-      <div><h3>Voľné použitie obsahu</h3><p>Obsah môžete voľne citovať a spracúvať vo vlastných textoch. Ďalej šíriť samotné PDF súbory nie je dovolené.</p></div>
-    </div>
-  </div>
-</section>
-
 <section id="otazky" style="padding-top:0">
   <div class="wrap">
     <div class="head reveal">
@@ -423,9 +424,10 @@ footer .links { display:flex; gap:22px; flex-wrap:wrap; }
     </div>
     <div class="faq reveal">
       <details><summary>Ako a kedy dostanem analýzy?</summary><p>Po zaplatení Vám vybrané analýzy pošleme vo formáte PDF na e‑mail zadaný pri platbe, spravidla do niekoľkých minút. Faktúru Vám pošle platobná brána Stripe.</p></details>
-      <details><summary>Ako analýzy vznikajú?</summary><p>Za každou analýzou stojí ručná rešerš. Rozhodnutia sme vyhľadávali a vyberali jednotlivo podľa skúmanej otázky, nie pomocou AI. Citácie sú doslovné a so spisovou značkou.</p></details>
+      <details><summary>Ako analýzy vznikajú?</summary><p>Za každou analýzou stojí ručná rešerš. Rozhodnutia sme vyhľadávali a vyberali jednotlivo podľa skúmanej otázky, nie pomocou AI.</p></details>
       <details><summary>Z akých rokov sú rozhodnutia?</summary><p>Analýzy vychádzajú z rozhodovacej praxe z rokov 2025 a 2026. Ročník vidíte pri každej téme v katalógu, stav judikatúry je uvedený na titulnej strane analýzy.</p></details>
       <details><summary>Môžem dostať faktúru vopred a zaplatiť prevodom?</summary><p>Áno. Pošlite nám čísla tém a fakturačné údaje kancelárie na info@jurispoint.sk. Vystavíme faktúru a po úhrade Vám analýzy pošleme.</p></details>
+      <details><summary>Môžem obsah analýz použiť vo vlastných textoch?</summary><p>Áno. Obsah môžete voľne citovať a spracúvať vo vlastných textoch, článkoch či prezentáciách. Ďalej šíriť samotné PDF súbory nie je dovolené.</p></details>
       <details><summary>Je to predplatné?</summary><p>Nie. Platíte jednorazovo len za analýzy, ktoré si vyberiete, a zostávajú Vám natrvalo.</p></details>
     </div>
   </div>
