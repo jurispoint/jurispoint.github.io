@@ -264,6 +264,23 @@ footer .links { display:flex; gap:22px; flex-wrap:wrap; }
   .bar .btn { padding:13px 14px; font-size:15px; }
 }
 @media (prefers-reduced-motion:reduce) { .reveal { opacity:1; transform:none; transition:none; } html { scroll-behavior:auto; } .btn, .sample { transition:none; } }
+
+/* baliky */
+.pk-grid { display:grid; grid-template-columns:repeat(4, 1fr); gap:16px; }
+.pk { position:relative; display:flex; flex-direction:column; border:1px solid var(--line); border-radius:var(--r); background:var(--card); padding:24px 20px 20px; }
+.pk.hot { border-color:var(--accent); background:var(--sel); }
+.pk .flag { position:absolute; top:-11px; left:18px; background:var(--accent); color:#fff; font-size:12px; font-weight:600; letter-spacing:.04em; padding:3px 10px; border-radius:999px; }
+.pk h3 { font-size:21px; }
+.pk .cnt { margin:6px 0 0; font-size:14px; color:var(--muted); }
+.pk .price { font-family:var(--serif); font-size:34px; font-weight:600; color:var(--navy); margin:14px 0 0; line-height:1; }
+.pk .per { font-size:13.5px; color:var(--faint); margin:4px 0 0; }
+.pk .pk-what { font-size:14.5px; color:var(--muted); margin:14px 0 18px; flex:1; }
+.pk .btn { width:100%; }
+.pk-more { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:18px; margin-top:32px; padding-top:24px; border-top:1px solid var(--line); }
+.pk-more p { margin:0; color:var(--muted); font-size:15.5px; max-width:620px; }
+.pk-more .acts { display:flex; flex-wrap:wrap; gap:12px; }
+@media (max-width:1000px) { .pk-grid { grid-template-columns:repeat(2, 1fr); } }
+@media (max-width:560px) { .pk-grid { grid-template-columns:1fr; } .pk-more .acts .btn { flex:1; } }
 </style>
 </head>
 <body>
@@ -273,7 +290,8 @@ footer .links { display:flex; gap:22px; flex-wrap:wrap; }
     <a class="logo" href="/" aria-label="JurisPoint, úvodná stránka">JURIS<i>§</i>POINT</a>
     <nav class="menu" id="menu" aria-label="Hlavná navigácia">
       <a href="#ukazky">Ukážky zdarma</a>
-      <a href="#cennik">Cenník</a>
+      <a href="#baliky">Balíky</a>
+      <a href="#cennik">Vlastný výber</a>
       <a href="#otazky">Otázky</a>
       <a href="#kontakt">Kontakt</a>
       <a class="btn btn-dark" href="#katalog">Katalóg analýz</a>
@@ -290,10 +308,10 @@ footer .links { display:flex; gap:22px; flex-wrap:wrap; }
       <h1>250 analýz judikatúry <em>k sporným právnym otázkam.</em></h1>
       <p class="lead">Civilné, trestné, rodinné, správne, pracovné, obchodné a ústavné právo. Každá analýza rieši jednu otázku, na ktorú zákon nedáva jednoznačnú odpoveď, a ukazuje, ako ju rozhodujú slovenské súdy v aktuálnej praxi: kľúčové rozhodnutia so spisovou značkou, doslovné citácie z odôvodnení a praktický postup pre obe strany sporu.</p>
       <div class="cta">
-        <a class="btn btn-accent" href="#katalog">Vybrať z 250 analýz</a>
+        <a class="btn btn-accent" href="#baliky">Pozrieť balíky</a>
         <a class="btn btn-line" href="#ukazky">Ukážka zdarma</a>
       </div>
-      <p class="fine">Platíte len za témy, ktoré si vyberiete. Jednorazovo, bez predplatného.</p>
+      <p class="fine">Hotové balíky podľa oblasti práva alebo vlastný výber tém. Jednorazovo, bez predplatného.</p>
     </div>
     <div class="paper reveal" aria-hidden="true">
       <div class="back sheet"><img src="/img/ukazka1-titul.webp?v=3" alt="" width="640" height="906"></div>
@@ -322,6 +340,33 @@ footer .links { display:flex; gap:22px; flex-wrap:wrap; }
       <div><h3>Ušetríte hodiny hľadania</h3><p>Rozhodovaciu prax k jednej otázke máte pokope a zorientujete sa v nej za pár minút.</p></div>
       <div><h3>Nájdete ďalší uhol argumentácie</h3><p>Aj keď si judikatúru hľadáte sami, v analýze často objavíte argument alebo rozhodnutie, ktoré Vám ušlo.</p></div>
       <div><h3>Ľahšie napíšete článok či prezentáciu</h3><p>Prehľad judikatúry k téme je pevné východisko pre odborné články, prednášky a publikácie.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="baliky">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="kicker">Hotové balíky</span>
+      <h2>Vyberte si balík a máte hotovo</h2>
+      <p>Balík obsahuje všetky analýzy z danej oblasti práva. Kúpite ho jedným kliknutím a odkaz na stiahnutie dostanete hneď po zaplatení.</p>
+    </div>
+    <div class="pk-grid reveal">
+      <div class="pk"><h3>Civilné právo</h3><p class="cnt">113 analýz</p><div class="price">169,99 €</div><p class="per">1,50 € za analýzu</p><p class="pk-what">Civilný proces, zodpovednosť za škodu, vecné práva, spoluvlastníctvo a BSM, záväzky a zmluvy, spotrebiteľské právo a ďalšie.</p><a class="btn btn-dark" data-ev="balik" data-x="civilne" href="https://buy.stripe.com/3cI6oHcmdfXObqt5jxcMM0d?locale=sk">Kúpiť balík</a></div>
+      <div class="pk"><h3>Trestné právo</h3><p class="cnt">68 analýz</p><div class="price">109,99 €</div><p class="per">1,62 € za analýzu</p><p class="pk-what">Trestné právo hmotné, procesné a ukladanie a výkon trestov.</p><a class="btn btn-dark" data-ev="balik" data-x="trestne" href="https://buy.stripe.com/cNi5kDgCt4f66694ftcMM0c?locale=sk">Kúpiť balík</a></div>
+      <div class="pk"><h3>Rodinné právo</h3><p class="cnt">26 analýz</p><div class="price">49,99 €</div><p class="per">1,92 € za analýzu</p><p class="pk-what">Rodičovské práva a styk s dieťaťom, výživné, spôsobilosť na právne úkony.</p><a class="btn btn-dark" data-ev="balik" data-x="rodinne" href="https://buy.stripe.com/14A5kD3PHbHy7ad6nBcMM0e?locale=sk">Kúpiť balík</a></div>
+      <div class="pk"><h3>Správne a ústavné právo</h3><p class="cnt">32 analýz</p><div class="price">59,99 €</div><p class="per">1,87 € za analýzu</p><p class="pk-what">Správne súdnictvo, zákonný sudca, správne delikty, stavebné právo, sociálne zabezpečenie, dane, prieťahy v konaní.</p><a class="btn btn-dark" data-ev="balik" data-x="spravne-ustavne" href="https://buy.stripe.com/bJedR95XPaDu66927lcMM0f?locale=sk">Kúpiť balík</a></div>
+      <div class="pk"><h3>Obchodné a pracovné právo</h3><p class="cnt">11 analýz</p><div class="price">24,99 €</div><p class="per">2,27 € za analýzu</p><p class="pk-what">Konkurz, obchodné záväzkové vzťahy, skončenie pracovného pomeru, antidiskriminácia, bezpečnosť práce.</p><a class="btn btn-dark" data-ev="balik" data-x="obchodne-pracovne" href="https://buy.stripe.com/28E7sL71TbHy8ehcLZcMM0g?locale=sk">Kúpiť balík</a></div>
+      <div class="pk"><h3>Civilné a rodinné právo</h3><p class="cnt">139 analýz</p><div class="price">199,99 €</div><p class="per">1,44 € za analýzu</p><p class="pk-what">Všetky civilné (113) a rodinné (26) analýzy. Dodanie v troch ZIP súboroch.</p><a class="btn btn-dark" data-ev="balik" data-x="civilne-rodinne" href="https://buy.stripe.com/8x2dR9ae526YbqtaDRcMM0h?locale=sk">Kúpiť balík</a></div>
+      <div class="pk hot"><span class="flag">Najviac analýz</span><h3>Civilné a trestné právo</h3><p class="cnt">181 analýz</p><div class="price">259,99 €</div><p class="per">1,44 € za analýzu</p><p class="pk-what">Všetky civilné (113) a trestné (68) analýzy. Dodanie v troch ZIP súboroch.</p><a class="btn btn-accent" data-ev="balik" data-x="civilne-trestne" href="https://buy.stripe.com/5kQ5kDae5fXO0LPfYbcMM0i?locale=sk">Kúpiť balík</a></div>
+      <div class="pk"><h3>Ročník 2026</h3><p class="cnt">79 analýz</p><div class="price">69,99 €</div><p class="per">0,89 € za analýzu</p><p class="pk-what">Kompletný ročník 2026: analýzy z rozhodovacej praxe roku 2026 naprieč odvetviami, roztriedené podľa práva.</p><a class="btn btn-dark" data-ev="balik" data-x="rocnik-2026" href="https://buy.stripe.com/3cI6oH9a1h1SdyB3bpcMM00?locale=sk">Kúpiť balík</a></div>
+    </div>
+    <div class="pk-more reveal">
+      <p>Platba kartou, Apple Pay alebo Google Pay cez Stripe. Faktúru dostanete e‑mailom. Potrebujete iný výber alebo platbu prevodom? Vyberte si témy sami alebo nám napíšte.</p>
+      <div class="acts">
+        <button type="button" class="btn btn-dark" onclick="document.getElementById('allbtn').click()">Celý katalóg za 349,99 €</button>
+        <a class="btn btn-line" href="#cennik">Vybrať témy sami</a>
+      </div>
     </div>
   </div>
 </section>
@@ -381,9 +426,9 @@ footer .links { display:flex; gap:22px; flex-wrap:wrap; }
 <section class="pricing" id="cennik">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Cenník</span>
+      <span class="kicker">Vlastný výber</span>
       <h2>Čím viac tém, tým nižšia cena za analýzu</h2>
-      <p>Témy si vyberáte sami, cena sa určí podľa počtu. Minimálna objednávka je päť analýz.</p>
+      <p>Radšej si témy vyberiete sami? Vyberiete ich z katalógu nižšie, cena sa určí podľa počtu. Minimálna objednávka je päť analýz.</p>
     </div>
     <div class="tiers reveal" id="tiers"></div>
     <div class="row reveal">
@@ -423,12 +468,12 @@ footer .links { display:flex; gap:22px; flex-wrap:wrap; }
       <h2>Otázky a odpovede</h2>
     </div>
     <div class="faq reveal">
-      <details><summary>Ako a kedy dostanem analýzy?</summary><p>Po zaplatení Vám vybrané analýzy pošleme vo formáte PDF na e‑mail zadaný pri platbe, spravidla do niekoľkých minút. Faktúru Vám pošle platobná brána Stripe.</p></details>
+      <details><summary>Ako dostanem balík?</summary><p>Po zaplatení sa Vám ihneď zobrazí odkaz na stiahnutie balíka (ZIP súbor s PDF analýzami). Odkaz nájdete aj vo faktúre, ktorú Vám e‑mailom pošle Stripe. Väčšie balíky sú rozdelené na viac ZIP súborov.</p></details> <details><summary>Ako a kedy dostanem analýzy z vlastného výberu?</summary><p>Po zaplatení Vám vybrané analýzy pošleme vo formáte PDF na e‑mail zadaný pri platbe, spravidla do niekoľkých minút. Faktúru Vám pošle platobná brána Stripe.</p></details>
       <details><summary>Ako analýzy vznikajú?</summary><p>Za každou analýzou stojí ručná rešerš. Rozhodnutia sme vyhľadávali a vyberali jednotlivo podľa skúmanej otázky.</p></details>
       <details><summary>Z akých rokov sú rozhodnutia?</summary><p>Analýzy vychádzajú z rozhodovacej praxe z rokov 2025 a 2026. Ročník vidíte pri každej téme v katalógu, stav judikatúry je uvedený na titulnej strane analýzy.</p></details>
       <details><summary>Môžem dostať faktúru vopred a zaplatiť prevodom?</summary><p>Áno. Pošlite nám čísla tém a fakturačné údaje kancelárie na info@jurispoint.sk. Vystavíme faktúru a po úhrade Vám analýzy pošleme.</p></details>
       <details><summary>Môžem obsah analýz použiť vo vlastných textoch?</summary><p>Áno. Obsah môžete voľne citovať a spracúvať vo vlastných textoch, článkoch či prezentáciách. Ďalej šíriť samotné PDF súbory nie je dovolené.</p></details>
-      <details><summary>Je to predplatné?</summary><p>Nie. Platíte jednorazovo len za analýzy, ktoré si vyberiete, a zostávajú Vám natrvalo.</p></details>
+      <details><summary>Je to predplatné?</summary><p>Nie. Platíte jednorazovo za vybraný balík alebo za analýzy, ktoré si vyberiete, a zostávajú Vám natrvalo.</p></details>
     </div>
   </div>
 </section>
@@ -552,7 +597,7 @@ footer .links { display:flex; gap:22px; flex-wrap:wrap; }
   window.addEventListener("pagehide", leave);
   if ("IntersectionObserver" in window) {
     var secObs = new IntersectionObserver(function (es) { es.forEach(function (x) { if (x.isIntersecting && seen.indexOf(x.target.id) < 0) { seen.push(x.target.id); track("sekcia", x.target.id); } }); }, { threshold: 0.35 });
-    ["obsah", "ukazky", "cennik", "katalog", "otazky", "kontakt"].forEach(function (id) { var n = el(id); if (n) secObs.observe(n); });
+    ["obsah", "baliky", "ukazky", "cennik", "katalog", "otazky", "kontakt"].forEach(function (id) { var n = el(id); if (n) secObs.observe(n); });
   }
   document.addEventListener("click", function (e) { var a = e.target.closest("[data-ev]"); if (a) track(a.getAttribute("data-ev"), a.getAttribute("data-x") || ""); }, true);
 
